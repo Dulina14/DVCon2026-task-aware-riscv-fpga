@@ -1,0 +1,9 @@
+#!/bin/sh
+# 192 px. Host evaluation puts top-1 selection at 0.286 here against 0.186 at
+# 128 px, on the same INT8 weights. 970,424 invocations, so expect roughly
+# 12-13 minutes if the 485 us per invocation holds.
+cd /tmp/team43
+./team43_pipeline --image demo_image.jpg --task "serve wine" \
+    --imgsz 192 \
+    --packed /tmp/team43/team43_minilm_packed.bin \
+    --out ./result_192_new.ppm 2>&1 | tee log_192_new.txt

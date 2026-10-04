@@ -1,0 +1,31 @@
+
+`define R              8
+`define C              8
+`define WK             8
+`define WX             8
+`define WY             32
+`define VALID_PROB     1
+`define READY_PROB     50
+`define CLK_PERIOD     10
+`define AXI_WIDTH      64
+`define AXIL_WIDTH     32
+`define ADDR_WIDTH     64
+`define DIR            "/mnt/d/verilator/axis-systolic-array/run/work_R2_C2/data"
+
+`define AXIL_BASE_ADDR 32'hB0000000
+`define A_START        h'0
+`define A_MM2S_0_DONE  h'1
+`define A_MM2S_0_ADDR  h'2
+`define A_MM2S_0_BYTES h'3
+`define A_MM2S_0_TUSER h'4
+`define A_MM2S_1_DONE  h'5
+`define A_MM2S_1_ADDR  h'6
+`define A_MM2S_1_BYTES h'7
+`define A_MM2S_1_TUSER h'8
+`define A_MM2S_2_DONE  h'9
+`define A_MM2S_2_ADDR  h'A
+`define A_MM2S_2_BYTES h'B
+`define A_MM2S_2_TUSER h'C
+`define A_S2MM_DONE    h'D
+`define A_S2MM_ADDR    h'E
+`define A_S2MM_BYTES   h'F

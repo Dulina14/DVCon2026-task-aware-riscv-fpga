@@ -1,0 +1,62 @@
+#!/bin/sh
+# Cold start, timed end to end. This is both the rehearsal and the recovery
+# procedure: run it after any power cycle to get from a bare board to a first
+# answer, and read the elapsed times it prints.
+#
+# BEFORE this script, on the dev PC:
+#   1. Program the FPGA.  cd RUN && ./run.sh  -> option 3
+#      (the Genesys 2 loses its configuration on power-off; nothing below works
+#       until the bitstream is loaded and Linux has booted)
+#   2. Build the deploy bundle, once:
+#        cd /home/Team43/Desktop/DVCon_2026/Application
+#        tar cf team43_deploy.tar team43_pipeline_s team43_yolo_s_int8.bin \
+#            team43_minilm_int8.bin team43_minilm_packed.bin vocab.txt \
+#            phase3_images_s256
+#      Plain tar, not tar.gz: the INT8 blobs barely compress and a 50 MHz core
+#      would spend longer decompressing than the link saves.
+#
+# The MiniLM packing cache IS shipped, all 11.2 MB of it. Generating it on the
+# board instead looks attractive but is not: pk_write() runs at the end of main,
+# so --emit-packed completes an entire query before writing anything. At 256 px
+# that is ~275 s plus the un-cached MiniLM packing, against ~120 s to transfer
+# the file at the measured 94 KB/s. Shipping it is about three minutes cheaper
+# and has nothing that can go wrong halfway.
+DEV=Team43@192.168.1.1
+SRC=/home/Team43/Desktop/DVCon_2026/Application
+T0=$(date +%s)
+say() { echo "[$(( $(date +%s) - T0 ))s] $*"; }
+
+say "network up"
+ifconfig eth0 192.168.1.50 netmask 255.255.255.0 up
+ping -c 2 192.168.1.1 >/dev/null 2>&1 || { echo "FAIL: dev PC unreachable"; exit 1; }
+say "dev PC reachable"
+
+mkdir -p /tmp/team43
+cd /tmp/team43
+say "pulling deploy bundle (about 35 MB, one password prompt)"
+scp $DEV:$SRC/team43_deploy.tar . || { echo "FAIL: scp"; exit 1; }
+say "bundle received"
+
+tar xf team43_deploy.tar && rm -f team43_deploy.tar
+chmod +x team43_pipeline_s
+say "unpacked"
+
+for f in team43_pipeline_s team43_yolo_s_int8.bin team43_minilm_int8.bin \
+         team43_minilm_packed.bin vocab.txt; do
+  [ -s "$f" ] || { echo "FAIL: $f missing from the bundle"; exit 1; }
+done
+say "all five payload files present"
+
+say "first query starting"
+./team43_pipeline_s --image phase3_images_s256/COCO_val2014_000000398604.jpg \
+    --task "water plant" --imgsz 256 \
+    --yolo /tmp/team43/team43_yolo_s_int8.bin \
+    --packed /tmp/team43/team43_minilm_packed.bin \
+    --out /tmp/team43/coldstart.ppm 2>&1 | tee /tmp/team43/coldstart.log \
+  | grep -E "^imgsz|^silu|^fpcheck|^ddr|SELECTED :|total  "
+say "FIRST ANSWER DELIVERED"
+
+echo
+echo "expected: wine glass, rank 0.81284, fpcheck 34800000 3efe65ea be54d74a"
+echo "anything else means the deployed files are not the ones we verified"
+ls -l /tmp/team43

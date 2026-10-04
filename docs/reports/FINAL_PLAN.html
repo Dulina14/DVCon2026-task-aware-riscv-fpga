@@ -1,0 +1,474 @@
+<title>The Eight Day Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+
+<style>
+:root{
+  --ground:#F5F7F5; --panel:#FFFFFF; --band:#ECEFEC;
+  --ink:#191D1B; --ink-2:#4A534E; --ink-3:#77817B;
+  --rule:#D6DCD7; --rule-2:#E6EAE6;
+  --accent:#0F6E63; --accent-soft:#D7E8E4;
+  --warm:#A66A22; --warm-soft:#F4E9DA;
+  --loss:#9E3B34; --loss-soft:#F3E2E0;
+  --shadow:0 1px 2px rgba(25,29,27,.05),0 8px 24px -16px rgba(25,29,27,.18);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1312; --panel:#161B19; --band:#1C2321;
+    --ink:#E7ECE8; --ink-2:#A9B4AE; --ink-3:#7C8781;
+    --rule:#2B3532; --rule-2:#222A28;
+    --accent:#48B7A7; --accent-soft:#17322E;
+    --warm:#D6A059; --warm-soft:#332818;
+    --loss:#D9776C; --loss-soft:#33201E;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -16px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1312; --panel:#161B19; --band:#1C2321;
+  --ink:#E7ECE8; --ink-2:#A9B4AE; --ink-3:#7C8781;
+  --rule:#2B3532; --rule-2:#222A28;
+  --accent:#48B7A7; --accent-soft:#17322E;
+  --warm:#D6A059; --warm-soft:#332818;
+  --loss:#D9776C; --loss-soft:#33201E;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -16px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"IBM Plex Serif",Georgia,serif;font-size:16.5px;line-height:1.62;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1010px;margin:0 auto;padding:0 28px 96px}
+
+header.mast{border-bottom:2px solid var(--ink);padding:56px 0 20px;margin-bottom:36px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 18px;
+  display:flex;flex-wrap:wrap;gap:10px 18px}
+.eyebrow span:not(:first-child){color:var(--ink-3)}
+h1{font-family:"IBM Plex Sans",system-ui,sans-serif;font-weight:700;
+  font-size:clamp(34px,5.4vw,52px);line-height:1.05;letter-spacing:-.022em;
+  margin:0 0 16px;text-wrap:balance;max-width:15ch}
+.standfirst{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:64ch;margin:0 0 22px}
+.standfirst strong{color:var(--ink);font-weight:600}
+
+.countdown{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:var(--rule);border:1px solid var(--rule);margin:0 0 48px}
+.cd{background:var(--panel);padding:16px 18px}
+.cd .d{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);
+  letter-spacing:.05em;margin-bottom:5px}
+.cd .t{font-family:"IBM Plex Sans",sans-serif;font-size:14px;font-weight:600;line-height:1.35}
+.cd.hot{background:var(--loss-soft)}
+.cd.hot .t{color:var(--loss)}
+
+section{margin:0 0 58px}
+h2{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:25px;
+  letter-spacing:-.015em;line-height:1.2;margin:0 0 6px;text-wrap:balance;
+  display:flex;gap:14px;align-items:baseline}
+h2 .num{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
+  color:var(--accent);letter-spacing:.06em;flex:none;padding-top:2px}
+.dek{color:var(--ink-3);font-size:15px;margin:0 0 22px 40px;max-width:62ch;font-style:italic}
+h3{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:15px;
+  margin:30px 0 10px;color:var(--ink)}
+p{margin:0 0 16px;max-width:68ch}
+.body{margin-left:40px}
+@media(max-width:640px){.dek,.body{margin-left:0}}
+em.q{font-style:italic;color:var(--ink-2)}
+code{font-family:"IBM Plex Mono",monospace;font-size:.87em;background:var(--band);
+  padding:1px 5px;border-radius:2px;border:1px solid var(--rule-2)}
+
+.tw{overflow-x:auto;margin:20px 0 8px;border:1px solid var(--rule);background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px}
+caption{caption-side:top;text-align:left;padding:13px 16px 11px;
+  font-family:"IBM Plex Sans",sans-serif;font-size:12.5px;font-weight:600;
+  color:var(--ink);border-bottom:1px solid var(--rule);background:var(--band)}
+th,td{padding:8px 14px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal;min-width:170px}
+thead th{font-family:"IBM Plex Sans",sans-serif;font-size:11px;font-weight:600;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);
+  border-bottom:1px solid var(--rule);padding-top:11px;padding-bottom:9px}
+tbody tr+tr td{border-top:1px solid var(--rule-2)}
+tr.hi td{background:var(--accent-soft);font-weight:600}
+td.acc{color:var(--accent);font-weight:600}
+td.warm{color:var(--warm);font-weight:600}
+td.dim{color:var(--ink-3)}
+tfoot td{border-top:1.5px solid var(--ink);font-weight:600;background:var(--band)}
+.note{font-family:"IBM Plex Sans",sans-serif;font-size:12.5px;color:var(--ink-3);
+  margin:10px 0 0;max-width:70ch;line-height:1.5}
+
+/* phases */
+.phase{border:1px solid var(--rule);background:var(--panel);margin:0 0 20px;
+  box-shadow:var(--shadow)}
+.phase-h{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;
+  padding:15px 20px;border-bottom:1px solid var(--rule);background:var(--band)}
+.phase-n{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.phase-t{font-family:"IBM Plex Sans",sans-serif;font-size:17px;font-weight:600;flex:1;min-width:200px}
+.phase-w{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3)}
+.phase-b{padding:18px 20px}
+.phase-b p{margin-bottom:12px}
+.phase-b p:last-child{margin-bottom:0}
+.gate{border-left:3px solid var(--warm);background:var(--warm-soft);
+  padding:12px 16px;margin:14px 0 0;font-size:14.5px;line-height:1.5}
+.gate b{font-family:"IBM Plex Sans",sans-serif;font-size:11px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--warm);display:block;margin-bottom:5px}
+.target{border-left:3px solid var(--accent);background:var(--accent-soft);
+  padding:12px 16px;margin:14px 0 0;font-size:14.5px;line-height:1.5}
+.target b{font-family:"IBM Plex Sans",sans-serif;font-size:11px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--accent);display:block;margin-bottom:5px}
+
+ol.steps{margin:6px 0 0;padding-left:20px}
+ol.steps li{margin-bottom:9px;padding-left:4px}
+ol.steps li:last-child{margin-bottom:0}
+
+pre{font-family:"IBM Plex Mono",monospace;font-size:12.5px;line-height:1.6;
+  background:var(--band);border:1px solid var(--rule);padding:14px 16px;
+  overflow-x:auto;margin:14px 0}
+pre .c{color:var(--ink-3)}
+
+.callout{border-left:3px solid var(--accent);background:var(--panel);
+  padding:18px 22px;margin:22px 0;box-shadow:var(--shadow)}
+.callout.warn{border-left-color:var(--loss)}
+.callout p:last-child{margin-bottom:0}
+.callout .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);font-weight:600;display:block;margin-bottom:7px}
+.callout.warn .tag{color:var(--loss)}
+
+footer{border-top:1px solid var(--rule);margin-top:20px;padding-top:20px;
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3);
+  display:flex;flex-wrap:wrap;gap:6px 24px}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <p class="eyebrow">
+    <span>Team 43 · Silicon Syndicate</span>
+    <span>DVCon India 2026 finals</span>
+    <span>plan of record · 24 August</span>
+  </p>
+  <h1>The Eight Day Plan</h1>
+  <p class="standfirst">
+    The systolic array was never the bottleneck. <strong>93% of a query is system calls</strong>
+    spent issuing 38 accelerator invocations where the RTL only ever needed one. Removing that
+    loop is a software change, needs no new bitstream, and is worth more than widening the array
+    to 64×64 would have been.
+  </p>
+</header>
+
+<div class="countdown">
+  <div class="cd hot"><div class="d">24–27 Aug</div><div class="t">Board access. Everything needing hardware happens here.</div></div>
+  <div class="cd"><div class="d">28 Aug</div><div class="t">Buffer and packing</div></div>
+  <div class="cd"><div class="d">29 Aug</div><div class="t">In Bangalore</div></div>
+  <div class="cd"><div class="d">1 Sept · 15:30</div><div class="t">Presentation, 15 minutes</div></div>
+</div>
+
+<section>
+  <h2><span class="num">§1</span>What changed today</h2>
+  <p class="dek">Two board runs and a read of the RTL moved the whole plan.</p>
+  <div class="body">
+    <p>
+      Your three board runs give a clean per-invocation cost, and it is remarkably flat:
+      262&nbsp;µs at 128&nbsp;px, 255&nbsp;µs at 192, 251&nbsp;µs at 320. Five system calls per
+      invocation puts a single call at about <strong>50&nbsp;µs</strong>, and multiplying that by
+      the call count reproduces the measured GEMM time at all three canvases to within 4%.
+      The GEMM loop is not computing. It is making system calls.
+    </p>
+
+    <div class="tw">
+      <table>
+        <caption>Measured on the board today — where a 320 px query actually goes</caption>
+        <thead><tr><th>Stage</th><th>128 px</th><th>192 px</th><th>320 px</th><th>Share at 320</th></tr></thead>
+        <tbody>
+          <tr><td>GEMM loop</td><td>135.6 s</td><td>247.8 s</td><td class="loss">587.4 s</td><td>82%</td></tr>
+          <tr><td>VEGA float</td><td>16.0 s</td><td>30.8 s</td><td>78.2 s</td><td>11%</td></tr>
+          <tr><td>Packing (im2col)</td><td>6.8 s</td><td>13.8 s</td><td>36.8 s</td><td>5%</td></tr>
+          <tr><td>Upload to DDR</td><td>10.6 s</td><td>13.0 s</td><td>20.0 s</td><td>3%</td></tr>
+          <tr><td>JPEG decode</td><td>4.5 s</td><td>4.5 s</td><td>4.5 s</td><td>0.6%</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total</td><td>164.5 s</td><td>299.8 s</td><td>713.0 s</td><td></td></tr></tfoot>
+      </table>
+    </div>
+    <p class="note">
+      These supersede the 528.8&nbsp;s in the Stage 3B report by a factor of about three. Whatever
+      changed between machines, every timing claim we make on 1 September must come from this table.
+    </p>
+
+    <h3>The RTL never required the k0 loop</h3>
+    <p>
+      <code>gemm_run</code> issues <code>(M/8)×(N/8)×(K/8)</code> invocations. The K factor is the
+      expensive one: measured on the deployed graph it averages <strong>38 K-tiles per output
+      tile</strong>. But reading the accelerator source, nothing fixes K at 8:
+    </p>
+    <ol class="steps">
+      <li>In <code>axis_sa.sv</code>, the accumulator is reset by <code>m_first</code>, which
+          follows <code>vlast</code> — so an accumulation runs until a <em class="q">last</em> beat,
+          however many beats that is.</li>
+      <li>In <code>top_axi_int.v</code>, <code>s_last = s_k_tlast &amp; s_x_tlast</code> — the DMA
+          asserts it at the end of a descriptor.</li>
+      <li>In <code>dma_controller.sv</code>, the descriptor length is just the
+          <code>MM2S_n_BYTES</code> register, a full 32-bit field passed straight through.</li>
+    </ol>
+    <p>
+      So streaming <code>8×K</code> bytes instead of 64 should accumulate all of K in one
+      invocation and emit the same 8×8 tile. And the packed buffers already suit it — the X run for
+      a fixed <code>m0</code> and the W run for a fixed <code>n0</code> are already contiguous and
+      already in k-major order, which is exactly the beat order the array consumes.
+    </p>
+
+    <div class="tw">
+      <table>
+        <caption>What collapsing the k0 loop removes — counted on the deployed graph</caption>
+        <thead><tr><th>Canvas</th><th>Invocations</th><th>Output tiles</th><th>System calls</th><th>Reduction</th></tr></thead>
+        <tbody>
+          <tr><td>128 px</td><td>517,888</td><td>12,437</td><td>2,614,314 → 99,496</td><td class="acc">26.3×</td></tr>
+          <tr><td>192 px</td><td>970,424</td><td>24,452</td><td>4,901,024 → 195,616</td><td class="acc">25.1×</td></tr>
+          <tr><td>320 px</td><td>2,339,064</td><td>62,196</td><td>11,819,712 → 497,568</td><td class="acc">23.8×</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="tag">The consequence, if it holds on hardware</span>
+      <p>
+        At 50&nbsp;µs per call, the 320&nbsp;px GEMM loop goes from <strong>587&nbsp;s to about
+        25&nbsp;s</strong>, and the whole query from 713&nbsp;s to roughly <strong>165&nbsp;s</strong>.
+        That is 320&nbsp;px accuracy — top-1 selection 0.532 against today's 0.186 — in
+        <em class="q">less wall-clock time than the 128&nbsp;px pipeline takes right now</em>.
+        These are projections from the measured 50&nbsp;µs call cost, not results. §2 exists to
+        turn them into results or kill them.
+      </p>
+    </div>
+
+    <h3>And why the 64×64 array comes off the table</h3>
+    <p>
+      Your instinct to widen the array was aimed at the right problem — but at the wrong term.
+      Widening cuts <em class="q">arithmetic</em>, and arithmetic is roughly 0.16&nbsp;µs of a
+      251&nbsp;µs invocation. Once the k0 loop is gone, GEMM is 25&nbsp;s of a 165&nbsp;s query, so
+      even an infinitely fast array saves at most 15%. A 64×64 array also needs about
+      442,000&nbsp;LUTs against roughly 95,900 free — four times the device — and 32×32 exceeds both
+      the free LUTs and the 790 available DSP slices.
+    </p>
+    <p>
+      This is worth a slide of its own. <strong>We considered widening the array, measured what it
+      would buy, and rejected it on the numbers.</strong> That reads far better to a hardware
+      audience than building it would have.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§2</span>Phase 0 — prove it, today</h2>
+  <p class="dek">One probe, twenty minutes, and the rest of the plan is decided.</p>
+  <div class="body">
+    <p>
+      <code>team43_kdepth.c</code> is written and compiles clean. It builds a K-major operand pair,
+      computes a software reference, then runs three methods against it at K = 8, 16, 64, 128, 256,
+      512 and 1024, twenty random operand sets each.
+    </p>
+    <ol class="steps">
+      <li><b>A</b> — the shipping method: K/8 invocations, seed and harvest Y around them.</li>
+      <li><b>B</b> — one invocation over the whole K, keeping the current one-read wait.</li>
+      <li><b>C</b> — one invocation, but <code>Y_DONE</code> cleared first and then genuinely polled.</li>
+    </ol>
+
+    <div class="callout warn">
+      <span class="tag">The hazard C exists to close</span>
+      <p>
+        <code>wait_done()</code> polls <code>Y_DONE</code> but nothing ever clears it, so after the
+        first tile it is permanently high and the "poll" is really one syscall's worth of delay —
+        about 50&nbsp;µs. That is why the pipeline is correct today: a K=8 tile finishes well inside
+        it. A K=1024 tile streams 1024 beats at 50&nbsp;MHz, about 20.5&nbsp;µs, plus DMA latency.
+        Still inside, but the margin has become a guess rather than an accident. If B passes and C
+        passes, ship C anyway — it costs one syscall per output tile and does not depend on a
+        coincidence.
+      </p>
+    </div>
+
+    <p>Correctness is judged against the software reference, never against method A, so a wrong A
+       cannot make B or C look right. Build and run:</p>
+<pre><span class="c"># on the dev PC</span>
+docker run --rm -t -v "$PWD":/workspace -w /workspace --user $(id -u):$(id -g) \
+  buildroot-2004_new bash -c 'buildroot_dvcon/buildroot/output/host/bin/riscv64-buildroot-linux-gnu-gcc \
+  -std=gnu99 -O2 -static -Wall -Wextra -o team43_kdepth team43_kdepth.c -lrt'
+./push team43_kdepth
+
+<span class="c"># on the board</span>
+cd /tmp/team43 &amp;&amp; chmod +x team43_kdepth &amp;&amp; ./team43_kdepth
+</pre>
+
+    <div class="gate">
+      <b>Gate 0 — decides everything downstream</b>
+      C is EXACT at every K → proceed to Phase 1 as written.<br>
+      C is exact only up to some K → proceed, but cap <code>--kdepth</code> there; a partial
+      collapse still removes most of the calls.<br>
+      C fails at every K, or A is not exact → stop, send me the output, and we fall back to the
+      192&nbsp;px demo we already have working.
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§3</span>Phase 1 — collapse the loop</h2>
+  <p class="dek">A flag, not a rewrite. The old path stays reachable all week.</p>
+  <div class="body">
+    <p>
+      I implement <code>--kdepth N</code> in <code>gemm_run</code>: N K-tiles per invocation, with
+      <code>N=1</code> reproducing today's behaviour exactly. The default becomes "all of K", and
+      any value in between is available if Gate 0 found a ceiling. Nothing else in the pipeline
+      changes, so a regression is one flag away from being isolated.
+    </p>
+    <ol class="steps">
+      <li>Host verification first: <code>--sim</code> is unaffected, and
+          <code>--kdepth 1</code> must produce byte-identical output to the current binary.</li>
+      <li>Board at 128&nbsp;px: the marked image and every ranking line must match your existing
+          <code>result_419974_128.ppm</code> exactly. Identical output, lower time, or we stop.</li>
+      <li>Then 192&nbsp;px and 320&nbsp;px, timed.</li>
+    </ol>
+
+    <div class="target">
+      <b>Targets — Phase 1</b>
+      128&nbsp;px: ≤&nbsp;60&nbsp;s, output identical to today's run.<br>
+      320&nbsp;px: ≤&nbsp;180&nbsp;s, and the kitchen image still selects the foreground
+      <code>wine glass</code> at 0.546.<br>
+      Any mismatch in a ranking line is a failure, not a rounding difference.
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§4</span>Phase 2 — the next bottleneck</h2>
+  <p class="dek">Once GEMM is 25 s, the profile inverts and software becomes the whole cost.</p>
+  <div class="body">
+    <p>
+      After Phase 1 a 320&nbsp;px query should look like this. Nothing here needs the accelerator
+      at all, which means Phase 2 can continue after board access ends.
+    </p>
+
+    <div class="tw">
+      <table>
+        <caption>Projected 320 px profile after the k0 collapse</caption>
+        <thead><tr><th>Stage</th><th>Before</th><th>After</th><th>New share</th><th>What it is</th></tr></thead>
+        <tbody>
+          <tr><td>VEGA float</td><td>78.2 s</td><td>78.2 s</td><td class="loss">48%</td><td>dequant/requant, SiLU, detect-head sigmoid — all on the 50 MHz core</td></tr>
+          <tr><td>Packing (im2col)</td><td>36.8 s</td><td>36.8 s</td><td class="warm">22%</td><td>35.3 s of it is im2col over 75 calls</td></tr>
+          <tr><td>GEMM loop</td><td>587.4 s</td><td class="acc">~25 s</td><td>15%</td><td>now 8 syscalls per output tile</td></tr>
+          <tr><td>Upload to DDR</td><td>20.0 s</td><td>20.0 s</td><td>12%</td><td>bulk writes at ~8 MB/s through the driver</td></tr>
+          <tr><td>JPEG decode</td><td>4.5 s</td><td>4.5 s</td><td>3%</td><td>already integer, already cheap</td></tr>
+        </tbody>
+        <tfoot><tr><td>Query</td><td>713.0 s</td><td>~165 s</td><td></td><td></td></tr></tfoot>
+      </table>
+    </div>
+
+    <p>
+      Attack in this order, and stop when the demo is comfortable rather than chasing the last
+      second:
+    </p>
+    <ol class="steps">
+      <li><b>VEGA float, 78&nbsp;s.</b> The requantisation is a float multiply per output element.
+          Replacing it with an integer multiply-and-shift, and SiLU with a lookup table, is the
+          standard fix and should take a large bite out of this.</li>
+      <li><b>im2col, 35&nbsp;s.</b> Currently a scatter per patch. For 1×1 convolutions — which are
+          most of YOLOv8n's parameters — im2col is the identity and can be skipped entirely.</li>
+      <li><b>Upload, 20&nbsp;s.</b> X is re-uploaded per M-chunk; weights already are not. Worth
+          checking whether the chunking can be widened.</li>
+    </ol>
+
+    <div class="target">
+      <b>Target — Phase 2</b>
+      320&nbsp;px query under <strong>120&nbsp;s</strong>. That is a live demo that holds an
+      audience: ask a question, talk through the architecture, show the marked image.
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§5</span>Phase 3 — lock the demo and collect evidence</h2>
+  <p class="dek">Board access ends 27 August. Everything that needs hardware must be captured by then.</p>
+  <div class="body">
+    <ol class="steps">
+      <li><b>All 14 tasks, on the board, at the chosen canvas.</b> One image per task, terminal log
+          and marked image saved for each. This is the evidence base for every claim in the talk,
+          and we have never had it from hardware.</li>
+      <li><b>The paper's Figure 1 contrast, on hardware.</b> Same image, two prompts, two different
+          objects marked. It is the clearest 30 seconds in the whole presentation.</li>
+      <li><b>Cold-start rehearsal, timed.</b> Power cycle, network up, files transferred, first
+          query answered. Never measured, and it is the most likely thing to go wrong on stage.
+          The board's SSH host key regenerates every boot, so <code>./push</code> with
+          <code>StrictHostKeyChecking=no</code> is part of the drill.</li>
+      <li><b>Freeze.</b> Tag the working binary and model files. The Stage 3B bitstream and binary
+          stay untouched as the fallback — we are not rebuilding the bitstream at any point in this
+          plan, which is precisely why the risk is bounded.</li>
+    </ol>
+
+    <div class="target">
+      <b>Targets — Phase 3</b>
+      14 board logs + 14 marked images.<br>
+      Cold start measured end to end, with a written checklist that someone else could follow.<br>
+      A frozen, named build that we do not touch again.
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§6</span>Phase 4 — the presentation</h2>
+  <p class="dek">Fifteen minutes. It does not exist yet, and it is what you are actually judged on.</p>
+  <div class="body">
+    <p>
+      The technical work is only worth what the talk conveys. The narrative that the evidence now
+      supports, in order:
+    </p>
+    <ol class="steps">
+      <li><b>The problem.</b> Task-driven selection, the paper, why an edge device is the
+          interesting case. One slide.</li>
+      <li><b>The system.</b> SoC, accelerator, what runs where. Emphasise that the board takes an
+          ordinary JPEG and a plain-English prompt and needs nothing else.</li>
+      <li><b>The measurement that mattered.</b> Top-1 selection accuracy, the oracle ceiling, and
+          the attribution: detector 72 points, ranker 8. This is the intellectual core and nobody
+          else will have it.</li>
+      <li><b>What we found out about our own ranker.</b> 94.7% on clean boxes; 0.394 mAP on the
+          paper's own detections against their published 0.326.</li>
+      <li><b>The bottleneck nobody expected.</b> 93% system calls, the RTL read that revealed the
+          k0 loop was never necessary, and the measured result.</li>
+      <li><b>What we chose not to build.</b> The array-widening analysis and why the numbers said no.</li>
+      <li><b>Live demo.</b></li>
+      <li><b>Honest limits.</b> What is still lost, and what we would do with another month.</li>
+    </ol>
+    <p>
+      The Stage 3B report also needs its timings and accuracy figures replaced — it currently says
+      528.8&nbsp;s and 0.063&nbsp;mAP, both superseded. That is a paper exercise and can happen on
+      the 28th or in Bangalore.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§7</span>What could go wrong</h2>
+  <div class="body">
+    <div class="tw">
+      <table>
+        <caption>Risk register — the fallback is always a working system</caption>
+        <thead><tr><th>Risk</th><th>Detected by</th><th>Fallback</th></tr></thead>
+        <tbody>
+          <tr><td>Long descriptors do not accumulate correctly</td><td>Gate 0, today</td><td>Cap <code>--kdepth</code> at the largest K that passed; partial collapse still removes most calls</td></tr>
+          <tr><td>Y_DONE race at large K</td><td>Method B failing while C passes</td><td>Ship C — it clears and polls</td></tr>
+          <tr><td>Phase 1 changes any output</td><td>128 px board run vs today's log</td><td><code>--kdepth 1</code> restores current behaviour exactly</td></tr>
+          <tr><td>Board becomes unavailable early</td><td>—</td><td>Everything in Phase 2 and 4 is off-board; Phase 3 evidence is collected first for this reason</td></tr>
+          <tr><td>Demo too slow on the day</td><td>Phase 3 rehearsal</td><td>Drop to 192 px — already working, already timed, 0.286 top-1</td></tr>
+          <tr><td>Everything fails</td><td>—</td><td>The Stage 3B bitstream and binary are frozen and untouched throughout</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">
+      No step in this plan rebuilds the bitstream, modifies <code>Top.vhd</code>, the driver, or the
+      organiser TCL flow. The hardware we demonstrate on 1 September is the hardware already
+      implemented, timed and submitted.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <span>Team 43 — Silicon Syndicate</span>
+  <span>University of Moratuwa, Sri Lanka</span>
+  <span>Team 43 — Silicon Syndicate · University of Moratuwa</span>
+</footer>
+
+</div>

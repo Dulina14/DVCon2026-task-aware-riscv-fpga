@@ -1,0 +1,89 @@
+=== TEAM43 -- task-aware object selection, standalone on the board ===
+image : COCO_val2014_000000395344.jpg
+task  : "sit comfortably"
+imgsz : 256x256    rank-by: product    mode: accelerator
+build : Aug 26 2026 09:38:04   jpeg: integer islow IDCT + table colour
+kdepth : whole K per invocation
+silu   : expf
+fpcheck: 34800000 3efe65ea be54d74a   (host and board must match)
+regs   : 5 syscalls/tile (correct)
+weights: pre-packed cache
+ddr    : K/X windows 2 MB each, largest weight block 1179648 bytes
+format: JPEG, decoded on the board
+source: 640 x 480
+
+  yolo op 20/103
+  yolo op 40/103
+  yolo op 60/103
+  yolo op 80/103
+  yolo op 100/103
+
+--- DETECTED (10) ---
+  laptop           0.901
+  bed              0.864
+  remote           0.783
+  mouse            0.375
+  keyboard         0.250
+  mouse            0.198
+  chair            0.053
+  cell phone       0.039
+  remote           0.036
+  cell phone       0.026
+
+tokens: [CLS] task : sit comfortably [SEP] [PAD] [PAD]
+  minilm layer 1/6
+  minilm layer 2/6
+  minilm layer 3/6
+  minilm layer 4/6
+  minilm layer 5/6
+  minilm layer 6/6
+
+--- TASK-AWARE RANKING (minilm x yolo) ---
+  bed              yolo 0.864  minilm 0.95287  rank 0.82306   <== SELECTED
+  chair            yolo 0.053  minilm 0.98137  rank 0.05198
+  laptop           yolo 0.901  minilm 0.02041  rank 0.01839
+  mouse            yolo 0.375  minilm 0.00479  rank 0.00179
+  mouse            yolo 0.198  minilm 0.00479  rank 0.00095
+  remote           yolo 0.783  minilm 0.00073  rank 0.00057
+  keyboard         yolo 0.250  minilm 0.00129  rank 0.00032
+  cell phone       yolo 0.039  minilm 0.00127  rank 0.00005
+  ... 2 further candidates below rank 0.00005 not shown or drawn
+
+--- RESULT ---
+  SELECTED : bed   (rank 0.82306)
+  marked image written to ./ev_s256/task2.ppm
+
+--- WORK ---
+  detection   : 68432 invocations, 250.0 s
+  minilm      : 3001 invocations, 16.4 s  (head over 7 detected classes,
+                                          not all 80)
+  total       : 71433 invocations, 274.6 s
+  output tiles: 71433   (mean K-tiles per output tile 65.1)
+  if the k0 loop were streamed as one accumulation:
+     invocations 71433 -> 71433   (1.0x fewer)
+     syscalls    500031 -> 500031   (1.0x fewer)
+  GEMM loop 122.4 s | packing 43.5 s | upload 26.4 s | VEGA float 97.3 s
+  --- float breakdown (all of it inside VEGA float) ---
+    amax scan       :    5.91 s  over   5939200 elements  (0.99 us/elem)
+    quantise convert:   20.03 s  over   5939200 elements  (3.37 us/elem)
+    dequant + silu  :   64.21 s  over   4379648 elements  (14.66 us/elem, 4186112 through silu)
+    accounted       :   90.15 s of 97.30 s
+
+--- PACKING BREAKDOWN ---
+  detection  im2col      :    42.08 s  over      66 calls
+  detection  W tile copy :     1.35 s  over      63 calls, 10.6 MB  (7.9 MB/s)
+  minilm     activations :     0.11 s  over     182 calls
+  minilm     weights     :     1.32 s  over      38 calls, 10.7 MB  (8.12 MB/s)  [from cache]
+  cache hits             : 38 blocks, 10.7 MB copied
+  minilm     act-as-wgt  :     0.03 s  over     144 calls
+  ------------------------------------------------------------
+  detection subtotal     :    43.42 s
+  minilm    subtotal     :     1.45 s
+  sum vs g_pack_us       :    44.88 s vs 43.53 s   (W tile copy is extra, it was never counted before)
+
+--- JPEG DECODE ---
+  total                  :     4.95 s
+  huffman + dequant      :     2.49 s   (scan 4.16 s minus IDCT)
+  IDCT                   :     1.67 s   over 14400 blocks  (116 us/block)
+  YCbCr -> RGB           :     0.78 s   over 307200 pixels  (2.5 us/pixel)
+  unaccounted            :     0.01 s   (headers, allocation)

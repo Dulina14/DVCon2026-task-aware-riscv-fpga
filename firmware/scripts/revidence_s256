@@ -1,0 +1,44 @@
+#!/bin/sh
+# Phase 3 evidence, final build: YOLOv8s INT8 at 256 px, all fourteen prompts.
+#
+# Images re-picked from YOLOv8s detections -- the earlier set was chosen using
+# YOLOv8n and the two models do not fail on the same pictures. Task 9 keeps its
+# YOLOv8n pick because "open parcel" has no working example in the subset that
+# was scored for YOLOv8s; it scores 0.000 top-1 on both models, so treat it as
+# the honest failure case rather than hiding it.
+#
+# Aggregate to quote: top-1 0.627 over 359 test images. These fourteen are
+# working examples, not a random sample.
+#
+# ~275 s per task, so about 65 minutes. Leave it until ALL FOURTEEN DONE.
+cd /tmp/team43
+mkdir -p ev_s256
+run() {
+  T=$1; IMG=$2; PROMPT=$3
+  echo "=================================================================="
+  echo "task $T : $PROMPT"
+  echo "image  : $IMG"
+  date
+  ./team43_pipeline_s --image "$IMG" --task "$PROMPT" --imgsz 256 \
+      --yolo /tmp/team43/team43_yolo_s_int8.bin \
+      --packed /tmp/team43/team43_minilm_packed.bin \
+      --out ./ev_s256/task${T}.ppm 2>&1 | tee ./ev_s256/task${T}.log
+}
+run  1 "COCO_val2014_000000262353.jpg" "step on something to reach top of a shelf"
+run  2 "COCO_val2014_000000395344.jpg" "sit comfortably"
+run  3 "COCO_val2014_000000132329.jpg" "place flowers"
+run  4 "COCO_val2014_000000000962.jpg" "get potatoes out of fire"
+run  5 "COCO_val2014_000000398604.jpg" "water plant"
+run  6 "COCO_val2014_000000402528.jpg" "get lemon out of tea"
+run  7 "COCO_val2014_000000262565.jpg" "dig hole"
+run  8 "COCO_val2014_000000158956.jpg" "open bottle of beer"
+run  9 "COCO_val2014_000000272880.jpg" "open parcel"
+run 10 "COCO_val2014_000000146489.jpg" "serve wine"
+run 11 "COCO_val2014_000000393682.jpg" "pour sugar"
+run 12 "COCO_val2014_000000402528.jpg" "smear butter"
+run 13 "COCO_val2014_000000012860.jpg" "extinguish fire"
+run 14 "COCO_val2014_000000526425.jpg" "pound carpet"
+echo "=================================================================="
+echo "ALL FOURTEEN DONE"
+date
+ls -l ./ev_s256

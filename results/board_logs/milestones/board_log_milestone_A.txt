@@ -1,0 +1,34 @@
+TEAM 43 -- MILESTONE A on hardware, 16 August 2026
+Genesys 2 / VEGA AS1061, /dev/accelerator_test
+
+/tmp/team43/team43_minilm_a --task "serve wine" --mode both
+
+[tok] ids  [101, 4708, 1024, 3710, 4511, 102, 0, 0]
+[tok] reference check ("task: serve wine"): MATCH
+[emb] X[8,384] built. activation scale = 0.0545946426
+[gemm] X[8,384] * Wq[384,384] + bq
+[gemm] expected invocations = 2304
+
+--- mode: legacy ---
+invocations       : 2304
+wall time         : 8296400 us (8.296 s)
+per invocation    : 3600.9 us
+command-to-DONE   : 235.7 us avg
+software overhead : 93.5 %
+syscalls          : 43776 (19.0 per invocation)
+INT32 match       : 3072/3072 EXACT
+
+--- mode: hoist ---
+[hoist] 11 constant registers written once (11 syscalls)
+invocations       : 2304
+wall time         : 6046400 us (6.046 s)
+per invocation    : 2624.3 us
+command-to-DONE   : 232.7 us avg
+software overhead : 91.1 %
+syscalls          : 18443 (8.0 per invocation)
+INT32 match       : 3072/3072 EXACT
+
+quantized-vs-FP32  : max err 0.124607472   mean err 0.023065112
+
+--- REGISTER HOIST RESULT ---
+speedup: 1.37x   results identical: yes

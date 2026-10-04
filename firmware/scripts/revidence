@@ -1,0 +1,41 @@
+#!/bin/sh
+# Phase 3 evidence: all fourteen COCO-Tasks prompts, on the board, at 320 px.
+#
+# One image per task, each chosen on the host because the 320 px pipeline marks
+# a genuinely preferred object there -- these are working examples, not a random
+# sample. The honest aggregate over 717 test images is top-1 0.532, and that is
+# the number to quote; this set exists to show the system working, and every
+# log it writes is real board output.
+#
+# About 200 s per task, so roughly 47 minutes unattended. Run it once and do
+# not touch the terminal until it prints ALL FOURTEEN DONE.
+cd /tmp/team43
+mkdir -p evidence
+run() {
+  T=$1; IMG=$2; PROMPT=$3
+  echo "=================================================================="
+  echo "task $T : $PROMPT"
+  echo "image  : $IMG"
+  date
+  ./team43_pipeline --image "$IMG" --task "$PROMPT" --imgsz 320 \
+      --packed /tmp/team43/team43_minilm_packed.bin \
+      --out ./evidence/task${T}.ppm 2>&1 | tee ./evidence/task${T}.log
+}
+run  1 "COCO_val2014_000000262605.jpg" "step on something to reach top of a shelf"
+run  2 "COCO_val2014_000000393836.jpg" "sit comfortably"
+run  3 "COCO_val2014_000000132329.jpg" "place flowers"
+run  4 "COCO_val2014_000000394608.jpg" "get potatoes out of fire"
+run  5 "COCO_val2014_000000528200.jpg" "water plant"
+run  6 "COCO_val2014_000000132415.jpg" "get lemon out of tea"
+run  7 "COCO_val2014_000000265789.jpg" "dig hole"
+run  8 "COCO_val2014_000000001647.jpg" "open bottle of beer"
+run  9 "COCO_val2014_000000272880.jpg" "open parcel"
+run 10 "COCO_val2014_000000277015.jpg" "serve wine"
+run 11 "COCO_val2014_000000393682.jpg" "pour sugar"
+run 12 "COCO_val2014_000000402528.jpg" "smear butter"
+run 13 "COCO_val2014_000000012860.jpg" "extinguish fire"
+run 14 "COCO_val2014_000000526425.jpg" "pound carpet"
+echo "=================================================================="
+echo "ALL FOURTEEN DONE"
+date
+ls -l ./evidence

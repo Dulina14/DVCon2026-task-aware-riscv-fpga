@@ -1,0 +1,244 @@
+% ============================================================================
+% Simulation Results / Waveform Analysis -- paste into the report body.
+% Requires in preamble:
+%   \usepackage{booktabs}
+%   \usepackage{amsmath}
+%   \usepackage{graphicx}
+%   \usepackage{listings}
+%   \usepackage{xcolor}
+%   \lstset{basicstyle=\ttfamily\footnotesize,frame=single,
+%           columns=fullflexible,keepspaces=true}
+% ============================================================================
+
+\section{Simulation Results}
+
+The complete accelerator was simulated in Vivado XSim with the full-system
+testbench \texttt{tb\_top\_axi\_int}, which models the processor on the
+AXI4-Lite interface and a DDR memory on the AXI4-master interface. The clock
+period is \SI{10}{\nano\second} (so one cycle equals \SI{10}{\nano\second}) and
+\texttt{rstn} is active-low. The run is fully self-checking and ends with
+\texttt{SELF-CHECK: PASS} ($Y_\text{dut}=Y_\text{ref}=[29\;42;\;73\;90]$).
+
+The transcript establishes the following timeline, which divides the waveform
+into seven phases:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Time} & \textbf{Event} \\
+\midrule
+\SI{145}{ns}  & CPU begins programming the accelerator over AXI-Lite \\
+\SI{585}{ns}  & CPU writes START \\
+\SI{625}{ns}  & CPU begins polling DONE \\
+\SI{1105}{ns} & S2MM\_DONE asserts (after 12 polls); result verified \\
+\SI{1405}{ns} & \texttt{\$finish} \\
+\bottomrule
+\end{tabular}
+\caption{Simulation timeline (from \texttt{simulate.log}).}
+\label{tab:timeline}
+\end{table}
+
+% --- Drop the captured waveform screenshot here ---
+\begin{figure}[h]
+\centering
+% \includegraphics[width=\linewidth]{waveform_full.png}
+\caption{Full-system simulation waveform of \texttt{top\_axi\_int}, showing the
+AXI-Lite configuration writes, the AXI-master read bursts, the systolic-array
+activity, the AXI-master write-back, and the DONE handshake.}
+\label{fig:wave}
+\end{figure}
+
+\subsection{Reading the Waveform: the AXI Handshake}
+
+Every interface in the design is AXI, and an AXI transfer occurs on exactly one
+event: the rising clock edge at which a \texttt{VALID} signal and its paired
+\texttt{READY} are both high. Each transaction in the waveform is therefore
+located by finding that overlap; the data value of interest rides on the same
+edge. Three signal groups carry the whole story: \texttt{s\_axil\_*} (the CPU
+configuring the registers), \texttt{m\_axi\_*} (the accelerator reading and
+writing memory on its own), and the internal compute signals
+\texttt{s\_valid}/\texttt{s\_ready}/\texttt{m\_valid}/\texttt{m\_last} (the
+systolic array operating).
+
+\subsection{Phase 0 --- Reset and Preload (0--\SI{145}{ns})}
+
+During reset \texttt{rstn} is low and all \texttt{*valid} lines are zero. The
+input matrices are loaded into the DDR model by a back-door memory write in the
+testbench rather than over the bus, so no AXI activity is visible in this
+interval; the testbench arrays \texttt{x}, \texttt{k}, \texttt{a} already hold
+the test values and the software reference $Y_\text{ref}=[29\;42;\;73\;90]$ is
+computed before the design starts.
+
+\subsection{Phase 1 --- AXI-Lite Configuration (\SI{145}{}--\SI{585}{ns})}
+
+In this interval the waveform shows eleven AXI-Lite write bursts on
+\texttt{s\_axil\_*}: each is an address/data handshake
+(\texttt{awvalid}+\texttt{wvalid} accepted, followed by \texttt{bvalid}),
+taking about four cycles, so the eleven writes span roughly \SI{440}{ns}. The
+register index targeted by each write is
+$(\texttt{s\_axil\_awaddr}-\texttt{0xB000\_0000})\gg 2$, and
+\texttt{s\_axil\_wstrb} is \texttt{F} (all four bytes valid) throughout. The
+sequence programs the source/destination addresses and byte-lengths for the
+three input streams and the output:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{clllll}
+\toprule
+\# & \texttt{awaddr} & idx & Register & \texttt{wdata} & Meaning \\
+\midrule
+1  & B0000008 & 2  & MM2S\_0\_ADDR  & 00000000 & K source addr \\
+2  & B000000C & 3  & MM2S\_0\_BYTES & 00000004 & K length = 4\,B \\
+3  & B0000010 & 4  & MM2S\_0\_TUSER & 00000000 & (unused) \\
+4  & B0000018 & 6  & MM2S\_1\_ADDR  & 00000100 & X source addr \\
+5  & B000001C & 7  & MM2S\_1\_BYTES & 00000004 & X length = 4\,B \\
+6  & B0000020 & 8  & MM2S\_1\_TUSER & 00000000 & --- \\
+7  & B0000028 & 10 & MM2S\_2\_ADDR  & 00000200 & bias source addr \\
+8  & B000002C & 11 & MM2S\_2\_BYTES & 00000010 & bias length = 16\,B \\
+9  & B0000030 & 12 & MM2S\_2\_TUSER & 00000000 & --- \\
+10 & B0000038 & 14 & S2MM\_ADDR     & 00000300 & Y dest addr \\
+11 & B000003C & 15 & S2MM\_BYTES    & 00000010 & Y length = 16\,B \\
+\bottomrule
+\end{tabular}
+\caption{The eleven configuration writes visible on the AXI-Lite slave.}
+\label{tab:cfg}
+\end{table}
+
+Adding \texttt{DUT/CONTROLLER/cfg} to the wave shows each register latching its
+value as the corresponding write completes.
+
+\subsection{Phase 2 --- START (\SI{585}{ns})}
+
+A single AXI-Lite write to index~0 (\texttt{s\_axil\_awaddr = B0000000},
+\texttt{wdata = 00000001}) launches the engines. Inside \texttt{dma\_controller}
+this issues all four DMA descriptors on one cycle and then self-clears, so the
+internal signal \texttt{DUT/CONTROLLER/cfg[0]} appears as a single-cycle pulse
+--- a convenient marker for the instant computation begins. From this point the
+CPU only polls; the accelerator proceeds autonomously.
+
+\subsection{Phase 3 --- AXI-Master Reads: Operand Fetch (from $\approx$\SI{625}{ns})}
+
+The \texttt{m\_axi\_*} signals now become active as the accelerator masters the
+bus to fetch operands from the DDR model. Because the design parameter
+\texttt{AXI\_MAX\_BURST\_LEN} is~1, every transfer is a single-beat burst, which
+the constant qualifier values confirm: \texttt{m\_axi\_arlen=00} (one beat),
+\texttt{m\_axi\_arsize=2} ($2^2 = 4$ bytes/beat), \texttt{m\_axi\_arburst=1}
+(INCR), and \texttt{m\_axi\_rresp=0} (OKAY). Six read transactions appear on
+\texttt{m\_axi\_araddr}:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lllll}
+\toprule
+Source & Region & Bytes & Addresses & \texttt{rdata} \\
+\midrule
+MM2S\_0 (K)    & 0x000 & 4  & 0x000 & 07080506 \\
+MM2S\_1 (X)    & 0x100 & 4  & 0x100 & 04020301 \\
+MM2S\_2 (bias) & 0x200 & 16 & 0x200,\,0x204,\,0x208,\,0x20C & 0A,\,1E,\,14,\,28 \\
+\bottomrule
+\end{tabular}
+\caption{The six read beats issued on the shared AXI master.}
+\label{tab:reads}
+\end{table}
+
+The order in which these beats appear on the bus is determined by the
+\texttt{axi\_crossbar} arbiter and is therefore timing-dependent; the
+\texttt{m\_axi\_arid} field identifies which engine owns each beat (the crossbar
+widens the 4-bit source IDs to the 6-bit master ID). The fetched 32-bit words do
+not enter the array directly: the \texttt{alex\_axis\_adapter\_any} blocks
+down-size the K and X words to 16-bit stream beats (two beats each, equal to the
+contraction depth $T$) and up-size the bias to 64-bit.
+
+\subsection{Phase 4 --- Systolic-Array Compute (overlapping the reads)}
+
+The compute signals show the array operating:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\toprule
+Signal & Observation \\
+\midrule
+\texttt{s\_valid} \& \texttt{s\_ready} & two beats high $=$ the $T{=}2$ operand pairs entering ($\texttt{s\_valid}=\texttt{s\_k\_tvalid}\,\&\,\texttt{s\_x\_tvalid}$) \\
+\texttt{m\_valid} \& \texttt{m\_ready} & result beats leaving the array ($C{=}2$ columns) \\
+\texttt{m\_last} & high on the final column \\
+\bottomrule
+\end{tabular}
+\caption{Internal systolic-array activity.}
+\label{tab:compute}
+\end{table}
+
+The array accumulates $Y[r][c]=\sum_t x[r][t]\cdot k[t][c]$ over the two operand
+beats and then streams the $2\times2$ result out over two beats. Immediately
+after the array, \texttt{top\_axi\_int} adds the bias
+($m\_y = m\_data + a$), so the data delivered to the write DMA is the final
+$Y = X\cdot K + \text{bias}$.
+
+\subsection{Phase 5 --- AXI-Master Writes: Result Write-Back (before \SI{1105}{ns})}
+
+The S2MM engine drives the \texttt{m\_axi} write channels. The 16-byte result is
+written as four single-beat bursts (\texttt{m\_axi\_awlen=00},
+\texttt{m\_axi\_awsize=2}, \texttt{m\_axi\_awburst=1}, \texttt{m\_axi\_wstrb=F},
+\texttt{m\_axi\_wlast=1} per beat, \texttt{m\_axi\_bresp=0}). The four data words
+on \texttt{m\_axi\_wdata}, in address order, are the result matrix:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+\toprule
+\texttt{awaddr} & \texttt{wdata} & dec & Element \\
+\midrule
+0x300 & 0000001D & 29 & $Y[0][0]$ \\
+0x304 & 00000049 & 73 & $Y[1][0]$ \\
+0x308 & 0000002A & 42 & $Y[0][1]$ \\
+0x30C & 0000005A & 90 & $Y[1][1]$ \\
+\bottomrule
+\end{tabular}
+\caption{Result words written back to the DDR model.}
+\label{tab:writes}
+\end{table}
+
+Each 64-bit output beat per column is \texttt{\{row1,\,row0\}}, down-sized to two
+32-bit words (low word $=$ row\,0, high word $=$ row\,1).
+
+\subsection{Phase 6 --- DONE Polling (to \SI{1105}{ns})}
+
+Concurrently, the CPU model polls the \texttt{S2MM\_DONE} register (index~13) by
+issuing AXI-Lite reads at \texttt{s\_axil\_araddr = B0000034}. Twelve read bursts
+are visible: the first eleven return \texttt{0} and the twelfth returns \texttt{1}
+at \SI{1105}{ns}, when the S2MM engine reports completion with no error and the
+controller sets \texttt{cfg[A\_S2MM\_DONE]}. This $0\rightarrow1$ transition on
+\texttt{s\_axil\_rdata} is the definitive ``computation complete'' event.
+
+\subsection{Phase 7 --- Read-Back and Self-Check (\SI{1105}{}--\SI{1405}{ns})}
+
+The testbench back-door-reads $Y$ from the DDR model (the variable
+\texttt{y\_word} changes from \texttt{DEADBEEF} to \texttt{29,\,73,\,42,\,90}) and
+prints the result table. There is no bus activity here; the simulation finishes
+with \texttt{\$finish} at \SI{1405}{ns}.
+
+\subsection{Key Results}
+
+\begin{itemize}
+  \item \textbf{Configuration latency:} $\approx$\SI{440}{ns} (eleven AXI-Lite
+        writes) --- a one-time CPU setup cost.
+  \item \textbf{Compute + DMA latency:} START$\rightarrow$DONE $=$
+        585$\rightarrow$\SI{1105}{ns} $=$ \SI{520}{ns} $=$ 52 clock cycles for
+        the complete $2\times2\times2$ GEMM-with-bias, including all DDR traffic.
+  \item \textbf{Bus traffic:} 6 read beats + 4 write beats $=$ 10 single-beat
+        bursts, all arbitrated onto one shared AXI4 master by
+        \texttt{axi\_crossbar}.
+  \item \textbf{Functional proof:} $Y_\text{dut}=[29\;42;\;73\;90]$ matches the
+        software reference exactly, verifying the complete chain
+        (AXI-Lite config $\rightarrow$ AXI-master read $\rightarrow$ systolic
+        array $\rightarrow$ bias add $\rightarrow$ AXI-master write
+        $\rightarrow$ DONE) end-to-end.
+\end{itemize}
+
+\noindent At this $2\times2$ verification size the per-transaction handshake and
+DMA overhead dominate, so the array's throughput advantage is not yet visible;
+the purpose of this simulation is to demonstrate correct, autonomous AXI
+integration and the full data flow, which it does. Larger array dimensions and
+contraction depths are where the speed-up emerges (see the acceleration
+analysis).

@@ -1,0 +1,4 @@
+stage3a_synthesis
+date    : 2026-08-05T09:03:01.0226818+05:30
+vivado  : vivado v2025.2 (64-bit)
+rom_mif : 1c9328faf2695e50b34adfad760e4db736f8cec8cec3f25e4468f93132aba03b

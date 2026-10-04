@@ -1,0 +1,14 @@
+#!/bin/sh
+# The ranking-rule comparison, on hardware, same image and canvas.
+# Host measurement: minilm-alone marks a box whose median detector confidence
+# is 0.079; product ranking marks one at 0.230. This shows it on the board.
+cd /tmp/team43
+echo "=== product (new default) ==="
+./team43_pipeline --image demo_image.jpg --task "water plant" --imgsz 128 \
+    --packed /tmp/team43/team43_minilm_packed.bin \
+    --out ./rank_product.ppm 2>&1 | tee log_rank_product.txt
+echo "=== minilm alone (old default) ==="
+./team43_pipeline --image demo_image.jpg --task "water plant" --imgsz 128 \
+    --rank-by minilm --draw-top 0 \
+    --packed /tmp/team43/team43_minilm_packed.bin \
+    --out ./rank_minilm.ppm 2>&1 | tee log_rank_minilm.txt

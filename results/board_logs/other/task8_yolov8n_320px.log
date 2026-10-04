@@ -1,0 +1,73 @@
+=== TEAM43 -- task-aware object selection, standalone on the board ===
+image : COCO_val2014_000000001647.jpg
+task  : "open bottle of beer"
+imgsz : 320x320    rank-by: product    mode: accelerator
+build : Aug 25 2026 03:39:23   jpeg: integer islow IDCT + table colour
+kdepth : whole K per invocation
+silu   : sigmoid table
+fpcheck: 34800000 3efe65e9 be54d74a   (host and board must match)
+regs   : 5 syscalls/tile (correct)
+weights: pre-packed cache
+format: JPEG, decoded on the board
+source: 480 x 304
+
+  yolo op 20/103
+  yolo op 40/103
+  yolo op 60/103
+  yolo op 80/103
+  yolo op 100/103
+
+--- DETECTED (2) ---
+  scissors         0.957
+  person           0.046
+
+tokens: [CLS] task : open bottle of beer [SEP]
+  minilm layer 1/6
+  minilm layer 2/6
+  minilm layer 3/6
+  minilm layer 4/6
+  minilm layer 5/6
+  minilm layer 6/6
+
+--- TASK-AWARE RANKING (minilm x yolo) ---
+  scissors         yolo 0.957  minilm 0.94885  rank 0.90776   <== SELECTED
+  person           yolo 0.046  minilm 0.00187  rank 0.00009
+
+--- RESULT ---
+  SELECTED : scissors   (rank 0.90776)
+  marked image written to ./task8.ppm
+
+--- WORK ---
+  detection   : 59146 invocations, 193.3 s
+  minilm      : 3001 invocations, 16.4 s  (head over 2 detected classes,
+                                          not all 80)
+  total       : 62147 invocations, 215.8 s
+  output tiles: 62147   (mean K-tiles per output tile 37.5)
+  if the k0 loop were streamed as one accumulation:
+     invocations 62147 -> 62147   (1.0x fewer)
+     syscalls    435029 -> 435029   (1.0x fewer)
+  GEMM loop 92.6 s | packing 36.8 s | upload 20.2 s | VEGA float 76.2 s
+  --- float breakdown (all of it inside VEGA float) ---
+    amax scan       :    4.98 s  over   4995200 elements  (1.00 us/elem)
+    quantise convert:    8.21 s  over   4995200 elements  (1.64 us/elem)
+    dequant + silu  :   57.85 s  over   3774400 elements  (15.33 us/elem, 3472000 through silu)
+    accounted       :   71.04 s of 76.20 s
+
+--- PACKING BREAKDOWN ---
+  detection  im2col      :    35.33 s  over      75 calls
+  detection  W tile copy :     0.38 s  over      63 calls, 3.0 MB  (7.8 MB/s)
+  minilm     activations :     0.10 s  over     182 calls
+  minilm     weights     :     1.33 s  over      38 calls, 10.7 MB  (8.06 MB/s)  [from cache]
+  cache hits             : 38 blocks, 10.7 MB copied
+  minilm     act-as-wgt  :     0.03 s  over     144 calls
+  ------------------------------------------------------------
+  detection subtotal     :    35.72 s
+  minilm    subtotal     :     1.46 s
+  sum vs g_pack_us       :    37.17 s vs 36.79 s   (W tile copy is extra, it was never counted before)
+
+--- JPEG DECODE ---
+  total                  :     2.32 s
+  huffman + dequant      :     1.20 s   (scan 1.94 s minus IDCT)
+  IDCT                   :     0.74 s   over 6840 blocks  (109 us/block)
+  YCbCr -> RGB           :     0.37 s   over 145920 pixels  (2.5 us/pixel)
+  unaccounted            :     0.01 s   (headers, allocation)

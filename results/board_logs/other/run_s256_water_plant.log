@@ -1,0 +1,132 @@
+=== TEAM43 -- task-aware object selection, standalone on the board ===
+image : ./COCO_val2014_000000419974.jpg
+task  : "water plant"
+imgsz : 256x256    rank-by: product    mode: accelerator
+build : Aug 26 2026 09:38:04   jpeg: integer islow IDCT + table colour
+kdepth : whole K per invocation
+silu   : expf
+fpcheck: 34800000 3efe65ea be54d74a   (host and board must match)
+regs   : 5 syscalls/tile (correct)
+weights: pre-packed cache
+ddr    : K/X windows 2 MB each, largest weight block 1179648 bytes
+format: JPEG, decoded on the board
+source: 426 x 640
+
+  yolo op 20/103
+  yolo op 40/103
+  yolo op 60/103
+  yolo op 80/103
+  yolo op 100/103
+
+--- DETECTED (53) ---
+  person           0.881
+  dining table     0.869
+  dog              0.638
+  couch            0.569
+  dining table     0.274
+  bowl             0.268
+  bowl             0.259
+  person           0.201
+  bowl             0.194
+  knife            0.175
+  chair            0.130
+  cup              0.126
+  cake             0.096
+  cup              0.093
+  wine glass       0.088
+  dining table     0.082
+  person           0.081
+  potted plant     0.079
+  bowl             0.073
+  wine glass       0.071
+  bowl             0.070
+  pizza            0.064
+  person           0.054
+  wine glass       0.046
+  sandwich         0.042
+  chair            0.042
+  chair            0.041
+  person           0.039
+  chair            0.038
+  bowl             0.037
+  dog              0.035
+  chair            0.035
+  potted plant     0.034
+  dining table     0.032
+  dining table     0.031
+  dog              0.030
+  knife            0.029
+  person           0.029
+  dining table     0.028
+  chair            0.027
+  chair            0.027
+  dining table     0.026
+  chair            0.025
+  bottle           0.024
+  bowl             0.024
+  bowl             0.024
+  dining table     0.023
+  bottle           0.022
+  handbag          0.022
+  dining table     0.022
+  wine glass       0.021
+  chair            0.021
+  pizza            0.021
+
+tokens: [CLS] task : water plant [SEP] [PAD] [PAD]
+  minilm layer 1/6
+  minilm layer 2/6
+  minilm layer 3/6
+  minilm layer 4/6
+  minilm layer 5/6
+  minilm layer 6/6
+
+--- TASK-AWARE RANKING (minilm x yolo) ---
+  bowl             yolo 0.268  minilm 0.89964  rank 0.24086   <== SELECTED
+  bowl             yolo 0.259  minilm 0.89964  rank 0.23275
+  bowl             yolo 0.194  minilm 0.89964  rank 0.17453
+  cup              yolo 0.126  minilm 0.93536  rank 0.11829
+  cup              yolo 0.093  minilm 0.93536  rank 0.08742
+  wine glass       yolo 0.088  minilm 0.90303  rank 0.07912
+  bowl             yolo 0.073  minilm 0.89964  rank 0.06564
+  wine glass       yolo 0.071  minilm 0.90303  rank 0.06424
+  ... 45 further candidates below rank 0.06424 not shown or drawn
+
+--- RESULT ---
+  SELECTED : bowl   (rank 0.24086)
+  marked image written to ./result_s256.ppm
+
+--- WORK ---
+  detection   : 68432 invocations, 250.4 s
+  minilm      : 3050 invocations, 17.0 s  (head over 15 detected classes,
+                                          not all 80)
+  total       : 71482 invocations, 274.9 s
+  output tiles: 71482   (mean K-tiles per output tile 65.2)
+  if the k0 loop were streamed as one accumulation:
+     invocations 71482 -> 71482   (1.0x fewer)
+     syscalls    500374 -> 500374   (1.0x fewer)
+  GEMM loop 123.0 s | packing 43.5 s | upload 26.5 s | VEGA float 96.7 s
+  --- float breakdown (all of it inside VEGA float) ---
+    amax scan       :    5.92 s  over   5939200 elements  (1.00 us/elem)
+    quantise convert:   20.05 s  over   5939200 elements  (3.38 us/elem)
+    dequant + silu  :   64.28 s  over   4379648 elements  (14.68 us/elem, 4186112 through silu)
+    accounted       :   90.25 s of 96.68 s
+
+--- PACKING BREAKDOWN ---
+  detection  im2col      :    42.03 s  over      66 calls
+  detection  W tile copy :     1.34 s  over      63 calls, 10.6 MB  (7.9 MB/s)
+  minilm     activations :     0.11 s  over     182 calls
+  minilm     weights     :     1.31 s  over      38 calls, 10.7 MB  (8.14 MB/s)  [from cache]
+  cache hits             : 38 blocks, 10.7 MB copied
+  minilm     act-as-wgt  :     0.03 s  over     144 calls
+  ------------------------------------------------------------
+  detection subtotal     :    43.38 s
+  minilm    subtotal     :     1.45 s
+  sum vs g_pack_us       :    44.83 s vs 43.49 s   (W tile copy is extra, it was never counted before)
+
+--- JPEG DECODE ---
+  total                  :     4.48 s
+  huffman + dequant      :     2.28 s   (scan 3.77 s minus IDCT)
+  IDCT                   :     1.49 s   over 12960 blocks  (115 us/block)
+  YCbCr -> RGB           :     0.69 s   over 272640 pixels  (2.5 us/pixel)
+  unaccounted            :     0.01 s   (headers, allocation)

@@ -1,0 +1,38 @@
+# build outputs
+firmware/build/
+build/
+*.o
+pipeline_x86
+*.ppm
+!test_data/**/*.ppm
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# large weights and datasets (not tracked)
+*.pt
+*.pth
+*.onnx
+datasets/
+coco/
+derived/
+*.jsonl
+
+# vivado / simulation scratch
+.Xil/
+*.jou
+vivado*.log
+*.str
+*.wdb
+xsim.dir/
+VIVADO_PROJECT/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

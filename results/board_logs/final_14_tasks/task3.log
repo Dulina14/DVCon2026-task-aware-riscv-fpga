@@ -1,0 +1,89 @@
+=== TEAM43 -- task-aware object selection, standalone on the board ===
+image : COCO_val2014_000000132329.jpg
+task  : "place flowers"
+imgsz : 256x256    rank-by: product    mode: accelerator
+build : Aug 26 2026 09:38:04   jpeg: integer islow IDCT + table colour
+kdepth : whole K per invocation
+silu   : expf
+fpcheck: 34800000 3efe65ea be54d74a   (host and board must match)
+regs   : 5 syscalls/tile (correct)
+weights: pre-packed cache
+ddr    : K/X windows 2 MB each, largest weight block 1179648 bytes
+format: JPEG, decoded on the board
+source: 426 x 640
+
+  yolo op 20/103
+  yolo op 40/103
+  yolo op 60/103
+  yolo op 80/103
+  yolo op 100/103
+
+--- DETECTED (10) ---
+  bottle           0.788
+  refrigerator     0.769
+  bottle           0.763
+  bottle           0.755
+  bottle           0.748
+  bottle           0.073
+  bottle           0.064
+  chair            0.060
+  refrigerator     0.024
+  bottle           0.021
+
+tokens: [CLS] task : place flowers [SEP] [PAD] [PAD]
+  minilm layer 1/6
+  minilm layer 2/6
+  minilm layer 3/6
+  minilm layer 4/6
+  minilm layer 5/6
+  minilm layer 6/6
+
+--- TASK-AWARE RANKING (minilm x yolo) ---
+  bottle           yolo 0.788  minilm 0.93346  rank 0.73550   <== SELECTED
+  bottle           yolo 0.763  minilm 0.93346  rank 0.71234
+  bottle           yolo 0.755  minilm 0.93346  rank 0.70504
+  bottle           yolo 0.748  minilm 0.93346  rank 0.69789
+  bottle           yolo 0.073  minilm 0.93346  rank 0.06783
+  bottle           yolo 0.064  minilm 0.93346  rank 0.05977
+  bottle           yolo 0.021  minilm 0.93346  rank 0.01939
+  refrigerator     yolo 0.769  minilm 0.00047  rank 0.00036
+  ... 2 further candidates below rank 0.00036 not shown or drawn
+
+--- RESULT ---
+  SELECTED : bottle   (rank 0.73550)
+  marked image written to ./ev_s256/task3.ppm
+
+--- WORK ---
+  detection   : 68432 invocations, 250.1 s
+  minilm      : 3001 invocations, 16.5 s  (head over 3 detected classes,
+                                          not all 80)
+  total       : 71433 invocations, 273.2 s
+  output tiles: 71433   (mean K-tiles per output tile 65.1)
+  if the k0 loop were streamed as one accumulation:
+     invocations 71433 -> 71433   (1.0x fewer)
+     syscalls    500031 -> 500031   (1.0x fewer)
+  GEMM loop 122.7 s | packing 43.5 s | upload 26.8 s | VEGA float 95.8 s
+  --- float breakdown (all of it inside VEGA float) ---
+    amax scan       :    5.91 s  over   5939200 elements  (1.00 us/elem)
+    quantise convert:   20.03 s  over   5939200 elements  (3.37 us/elem)
+    dequant + silu  :   64.28 s  over   4379648 elements  (14.68 us/elem, 4186112 through silu)
+    accounted       :   90.22 s of 95.77 s
+
+--- PACKING BREAKDOWN ---
+  detection  im2col      :    42.06 s  over      66 calls
+  detection  W tile copy :     1.34 s  over      63 calls, 10.6 MB  (7.9 MB/s)
+  minilm     activations :     0.11 s  over     182 calls
+  minilm     weights     :     1.31 s  over      38 calls, 10.7 MB  (8.16 MB/s)  [from cache]
+  cache hits             : 38 blocks, 10.7 MB copied
+  minilm     act-as-wgt  :     0.03 s  over     144 calls
+  ------------------------------------------------------------
+  detection subtotal     :    43.40 s
+  minilm    subtotal     :     1.45 s
+  sum vs g_pack_us       :    44.85 s vs 43.50 s   (W tile copy is extra, it was never counted before)
+
+--- JPEG DECODE ---
+  total                  :     3.61 s
+  huffman + dequant      :     1.54 s   (scan 2.92 s minus IDCT)
+  IDCT                   :     1.38 s   over 12960 blocks  (107 us/block)
+  YCbCr -> RGB           :     0.68 s   over 272640 pixels  (2.5 us/pixel)
+  unaccounted            :     0.01 s   (headers, allocation)

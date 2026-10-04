@@ -1,0 +1,28 @@
+TEAM 43 -- DRIVER MICRO-BENCHMARK on hardware, 16 August 2026
+/tmp/team43/team43_probe
+
+1. DRIVER PRIMITIVE COST
+   lseek()                           25.3 us   (syscall floor, no device work)
+   pwrite 1 word  (register)         65.3 us
+   pread  1 word  (register)         62.1 us
+   pwrite 16 words (64 B)  -> K     188.8 us
+   pwrite 16 words (64 B)  -> X     184.0 us
+   pread  16 words (64 B)  <- K     186.7 us
+   pwrite 64 words (256 B) -> BIAS  267.5 us
+   pread  64 words (256 B) <- Y     274.7 us
+
+2. TRANSFER COST vs SIZE (X window)
+     words      write us     read us  write us/word
+         1         162.7       662.7         162.67
+         4         154.4       159.2          38.60
+        16         180.8       187.7          11.30
+        64         259.5       271.5           4.05
+       256         561.9       610.1           2.19
+
+   => cost is per CALL, not per byte.
+
+4. EXPERIMENTS
+   E1 operands persist in DDR between invocations        PASS
+   E2 BIAS aliased onto the Y window accumulates in DDR   PASS
+   E3 three chained tiles correct without START clears    PASS
+      (but only because separated by ~270 us of traffic)

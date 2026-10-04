@@ -1,0 +1,87 @@
+=== TEAM43 -- task-aware object selection, standalone on the board ===
+image : COCO_val2014_000000402528.jpg
+task  : "get lemon out of tea"
+imgsz : 256x256    rank-by: product    mode: accelerator
+build : Aug 26 2026 09:38:04   jpeg: integer islow IDCT + table colour
+kdepth : whole K per invocation
+silu   : expf
+fpcheck: 34800000 3efe65ea be54d74a   (host and board must match)
+regs   : 5 syscalls/tile (correct)
+weights: pre-packed cache
+ddr    : K/X windows 2 MB each, largest weight block 1179648 bytes
+format: JPEG, decoded on the board
+source: 640 x 426
+
+  yolo op 20/103
+  yolo op 40/103
+  yolo op 60/103
+  yolo op 80/103
+  yolo op 100/103
+[warn] prompt truncated to 6 tokens
+
+--- DETECTED (8) ---
+  fork             0.912
+  dining table     0.715
+  bottle           0.579
+  sandwich         0.556
+  bowl             0.170
+  sandwich         0.087
+  spoon            0.069
+  fork             0.046
+
+tokens: [CLS] task : get lemon out of [SEP]
+  minilm layer 1/6
+  minilm layer 2/6
+  minilm layer 3/6
+  minilm layer 4/6
+  minilm layer 5/6
+  minilm layer 6/6
+
+--- TASK-AWARE RANKING (minilm x yolo) ---
+  fork             yolo 0.912  minilm 0.97971  rank 0.89345   <== SELECTED
+  bottle           yolo 0.579  minilm 0.75049  rank 0.43467
+  spoon            yolo 0.069  minilm 0.97298  rank 0.06696
+  fork             yolo 0.046  minilm 0.97971  rank 0.04480
+  bowl             yolo 0.170  minilm 0.18105  rank 0.03077
+  dining table     yolo 0.715  minilm 0.00221  rank 0.00158
+  sandwich         yolo 0.556  minilm 0.00028  rank 0.00016
+  sandwich         yolo 0.087  minilm 0.00028  rank 0.00002
+
+--- RESULT ---
+  SELECTED : fork   (rank 0.89345)
+  marked image written to ./ev_s256/task6.ppm
+
+--- WORK ---
+  detection   : 68432 invocations, 250.4 s
+  minilm      : 3001 invocations, 16.4 s  (head over 6 detected classes,
+                                          not all 80)
+  total       : 71433 invocations, 274.0 s
+  output tiles: 71433   (mean K-tiles per output tile 65.1)
+  if the k0 loop were streamed as one accumulation:
+     invocations 71433 -> 71433   (1.0x fewer)
+     syscalls    500031 -> 500031   (1.0x fewer)
+  GEMM loop 122.8 s | packing 43.5 s | upload 26.7 s | VEGA float 96.3 s
+  --- float breakdown (all of it inside VEGA float) ---
+    amax scan       :    5.91 s  over   5939200 elements  (0.99 us/elem)
+    quantise convert:   20.05 s  over   5939200 elements  (3.38 us/elem)
+    dequant + silu  :   64.24 s  over   4379648 elements  (14.67 us/elem, 4186112 through silu)
+    accounted       :   90.19 s of 96.33 s
+
+--- PACKING BREAKDOWN ---
+  detection  im2col      :    42.03 s  over      66 calls
+  detection  W tile copy :     1.35 s  over      63 calls, 10.6 MB  (7.9 MB/s)
+  minilm     activations :     0.10 s  over     182 calls
+  minilm     weights     :     1.31 s  over      38 calls, 10.7 MB  (8.13 MB/s)  [from cache]
+  cache hits             : 38 blocks, 10.7 MB copied
+  minilm     act-as-wgt  :     0.03 s  over     144 calls
+  ------------------------------------------------------------
+  detection subtotal     :    43.38 s
+  minilm    subtotal     :     1.45 s
+  sum vs g_pack_us       :    44.83 s vs 43.48 s   (W tile copy is extra, it was never counted before)
+
+--- JPEG DECODE ---
+  total                  :     4.19 s
+  huffman + dequant      :     2.00 s   (scan 3.49 s minus IDCT)
+  IDCT                   :     1.48 s   over 12960 blocks  (114 us/block)
+  YCbCr -> RGB           :     0.69 s   over 272640 pixels  (2.5 us/pixel)
+  unaccounted            :     0.01 s   (headers, allocation)

@@ -1,0 +1,10 @@
+#!/bin/sh
+# 320 px. Host evaluation puts top-1 selection at 0.532 here -- 2.9x the
+# deployed 128 px pipeline -- and mAP 0.389, level with the paper's own
+# Faster-RCNN detections. 2,339,064 invocations, so expect roughly 23 minutes.
+# Run this once, for the record. It is not a demo configuration on an 8x8 array.
+cd /tmp/team43
+./team43_pipeline --image demo_image.jpg --task "serve wine" \
+    --imgsz 320 \
+    --packed /tmp/team43/team43_minilm_packed.bin \
+    --out ./result_320_new.ppm 2>&1 | tee log_320_new.txt

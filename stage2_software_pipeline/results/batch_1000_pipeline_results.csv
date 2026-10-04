@@ -1,0 +1,1001 @@
+index,image,task,status,selected_object,selected_rank_score,selected_minilm_score,selected_yolo_conf,num_detections,preferred_objects,annotated_objects,is_positive_row,correct,expected_available_by_yolo,expected_in_top5
+1,D:\DATASETS\mscoco\val2014\COCO_val2014_000000557732.jpg,dig hole,selected,snowboard,0.9956026077270508,0.9956026077270508,0.7287858128547668,7,snowboard,person;skis;snowboard,True,True,True,True
+2,D:\DATASETS\mscoco\val2014\COCO_val2014_000000461753.jpg,extinguish fire,below_threshold,,,,,63,,person;toothbrush,False,True,False,False
+3,D:\DATASETS\mscoco\val2014\COCO_val2014_000000561514.jpg,get lemon out of tea,selected,wine glass,0.38900595903396606,0.38900595903396606,0.6670127511024475,18,,bowl;dining table;oven;vase;wine glass,False,False,False,False
+4,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132189.jpg,get potatoes out of fire,below_threshold,,,,,4,,bus;car,False,True,False,False
+5,D:\DATASETS\mscoco\val2014\COCO_val2014_000000312167.jpg,open bottle of beer,below_threshold,,,,,3,,vase,False,True,False,False
+6,D:\DATASETS\mscoco\val2014\COCO_val2014_000000131969.jpg,open parcel,below_threshold,,,,,12,,car;fire hydrant;person,False,True,False,False
+7,D:\DATASETS\mscoco\val2014\COCO_val2014_000000131611.jpg,place flowers,below_threshold,,,,,16,,elephant;person,False,True,False,False
+8,D:\DATASETS\mscoco\val2014\COCO_val2014_000000280612.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.944837212562561,3,tennis racket,person;sports ball;tennis racket,True,True,True,True
+9,D:\DATASETS\mscoco\val2014\COCO_val2014_000000525665.jpg,pour sugar,below_threshold,,,,,9,,cow,False,True,False,False
+10,D:\DATASETS\mscoco\val2014\COCO_val2014_000000265635.jpg,serve wine,below_threshold,,,,,2,,handbag;person;suitcase,False,True,False,False
+11,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000711.jpg,sit comfortably,selected,couch,0.9868879914283752,0.9868879914283752,0.9512077569961548,26,couch,book;cat;chair;couch;knife;potted plant;remote;vase,True,True,True,True
+12,D:\DATASETS\mscoco\val2014\COCO_val2014_000000045472.jpg,smear butter,below_threshold,,,,,24,,cup;orange,False,True,False,False
+13,D:\DATASETS\mscoco\val2014\COCO_val2014_000000139684.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.9154342412948608,19,chair,book;cat;chair;couch;dining table;tv;vase,True,True,True,True
+14,D:\DATASETS\mscoco\val2014\COCO_val2014_000000531047.jpg,water plant,selected,vase,0.9034367203712463,0.9034367203712463,0.9297370314598083,16,wine glass,book;couch;person;vase;wine glass,True,False,True,True
+15,D:\DATASETS\mscoco\val2014\COCO_val2014_000000155312.jpg,dig hole,selected,baseball bat,0.9970237612724304,0.9970237612724304,0.7589142918586731,44,baseball bat,baseball bat;baseball glove;bench;person,True,True,True,True
+16,D:\DATASETS\mscoco\val2014\COCO_val2014_000000002839.jpg,extinguish fire,below_threshold,,,,,7,,bench;person;teddy bear,False,True,False,False
+17,D:\DATASETS\mscoco\val2014\COCO_val2014_000000173819.jpg,get lemon out of tea,selected,bottle,0.7318173050880432,0.7318173050880432,0.8471927642822266,9,bottle,bottle;clock;sink;toilet,True,True,True,True
+18,D:\DATASETS\mscoco\val2014\COCO_val2014_000000396461.jpg,get potatoes out of fire,selected,spoon,0.9286569356918335,0.9286569356918335,0.08048166334629059,22,knife,bottle;bowl;knife;oven;sink;spoon,True,False,True,True
+19,D:\DATASETS\mscoco\val2014\COCO_val2014_000000410068.jpg,open bottle of beer,selected,chair,0.5803737044334412,0.5803737044334412,0.5609780550003052,62,,car;chair;person;truck;umbrella,False,False,False,False
+20,D:\DATASETS\mscoco\val2014\COCO_val2014_000000568426.jpg,open parcel,below_threshold,,,,,13,,cup;dining table;person;sandwich;wine glass,False,True,False,False
+21,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262672.jpg,place flowers,below_threshold,,,,,9,,backpack;car;person;skis,False,True,False,False
+22,D:\DATASETS\mscoco\val2014\COCO_val2014_000000278867.jpg,pound carpet,selected,baseball glove,0.7420501112937927,0.7420501112937927,0.5868847370147705,5,baseball glove,baseball glove;boat;person;sports ball,True,True,True,True
+23,D:\DATASETS\mscoco\val2014\COCO_val2014_000000452297.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.9077960252761841,21,spoon,banana;cup;spoon,True,True,True,True
+24,D:\DATASETS\mscoco\val2014\COCO_val2014_000000337403.jpg,serve wine,below_threshold,,,,,5,,spoon,False,True,False,False
+25,D:\DATASETS\mscoco\val2014\COCO_val2014_000000278822.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.8996521830558777,96,chair,backpack;bottle;cell phone;chair;cup;dining table;donut;laptop;person;tv,True,True,True,True
+26,D:\DATASETS\mscoco\val2014\COCO_val2014_000000462466.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.6012945175170898,44,knife,cake;cup;dining table;fork;knife;person;potted plant;spoon,True,True,True,True
+27,D:\DATASETS\mscoco\val2014\COCO_val2014_000000414663.jpg,step on something to reach top of a shelf,below_threshold,,,,,5,,clock;potted plant,False,True,False,False
+28,D:\DATASETS\mscoco\val2014\COCO_val2014_000000530630.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.825163722038269,13,,bowl;cup;dining table;fork;knife;sandwich;spoon,False,False,False,False
+29,D:\DATASETS\mscoco\val2014\COCO_val2014_000000396200.jpg,dig hole,selected,skateboard,0.99393230676651,0.99393230676651,0.8240589499473572,28,skateboard,car;person;skateboard;sports ball;traffic light;truck,True,True,True,True
+30,D:\DATASETS\mscoco\val2014\COCO_val2014_000000474528.jpg,extinguish fire,below_threshold,,,,,11,,chair;couch;potted plant;teddy bear,False,True,False,False
+31,D:\DATASETS\mscoco\val2014\COCO_val2014_000000565957.jpg,get lemon out of tea,selected,bottle,0.7318173050880432,0.7318173050880432,0.7739744782447815,8,,bottle;cell phone;person,False,False,False,False
+32,D:\DATASETS\mscoco\val2014\COCO_val2014_000000007304.jpg,get potatoes out of fire,selected,tennis racket,0.9950190782546997,0.9950190782546997,0.9224316477775574,5,tennis racket,person;sports ball;tennis racket,True,True,True,True
+33,D:\DATASETS\mscoco\val2014\COCO_val2014_000000177015.jpg,open bottle of beer,selected,chair,0.5803737640380859,0.5803737640380859,0.2482438087463379,16,,cat;couch;laptop;person;refrigerator,False,False,False,False
+34,D:\DATASETS\mscoco\val2014\COCO_val2014_000000301282.jpg,open parcel,selected,fork,0.8960486650466919,0.8960486650466919,0.6266098618507385,39,spoon,bottle;chair;dining table;handbag;person;pizza;spoon,True,False,True,True
+35,D:\DATASETS\mscoco\val2014\COCO_val2014_000000393840.jpg,place flowers,below_threshold,,,,,12,,boat;cow,False,True,False,False
+36,D:\DATASETS\mscoco\val2014\COCO_val2014_000000569758.jpg,pound carpet,selected,baseball glove,0.7420502305030823,0.7420502305030823,0.9100903868675232,2,baseball glove,baseball glove;person;sports ball,True,True,True,True
+37,D:\DATASETS\mscoco\val2014\COCO_val2014_000000397773.jpg,pour sugar,selected,bowl,0.42996954917907715,0.42996954917907715,0.1000802293419838,13,,broccoli,False,False,False,False
+38,D:\DATASETS\mscoco\val2014\COCO_val2014_000000406616.jpg,serve wine,below_threshold,,,,,31,,apple;carrot;knife;sink,False,True,False,False
+39,D:\DATASETS\mscoco\val2014\COCO_val2014_000000537395.jpg,sit comfortably,selected,toilet,0.9645435214042664,0.9645435214042664,0.9580059051513672,7,toilet,toilet,True,True,True,True
+40,D:\DATASETS\mscoco\val2014\COCO_val2014_000000372249.jpg,smear butter,below_threshold,,,,,1,,bird,False,True,False,False
+41,D:\DATASETS\mscoco\val2014\COCO_val2014_000000395701.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.8571850061416626,106,chair,book;bottle;chair;couch;potted plant;tv,True,True,True,True
+42,D:\DATASETS\mscoco\val2014\COCO_val2014_000000571847.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.960732638835907,10,cup,cell phone;cup;dining table;donut;person;spoon,True,True,True,True
+43,D:\DATASETS\mscoco\val2014\COCO_val2014_000000133149.jpg,dig hole,below_threshold,,,,,3,,bird,False,True,False,False
+44,D:\DATASETS\mscoco\val2014\COCO_val2014_000000415413.jpg,extinguish fire,below_threshold,,,,,25,,car;clock;traffic light,False,True,False,False
+45,D:\DATASETS\mscoco\val2014\COCO_val2014_000000563267.jpg,get lemon out of tea,selected,bottle,0.7318172454833984,0.7318172454833984,0.818533718585968,18,,bottle;cup;dining table;person;remote;tv,False,False,False,False
+46,D:\DATASETS\mscoco\val2014\COCO_val2014_000000277945.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.7918432354927063,16,baseball bat,baseball bat;baseball glove;person;sports ball,True,True,True,True
+47,D:\DATASETS\mscoco\val2014\COCO_val2014_000000136212.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.5379900932312012,6,dining table,cup;dining table;hot dog,True,True,True,True
+48,D:\DATASETS\mscoco\val2014\COCO_val2014_000000568883.jpg,open parcel,below_threshold,,,,,80,,bottle;chair;cup;dining table;person;umbrella,False,True,False,False
+49,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262394.jpg,place flowers,below_threshold,,,,,15,,horse;motorcycle;person,False,True,False,False
+50,D:\DATASETS\mscoco\val2014\COCO_val2014_000000316404.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.9627043604850769,7,tennis racket,person;sports ball;tennis racket,True,True,True,True
+51,D:\DATASETS\mscoco\val2014\COCO_val2014_000000259761.jpg,pour sugar,selected,fork,0.9068747758865356,0.9068747758865356,0.23223786056041718,31,cup,cake;chair;cup;dining table;person,True,False,True,True
+52,D:\DATASETS\mscoco\val2014\COCO_val2014_000000576946.jpg,serve wine,below_threshold,,,,,19,,bowl;chair;knife;microwave;person;pizza,False,True,False,False
+53,D:\DATASETS\mscoco\val2014\COCO_val2014_000000177941.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.4293298125267029,18,chair,cell phone;chair;dining table;fork;knife;person;pizza;wine glass,True,True,True,True
+54,D:\DATASETS\mscoco\val2014\COCO_val2014_000000471394.jpg,smear butter,below_threshold,,,,,13,knife,bowl;cup;dining table;fork;knife;sandwich,True,False,False,False
+55,D:\DATASETS\mscoco\val2014\COCO_val2014_000000131089.jpg,step on something to reach top of a shelf,below_threshold,,,,,2,,baseball bat;person,False,True,False,False
+56,D:\DATASETS\mscoco\val2014\COCO_val2014_000000418623.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.4178422689437866,41,cup,book;chair;cup;suitcase,True,True,True,True
+57,D:\DATASETS\mscoco\val2014\COCO_val2014_000000393840.jpg,dig hole,selected,boat,0.3023730516433716,0.3023730516433716,0.8008589148521423,12,,boat;cow,False,False,False,False
+58,D:\DATASETS\mscoco\val2014\COCO_val2014_000000474499.jpg,extinguish fire,selected,bowl,0.9219841361045837,0.9219841361045837,0.48984527587890625,43,bottle,apple;bottle;clock;oven;sink;spoon;vase,True,False,True,False
+59,D:\DATASETS\mscoco\val2014\COCO_val2014_000000270303.jpg,get lemon out of tea,selected,fork,0.9753941297531128,0.9753941297531128,0.9514908790588379,4,fork,fork;pizza,True,True,True,True
+60,D:\DATASETS\mscoco\val2014\COCO_val2014_000000531020.jpg,get potatoes out of fire,selected,skis,0.9959355592727661,0.9959355592727661,0.8669790029525757,7,skis,person;skis,True,True,True,True
+61,D:\DATASETS\mscoco\val2014\COCO_val2014_000000305526.jpg,open bottle of beer,below_threshold,,,,,4,,clock,False,True,False,False
+62,D:\DATASETS\mscoco\val2014\COCO_val2014_000000182424.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.8356578946113586,24,knife,bottle;clock;knife;person;potted plant,True,True,True,True
+63,D:\DATASETS\mscoco\val2014\COCO_val2014_000000395379.jpg,place flowers,selected,cup,0.9395426511764526,0.9395426511764526,0.9012959003448486,20,cup,bottle;cup;knife;microwave;oven;refrigerator,True,True,True,True
+64,D:\DATASETS\mscoco\val2014\COCO_val2014_000000069194.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.8360133171081543,8,baseball bat,baseball bat;person;sports ball,True,True,True,True
+65,D:\DATASETS\mscoco\val2014\COCO_val2014_000000418440.jpg,pour sugar,selected,fork,0.9068748950958252,0.9068748950958252,0.8755620121955872,10,fork,fork;sandwich,True,True,True,True
+66,D:\DATASETS\mscoco\val2014\COCO_val2014_000000292005.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.7208542227745056,9,,bottle;sink;toilet,False,False,False,False
+67,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262682.jpg,sit comfortably,below_threshold,,,,,21,,oven;potted plant;sink;spoon,False,True,False,False
+68,D:\DATASETS\mscoco\val2014\COCO_val2014_000000135613.jpg,smear butter,below_threshold,,,,,6,,bottle;sink;toilet,False,True,False,False
+69,D:\DATASETS\mscoco\val2014\COCO_val2014_000000151742.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.5370907187461853,17,,chair;person;tie,False,False,False,False
+70,D:\DATASETS\mscoco\val2014\COCO_val2014_000000534335.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.8246508240699768,5,cup,cup;dining table;hot dog;sandwich,True,True,True,True
+71,D:\DATASETS\mscoco\val2014\COCO_val2014_000000550601.jpg,dig hole,selected,skis,0.9949281215667725,0.9949281215667725,0.8447074294090271,12,skis,boat;person;skis,True,True,True,True
+72,D:\DATASETS\mscoco\val2014\COCO_val2014_000000476810.jpg,extinguish fire,selected,bottle,0.9197603464126587,0.9197603464126587,0.058639030903577805,14,,bed;book;cat;remote;tv,False,False,False,False
+73,D:\DATASETS\mscoco\val2014\COCO_val2014_000000179642.jpg,get lemon out of tea,selected,bottle,0.7318172454833984,0.7318172454833984,0.8036751747131348,42,bottle,bottle;chair;person;tennis racket,True,True,True,True
+74,D:\DATASETS\mscoco\val2014\COCO_val2014_000000525619.jpg,get potatoes out of fire,below_threshold,,,,,10,,car;dog;kite;person,False,True,False,False
+75,D:\DATASETS\mscoco\val2014\COCO_val2014_000000022793.jpg,open bottle of beer,below_threshold,,,,,6,,person;toilet,False,True,False,False
+76,D:\DATASETS\mscoco\val2014\COCO_val2014_000000334007.jpg,open parcel,below_threshold,,,,,12,,book;person;teddy bear,False,True,False,False
+77,D:\DATASETS\mscoco\val2014\COCO_val2014_000000003103.jpg,place flowers,below_threshold,,,,,7,,clock;person;skateboard,False,True,False,False
+78,D:\DATASETS\mscoco\val2014\COCO_val2014_000000269316.jpg,pound carpet,selected,frisbee,0.9866327047348022,0.9866327047348022,0.8612132668495178,5,frisbee,frisbee;person,True,True,True,True
+79,D:\DATASETS\mscoco\val2014\COCO_val2014_000000410380.jpg,pour sugar,selected,knife,0.9444102644920349,0.9444102644920349,0.6620927453041077,40,knife,bottle;bowl;carrot;knife;person;wine glass,True,True,True,True
+80,D:\DATASETS\mscoco\val2014\COCO_val2014_000000012946.jpg,serve wine,below_threshold,,,,,62,,bicycle;bottle;car;handbag;motorcycle;person;traffic light;umbrella,False,True,False,False
+81,D:\DATASETS\mscoco\val2014\COCO_val2014_000000004592.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.1885673999786377,105,chair,chair;person;sports ball;tennis racket;tie,True,True,True,True
+82,D:\DATASETS\mscoco\val2014\COCO_val2014_000000545385.jpg,smear butter,selected,spoon,0.9261945486068726,0.9261945486068726,0.9696478843688965,6,spoon,cake;cup;dining table;spoon,True,True,True,True
+83,D:\DATASETS\mscoco\val2014\COCO_val2014_000000532963.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.9014438986778259,37,chair,bowl;chair;cup;dining table;handbag;sandwich;wine glass,True,True,True,True
+84,D:\DATASETS\mscoco\val2014\COCO_val2014_000000047940.jpg,water plant,below_threshold,,,,,8,,bed;book;laptop;person,False,True,False,False
+85,D:\DATASETS\mscoco\val2014\COCO_val2014_000000526353.jpg,dig hole,below_threshold,,,,,32,,backpack;handbag;person;suitcase,False,True,False,False
+86,D:\DATASETS\mscoco\val2014\COCO_val2014_000000078035.jpg,extinguish fire,selected,bottle,0.9197603464126587,0.9197603464126587,0.6675065159797668,8,,sink;toothbrush,False,False,False,False
+87,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001841.jpg,get lemon out of tea,below_threshold,,,,,5,,person;tie,False,True,False,False
+88,D:\DATASETS\mscoco\val2014\COCO_val2014_000000131390.jpg,get potatoes out of fire,below_threshold,,,,,48,,cow,False,True,False,False
+89,D:\DATASETS\mscoco\val2014\COCO_val2014_000000174594.jpg,open bottle of beer,selected,chair,0.5803737044334412,0.5803737044334412,0.37609487771987915,87,,baseball bat;baseball glove;bench;chair;person;sports ball,False,False,False,False
+90,D:\DATASETS\mscoco\val2014\COCO_val2014_000000565233.jpg,open parcel,below_threshold,,,,,7,,bed;book;laptop;person,False,True,False,False
+91,D:\DATASETS\mscoco\val2014\COCO_val2014_000000540531.jpg,place flowers,below_threshold,,,,,2,,clock,False,True,False,False
+92,D:\DATASETS\mscoco\val2014\COCO_val2014_000000330515.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.8834128975868225,30,baseball bat,baseball bat;baseball glove;person;sports ball,True,True,True,True
+93,D:\DATASETS\mscoco\val2014\COCO_val2014_000000377235.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.5114980936050415,50,cup,backpack;car;chair;cup;dining table;person;truck;umbrella,True,True,True,True
+94,D:\DATASETS\mscoco\val2014\COCO_val2014_000000316704.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.6432817578315735,36,,bottle;cell phone;cup;dining table;person,False,False,False,False
+95,D:\DATASETS\mscoco\val2014\COCO_val2014_000000264686.jpg,sit comfortably,selected,couch,0.9868879914283752,0.9868879914283752,0.908906877040863,22,couch,chair;couch;dining table;remote;tv,True,True,True,True
+96,D:\DATASETS\mscoco\val2014\COCO_val2014_000000199881.jpg,smear butter,below_threshold,,,,,31,,bottle;chair;couch;dining table;person;potted plant;remote;vase;wine glass,False,True,False,False
+97,D:\DATASETS\mscoco\val2014\COCO_val2014_000000393274.jpg,step on something to reach top of a shelf,below_threshold,,,,,7,,potted plant;train,False,True,False,False
+98,D:\DATASETS\mscoco\val2014\COCO_val2014_000000010324.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.8002678155899048,19,bottle,apple;bottle;dog;oven;refrigerator,True,True,True,True
+99,D:\DATASETS\mscoco\val2014\COCO_val2014_000000400709.jpg,dig hole,selected,surfboard,0.993778645992279,0.993778645992279,0.9583225846290588,6,surfboard,person;surfboard,True,True,True,True
+100,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267571.jpg,extinguish fire,below_threshold,,,,,1,,giraffe,False,True,False,False
+101,D:\DATASETS\mscoco\val2014\COCO_val2014_000000270571.jpg,get lemon out of tea,selected,spoon,0.9698700904846191,0.9698700904846191,0.08051703125238419,8,knife,apple;knife;person,True,False,True,True
+102,D:\DATASETS\mscoco\val2014\COCO_val2014_000000533227.jpg,get potatoes out of fire,selected,surfboard,0.9928168058395386,0.9928168058395386,0.9316049814224243,16,surfboard,person;surfboard,True,True,True,True
+103,D:\DATASETS\mscoco\val2014\COCO_val2014_000000540101.jpg,open bottle of beer,below_threshold,,,,,55,,bus;car;clock;person;traffic light;truck,False,True,False,False
+104,D:\DATASETS\mscoco\val2014\COCO_val2014_000000564382.jpg,open parcel,selected,toothbrush,0.9518917798995972,0.9518917798995972,0.06106025353074074,13,toothbrush,book;chair;cup;dining table;keyboard;toothbrush,True,True,True,True
+105,D:\DATASETS\mscoco\val2014\COCO_val2014_000000533517.jpg,place flowers,selected,vase,0.9602795839309692,0.9602795839309692,0.8942667245864868,16,vase,bottle;cup;person;vase,True,True,True,True
+106,D:\DATASETS\mscoco\val2014\COCO_val2014_000000074200.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.9864787459373474,11,surfboard,person;surfboard,True,True,True,True
+107,D:\DATASETS\mscoco\val2014\COCO_val2014_000000250299.jpg,pour sugar,selected,fork,0.9068748950958252,0.9068748950958252,0.0761304646730423,8,wine glass,dining table;wine glass,True,False,True,True
+108,D:\DATASETS\mscoco\val2014\COCO_val2014_000000314412.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.8325561285018921,18,cup,bowl;broccoli;cup;dining table;spoon,True,True,True,True
+109,D:\DATASETS\mscoco\val2014\COCO_val2014_000000558911.jpg,sit comfortably,selected,dining table,0.10322926193475723,0.10322926193475723,0.19379471242427826,24,,apple;bowl;cake;cup;dining table;donut;orange,False,False,False,False
+110,D:\DATASETS\mscoco\val2014\COCO_val2014_000000018461.jpg,smear butter,below_threshold,,,,,10,,bottle;refrigerator,False,True,False,False
+111,D:\DATASETS\mscoco\val2014\COCO_val2014_000000133667.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.8364428281784058,6,chair,bed;car;chair;couch;person,True,True,True,True
+112,D:\DATASETS\mscoco\val2014\COCO_val2014_000000544044.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.8662291169166565,55,bottle,backpack;book;bottle;cell phone;clock;handbag,True,True,True,True
+113,D:\DATASETS\mscoco\val2014\COCO_val2014_000000431545.jpg,dig hole,selected,baseball glove,0.62175452709198,0.62175452709198,0.31656235456466675,5,baseball glove,baseball glove;person,True,True,True,True
+114,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527407.jpg,extinguish fire,below_threshold,,,,,1,,clock,False,True,False,False
+115,D:\DATASETS\mscoco\val2014\COCO_val2014_000000435359.jpg,get lemon out of tea,selected,bottle,0.7318172454833984,0.7318172454833984,0.8353135585784912,60,bottle,book;bottle;laptop,True,True,True,True
+116,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262391.jpg,get potatoes out of fire,selected,bottle,0.7121155858039856,0.7121155858039856,0.6499998569488525,10,bottle,bottle;person;tv,True,True,True,True
+117,D:\DATASETS\mscoco\val2014\COCO_val2014_000000014248.jpg,open bottle of beer,below_threshold,,,,,4,,bed;person;teddy bear,False,True,False,False
+118,D:\DATASETS\mscoco\val2014\COCO_val2014_000000073118.jpg,open parcel,below_threshold,,,,,3,,teddy bear,False,True,False,False
+119,D:\DATASETS\mscoco\val2014\COCO_val2014_000000131431.jpg,place flowers,below_threshold,,,,,1,,clock,False,True,False,False
+120,D:\DATASETS\mscoco\val2014\COCO_val2014_000000543620.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.8135544061660767,5,baseball bat,baseball bat;baseball glove;person,True,True,True,True
+121,D:\DATASETS\mscoco\val2014\COCO_val2014_000000147415.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.050551075488328934,15,,book;bottle;chair;cup;keyboard;laptop;person;remote,False,False,False,False
+122,D:\DATASETS\mscoco\val2014\COCO_val2014_000000441415.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.31865718960762024,34,cup,book;bowl;cell phone;chair;cup;dining table;handbag;laptop;orange;vase,True,True,True,True
+123,D:\DATASETS\mscoco\val2014\COCO_val2014_000000397636.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.7736263275146484,35,chair,bottle;chair;cup;dining table;handbag;knife;person;pizza,True,True,True,True
+124,D:\DATASETS\mscoco\val2014\COCO_val2014_000000536947.jpg,smear butter,below_threshold,,,,,13,,bottle;chair;refrigerator;truck,False,True,False,False
+125,D:\DATASETS\mscoco\val2014\COCO_val2014_000000090011.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.6038344502449036,12,chair,chair;person;scissors,True,True,True,True
+126,D:\DATASETS\mscoco\val2014\COCO_val2014_000000148977.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.8659671545028687,10,bottle,book;bottle;keyboard;teddy bear,True,True,True,True
+127,D:\DATASETS\mscoco\val2014\COCO_val2014_000000398066.jpg,dig hole,selected,baseball bat,0.9970237612724304,0.9970237612724304,0.8392132520675659,7,baseball bat,baseball bat;baseball glove;person;sports ball,True,True,True,True
+128,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132690.jpg,extinguish fire,below_threshold,,,,,4,,cat,False,True,False,False
+129,D:\DATASETS\mscoco\val2014\COCO_val2014_000000554445.jpg,get lemon out of tea,selected,fork,0.9753941297531128,0.9753941297531128,0.11690935492515564,33,knife,bottle;bowl;cup;dining table;hot dog;knife;microwave;oven;person;sandwich;sink,True,False,True,False
+130,D:\DATASETS\mscoco\val2014\COCO_val2014_000000397042.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.5255664587020874,26,baseball bat,baseball bat;bottle;car;chair;person,True,True,True,True
+131,D:\DATASETS\mscoco\val2014\COCO_val2014_000000290477.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.1046161949634552,9,,potted plant;vase,False,False,False,False
+132,D:\DATASETS\mscoco\val2014\COCO_val2014_000000143516.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.91880863904953,25,knife,cup;dining table;fork;knife,True,True,True,True
+133,D:\DATASETS\mscoco\val2014\COCO_val2014_000000528311.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.9253174662590027,28,cup,apple;book;cup;keyboard;mouse;tv,True,True,True,True
+134,D:\DATASETS\mscoco\val2014\COCO_val2014_000000327675.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.6345632076263428,4,tennis racket,person;sports ball;tennis racket,True,True,True,True
+135,D:\DATASETS\mscoco\val2014\COCO_val2014_000000322353.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.7058970928192139,24,spoon,bottle;bowl;cat;fork;potted plant;scissors;sink;spoon,True,True,True,True
+136,D:\DATASETS\mscoco\val2014\COCO_val2014_000000540006.jpg,serve wine,below_threshold,,,,,19,cup,banana;bottle;bowl;cup;person;potted plant,True,False,False,False
+137,D:\DATASETS\mscoco\val2014\COCO_val2014_000000032947.jpg,sit comfortably,selected,toilet,0.9645435214042664,0.9645435214042664,0.9239739775657654,8,toilet,person;sink;toilet,True,True,True,True
+138,D:\DATASETS\mscoco\val2014\COCO_val2014_000000277479.jpg,smear butter,below_threshold,,,,,32,,bottle;person;refrigerator,False,True,False,False
+139,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132336.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.8611201643943787,56,,backpack;bus;chair;person;traffic light,False,False,False,False
+140,D:\DATASETS\mscoco\val2014\COCO_val2014_000000283874.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.8149332404136658,64,bottle,banana;bottle;bowl;chair;motorcycle;person;umbrella,True,True,True,True
+141,D:\DATASETS\mscoco\val2014\COCO_val2014_000000138675.jpg,dig hole,selected,snowboard,0.9956026077270508,0.9956026077270508,0.3404134213924408,8,snowboard,person;snowboard,True,True,True,True
+142,D:\DATASETS\mscoco\val2014\COCO_val2014_000000416345.jpg,extinguish fire,below_threshold,,,,,9,,backpack;book;cat;chair;dining table;tv,False,True,False,False
+143,D:\DATASETS\mscoco\val2014\COCO_val2014_000000423576.jpg,get lemon out of tea,selected,spoon,0.9698700904846191,0.9698700904846191,0.898010790348053,8,spoon,cell phone;cup;keyboard;spoon;tv,True,True,True,True
+144,D:\DATASETS\mscoco\val2014\COCO_val2014_000000146253.jpg,get potatoes out of fire,selected,skis,0.9959355592727661,0.9959355592727661,0.5038508772850037,36,skis,backpack;person;skis,True,True,True,True
+145,D:\DATASETS\mscoco\val2014\COCO_val2014_000000445019.jpg,open bottle of beer,selected,chair,0.5803737044334412,0.5803737044334412,0.06625600904226303,35,,baseball bat;baseball glove;chair;person;sports ball,False,False,False,False
+146,D:\DATASETS\mscoco\val2014\COCO_val2014_000000459050.jpg,open parcel,below_threshold,,,,,38,,book;chair;couch;dining table;remote,False,True,False,False
+147,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000626.jpg,place flowers,below_threshold,,,,,3,,clock,False,True,False,False
+148,D:\DATASETS\mscoco\val2014\COCO_val2014_000000150314.jpg,pound carpet,selected,skis,0.9945266842842102,0.9945266842842102,0.536693274974823,32,skis,backpack;person;skis,True,True,True,True
+149,D:\DATASETS\mscoco\val2014\COCO_val2014_000000127050.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.32723668217658997,77,,chair;cup;dining table;person;umbrella,False,False,False,False
+150,D:\DATASETS\mscoco\val2014\COCO_val2014_000000355214.jpg,serve wine,below_threshold,,,,,8,,bottle;chair;person;teddy bear;tv,False,True,False,False
+151,D:\DATASETS\mscoco\val2014\COCO_val2014_000000159500.jpg,sit comfortably,selected,toilet,0.9645435214042664,0.9645435214042664,0.8236804604530334,5,,toilet,False,False,False,False
+152,D:\DATASETS\mscoco\val2014\COCO_val2014_000000466565.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.37495315074920654,35,fork,bowl;cell phone;cup;dining table;fork;person;pizza,True,False,True,False
+153,D:\DATASETS\mscoco\val2014\COCO_val2014_000000131386.jpg,step on something to reach top of a shelf,below_threshold,,,,,12,,airplane,False,True,False,False
+154,D:\DATASETS\mscoco\val2014\COCO_val2014_000000552018.jpg,water plant,selected,bowl,0.8974255323410034,0.8974255323410034,0.9522193670272827,8,bowl,bowl;broccoli;carrot;dining table,True,True,True,True
+155,D:\DATASETS\mscoco\val2014\COCO_val2014_000000398450.jpg,dig hole,below_threshold,,,,,64,,bicycle;kite;person,False,True,False,False
+156,D:\DATASETS\mscoco\val2014\COCO_val2014_000000079920.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.5904093384742737,19,vase,person;remote;scissors;tv;vase,True,True,True,True
+157,D:\DATASETS\mscoco\val2014\COCO_val2014_000000139291.jpg,get lemon out of tea,selected,bottle,0.7318172454833984,0.7318172454833984,0.9571607112884521,52,wine glass,bicycle;bottle;cup;person;wine glass,True,False,True,False
+158,D:\DATASETS\mscoco\val2014\COCO_val2014_000000417857.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.8336332440376282,13,baseball bat,baseball bat;baseball glove;person,True,True,True,True
+159,D:\DATASETS\mscoco\val2014\COCO_val2014_000000444755.jpg,open bottle of beer,selected,chair,0.5803737044334412,0.5803737044334412,0.8415644764900208,75,,book;dog;person;tie,False,False,False,False
+160,D:\DATASETS\mscoco\val2014\COCO_val2014_000000273494.jpg,open parcel,below_threshold,,,,,29,,backpack;bed;bowl;chair;cup;dining table;knife,False,True,False,False
+161,D:\DATASETS\mscoco\val2014\COCO_val2014_000000393942.jpg,place flowers,below_threshold,,,,,4,,person,False,True,False,False
+162,D:\DATASETS\mscoco\val2014\COCO_val2014_000000084767.jpg,pound carpet,selected,skis,0.9945266842842102,0.9945266842842102,0.8982266783714294,4,skis,person;skis,True,True,True,True
+163,D:\DATASETS\mscoco\val2014\COCO_val2014_000000506310.jpg,pour sugar,selected,bottle,0.7434991002082825,0.7434991002082825,0.8907515406608582,7,bottle,bottle;refrigerator,True,True,True,True
+164,D:\DATASETS\mscoco\val2014\COCO_val2014_000000158982.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.8359950184822083,16,,bottle;sink;toilet,False,False,False,False
+165,D:\DATASETS\mscoco\val2014\COCO_val2014_000000269689.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.7574388384819031,22,chair,baseball bat;chair;person,True,True,True,True
+166,D:\DATASETS\mscoco\val2014\COCO_val2014_000000033652.jpg,smear butter,below_threshold,,,,,3,,bowl;pizza,False,True,False,False
+167,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001393.jpg,step on something to reach top of a shelf,below_threshold,,,,,5,,potted plant;vase,False,True,False,False
+168,D:\DATASETS\mscoco\val2014\COCO_val2014_000000425870.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.06582862883806229,17,,book;person;remote;tv,False,False,False,False
+169,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527486.jpg,dig hole,selected,tennis racket,0.9961715340614319,0.9961715340614319,0.9509447813034058,16,tennis racket,person;sports ball;tennis racket,True,True,True,True
+170,D:\DATASETS\mscoco\val2014\COCO_val2014_000000212533.jpg,extinguish fire,selected,bowl,0.9219841361045837,0.9219841361045837,0.6733527779579163,66,bowl,apple;banana;bowl;orange;spoon,True,True,True,True
+171,D:\DATASETS\mscoco\val2014\COCO_val2014_000000141040.jpg,get lemon out of tea,selected,knife,0.8426859378814697,0.8426859378814697,0.5387647151947021,21,,bottle;bowl;chair;couch;cup;dining table;person;spoon;wine glass,False,False,False,False
+172,D:\DATASETS\mscoco\val2014\COCO_val2014_000000266847.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.4514825940132141,14,baseball glove,baseball glove;bench;bottle;person;sports ball,True,False,True,False
+173,D:\DATASETS\mscoco\val2014\COCO_val2014_000000002764.jpg,open bottle of beer,below_threshold,,,,,49,,boat;person,False,True,False,False
+174,D:\DATASETS\mscoco\val2014\COCO_val2014_000000411564.jpg,open parcel,below_threshold,,,,,16,,bottle;cell phone;chair;dining table;person;refrigerator,False,True,False,False
+175,D:\DATASETS\mscoco\val2014\COCO_val2014_000000002431.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.8860585689544678,22,wine glass,cup;dining table;knife;person;spoon;wine glass,True,False,True,True
+176,D:\DATASETS\mscoco\val2014\COCO_val2014_000000198397.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.900588870048523,50,tennis racket,chair;person;sports ball;tennis racket,True,True,True,True
+177,D:\DATASETS\mscoco\val2014\COCO_val2014_000000246589.jpg,pour sugar,selected,bottle,0.7434991002082825,0.7434991002082825,0.9172992706298828,16,bottle,bottle;cell phone;dining table;person;sandwich,True,True,True,True
+178,D:\DATASETS\mscoco\val2014\COCO_val2014_000000162332.jpg,serve wine,below_threshold,,,,,16,,cake;knife;person,False,True,False,False
+179,D:\DATASETS\mscoco\val2014\COCO_val2014_000000524382.jpg,sit comfortably,selected,bench,0.9515352249145508,0.9515352249145508,0.11083932965993881,8,,dog,False,False,False,False
+180,D:\DATASETS\mscoco\val2014\COCO_val2014_000000287151.jpg,smear butter,selected,toothbrush,0.7607229948043823,0.7607229948043823,0.4577130675315857,13,,bottle;sink;toilet,False,False,False,False
+181,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527427.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.9157376289367676,22,chair,cell phone;chair;dining table;laptop;person;potted plant,True,True,True,True
+182,D:\DATASETS\mscoco\val2014\COCO_val2014_000000155774.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.7246853709220886,23,,book;bowl;cup;handbag;person;tie,False,False,False,False
+183,D:\DATASETS\mscoco\val2014\COCO_val2014_000000266437.jpg,dig hole,selected,skateboard,0.99393230676651,0.99393230676651,0.9336467385292053,14,skateboard,person;skateboard,True,True,True,True
+184,D:\DATASETS\mscoco\val2014\COCO_val2014_000000265707.jpg,extinguish fire,below_threshold,,,,,14,,book;cat;keyboard,False,True,False,False
+185,D:\DATASETS\mscoco\val2014\COCO_val2014_000000302380.jpg,get lemon out of tea,selected,knife,0.8426859378814697,0.8426859378814697,0.16462332010269165,23,,cake;cup;person,False,False,False,False
+186,D:\DATASETS\mscoco\val2014\COCO_val2014_000000525247.jpg,get potatoes out of fire,selected,cup,0.5711650848388672,0.5711650848388672,0.21551984548568726,8,,cat;laptop,False,False,False,False
+187,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527025.jpg,open bottle of beer,below_threshold,,,,,32,,person,False,True,False,False
+188,D:\DATASETS\mscoco\val2014\COCO_val2014_000000235784.jpg,open parcel,below_threshold,,,,,3,,backpack;person,False,True,False,False
+189,D:\DATASETS\mscoco\val2014\COCO_val2014_000000268742.jpg,place flowers,selected,vase,0.9602795839309692,0.9602795839309692,0.9311507940292358,13,vase,bowl;potted plant;vase,True,True,True,True
+190,D:\DATASETS\mscoco\val2014\COCO_val2014_000000326928.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.8524564504623413,4,surfboard,person;surfboard,True,True,True,True
+191,D:\DATASETS\mscoco\val2014\COCO_val2014_000000505099.jpg,pour sugar,selected,bottle,0.7434991598129272,0.7434991598129272,0.373877614736557,38,bottle,backpack;baseball bat;baseball glove;bottle;chair;person,True,True,True,True
+192,D:\DATASETS\mscoco\val2014\COCO_val2014_000000571857.jpg,serve wine,below_threshold,,,,,35,cup,airplane;bicycle;bottle;chair;cup;person,True,False,False,False
+193,D:\DATASETS\mscoco\val2014\COCO_val2014_000000136820.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.8701239824295044,33,chair,bowl;chair;dining table;fork;knife;person;spoon,True,True,True,True
+194,D:\DATASETS\mscoco\val2014\COCO_val2014_000000134386.jpg,smear butter,below_threshold,,,,,45,,bottle;cake;person;refrigerator,False,True,False,False
+195,D:\DATASETS\mscoco\val2014\COCO_val2014_000000524450.jpg,step on something to reach top of a shelf,below_threshold,,,,,12,,backpack;bus;handbag;person,False,True,False,False
+196,D:\DATASETS\mscoco\val2014\COCO_val2014_000000418062.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.10389167070388794,12,wine glass,person;wine glass,True,False,True,True
+197,D:\DATASETS\mscoco\val2014\COCO_val2014_000000264659.jpg,dig hole,selected,stop sign,0.4408140182495117,0.4408140182495117,0.07821357250213623,9,,bird;car;handbag;person,False,False,False,False
+198,D:\DATASETS\mscoco\val2014\COCO_val2014_000000221610.jpg,extinguish fire,below_threshold,,,,,5,,clock;couch;tv,False,True,False,False
+199,D:\DATASETS\mscoco\val2014\COCO_val2014_000000175052.jpg,get lemon out of tea,selected,toothbrush,0.9414254426956177,0.9414254426956177,0.10821489989757538,15,bottle,bottle;person;sink,True,False,True,True
+200,D:\DATASETS\mscoco\val2014\COCO_val2014_000000263202.jpg,get potatoes out of fire,below_threshold,,,,,4,,cell phone;person,False,True,False,False
+201,D:\DATASETS\mscoco\val2014\COCO_val2014_000000268433.jpg,open bottle of beer,below_threshold,,,,,1,,clock,False,True,False,False
+202,D:\DATASETS\mscoco\val2014\COCO_val2014_000000573891.jpg,open parcel,below_threshold,,,,,3,,couch;teddy bear,False,True,False,False
+203,D:\DATASETS\mscoco\val2014\COCO_val2014_000000134133.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.10604136437177658,28,,backpack;cake;knife;person,False,False,False,False
+204,D:\DATASETS\mscoco\val2014\COCO_val2014_000000187734.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.7859975695610046,55,tennis racket,chair;person;sports ball;tennis racket,True,True,True,True
+205,D:\DATASETS\mscoco\val2014\COCO_val2014_000000505786.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.06901083886623383,11,,bottle;person,False,False,False,False
+206,D:\DATASETS\mscoco\val2014\COCO_val2014_000000362127.jpg,serve wine,below_threshold,,,,,6,,bottle;sink,False,True,False,False
+207,D:\DATASETS\mscoco\val2014\COCO_val2014_000000268378.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.8670172691345215,49,chair,chair;cup;dining table;fork;person;wine glass,True,True,True,True
+208,D:\DATASETS\mscoco\val2014\COCO_val2014_000000440779.jpg,smear butter,below_threshold,,,,,28,,bottle;couch;person;remote,False,True,False,False
+209,D:\DATASETS\mscoco\val2014\COCO_val2014_000000533129.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.9490746855735779,6,chair,chair;clock;couch;person;teddy bear,True,True,True,True
+210,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001340.jpg,water plant,selected,vase,0.9034367203712463,0.9034367203712463,0.8803471326828003,3,vase,vase,True,True,True,True
+211,D:\DATASETS\mscoco\val2014\COCO_val2014_000000003378.jpg,dig hole,selected,skateboard,0.99393230676651,0.99393230676651,0.9062676429748535,31,skateboard,person;skateboard,True,True,True,True
+212,D:\DATASETS\mscoco\val2014\COCO_val2014_000000065969.jpg,extinguish fire,selected,vase,0.9298223257064819,0.9298223257064819,0.9426817297935486,6,cup,cup;dining table;vase,True,False,True,True
+213,D:\DATASETS\mscoco\val2014\COCO_val2014_000000264180.jpg,get lemon out of tea,below_threshold,,,,,3,,cow,False,True,False,False
+214,D:\DATASETS\mscoco\val2014\COCO_val2014_000000406611.jpg,get potatoes out of fire,selected,skis,0.9959355592727661,0.9959355592727661,0.7383790016174316,60,skis,backpack;person;skis,True,True,True,True
+215,D:\DATASETS\mscoco\val2014\COCO_val2014_000000552217.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.17633207142353058,6,,bed;clock;person,False,False,False,False
+216,D:\DATASETS\mscoco\val2014\COCO_val2014_000000010400.jpg,open parcel,below_threshold,,,,,3,,clock,False,True,False,False
+217,D:\DATASETS\mscoco\val2014\COCO_val2014_000000533978.jpg,place flowers,selected,bottle,0.9335611462593079,0.9335611462593079,0.5946333408355713,11,,bottle;clock;microwave;oven;refrigerator,False,False,False,False
+218,D:\DATASETS\mscoco\val2014\COCO_val2014_000000018480.jpg,pound carpet,selected,frisbee,0.9866328239440918,0.9866328239440918,0.9211696982383728,17,frisbee,frisbee;person,True,True,True,True
+219,D:\DATASETS\mscoco\val2014\COCO_val2014_000000512330.jpg,pour sugar,selected,bottle,0.7434991598129272,0.7434991598129272,0.7856707572937012,18,bottle,bottle;refrigerator,True,True,True,True
+220,D:\DATASETS\mscoco\val2014\COCO_val2014_000000185935.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.31980788707733154,22,cup,bottle;cup;sink;toilet,True,True,True,True
+221,D:\DATASETS\mscoco\val2014\COCO_val2014_000000270758.jpg,sit comfortably,selected,toilet,0.9645435214042664,0.9645435214042664,0.964738667011261,4,,toilet,False,False,False,False
+222,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267191.jpg,smear butter,below_threshold,,,,,7,,elephant;person,False,True,False,False
+223,D:\DATASETS\mscoco\val2014\COCO_val2014_000000264191.jpg,step on something to reach top of a shelf,selected,toilet,0.1999446600675583,0.1999446600675583,0.8862053751945496,1,,toilet,False,False,False,False
+224,D:\DATASETS\mscoco\val2014\COCO_val2014_000000136915.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.5306586027145386,20,,baseball bat;book;chair;person;tie,False,False,False,False
+225,D:\DATASETS\mscoco\val2014\COCO_val2014_000000526456.jpg,dig hole,selected,bowl,0.8496681451797485,0.8496681451797485,0.0880502238869667,9,,cow,False,False,False,False
+226,D:\DATASETS\mscoco\val2014\COCO_val2014_000000408143.jpg,extinguish fire,selected,vase,0.9298223257064819,0.9298223257064819,0.9765183329582214,9,vase,bicycle;vase,True,True,True,True
+227,D:\DATASETS\mscoco\val2014\COCO_val2014_000000041279.jpg,get lemon out of tea,selected,cup,0.2091376930475235,0.2091376930475235,0.9427896738052368,28,,chair;cup;dining table;person;pizza,False,False,False,False
+228,D:\DATASETS\mscoco\val2014\COCO_val2014_000000525908.jpg,get potatoes out of fire,selected,tennis racket,0.9950190782546997,0.9950190782546997,0.9362099766731262,2,tennis racket,person;tennis racket,True,True,True,True
+229,D:\DATASETS\mscoco\val2014\COCO_val2014_000000041848.jpg,open bottle of beer,below_threshold,,,,,7,,teddy bear;tie,False,True,False,False
+230,D:\DATASETS\mscoco\val2014\COCO_val2014_000000302608.jpg,open parcel,below_threshold,,,,,9,,bed;book,False,True,False,False
+231,D:\DATASETS\mscoco\val2014\COCO_val2014_000000143167.jpg,place flowers,below_threshold,,,,,2,,clock,False,True,False,False
+232,D:\DATASETS\mscoco\val2014\COCO_val2014_000000147667.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.8723331689834595,9,tennis racket,person;sports ball;tennis racket,True,True,True,True
+233,D:\DATASETS\mscoco\val2014\COCO_val2014_000000522163.jpg,pour sugar,selected,bottle,0.7434991598129272,0.7434991598129272,0.7674533128738403,50,,book;bottle;person;surfboard,False,False,False,False
+234,D:\DATASETS\mscoco\val2014\COCO_val2014_000000180869.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.5178242325782776,79,,bottle;bowl;chair;dining table;donut;keyboard;laptop;mouse;person;tv,False,False,False,False
+235,D:\DATASETS\mscoco\val2014\COCO_val2014_000000431352.jpg,sit comfortably,selected,toilet,0.9645435214042664,0.9645435214042664,0.7845823764801025,6,toilet,sink;toilet,True,True,True,True
+236,D:\DATASETS\mscoco\val2014\COCO_val2014_000000393682.jpg,smear butter,selected,fork,0.8765053749084473,0.8765053749084473,0.9864424467086792,6,fork,cake;fork,True,True,True,True
+237,D:\DATASETS\mscoco\val2014\COCO_val2014_000000007570.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.9481139779090881,12,chair,chair;keyboard;mouse;potted plant;remote;tv;vase,True,True,True,True
+238,D:\DATASETS\mscoco\val2014\COCO_val2014_000000148444.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.9566835761070251,13,cup,cup;dining table;fork;knife;pizza,True,True,True,True
+239,D:\DATASETS\mscoco\val2014\COCO_val2014_000000543082.jpg,dig hole,selected,surfboard,0.993778645992279,0.993778645992279,0.8933647274971008,9,surfboard,kite;person;surfboard,True,True,True,True
+240,D:\DATASETS\mscoco\val2014\COCO_val2014_000000447169.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.27995380759239197,20,bottle,bottle;chair;clock;oven,True,False,True,True
+241,D:\DATASETS\mscoco\val2014\COCO_val2014_000000489029.jpg,get lemon out of tea,selected,bowl,0.1418105959892273,0.1418105959892273,0.464285284280777,19,,apple;bowl;broccoli;dining table,False,False,False,False
+242,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132001.jpg,get potatoes out of fire,selected,keyboard,0.14483760297298431,0.14483760297298431,0.9659531116485596,2,,keyboard;mouse,False,False,False,False
+243,D:\DATASETS\mscoco\val2014\COCO_val2014_000000405348.jpg,open bottle of beer,below_threshold,,,,,71,,car;clock;person;umbrella,False,True,False,False
+244,D:\DATASETS\mscoco\val2014\COCO_val2014_000000134119.jpg,open parcel,below_threshold,,,,,11,,cow;giraffe,False,True,False,False
+245,D:\DATASETS\mscoco\val2014\COCO_val2014_000000140908.jpg,place flowers,below_threshold,,,,,27,,bench;bicycle;person;teddy bear,False,True,False,False
+246,D:\DATASETS\mscoco\val2014\COCO_val2014_000000409784.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.7222743630409241,7,tennis racket,chair;person;sports ball;tennis racket,True,True,True,True
+247,D:\DATASETS\mscoco\val2014\COCO_val2014_000000169562.jpg,pour sugar,below_threshold,,,,,16,,chair;couch;keyboard;knife;motorcycle;mouse;tv,False,True,False,False
+248,D:\DATASETS\mscoco\val2014\COCO_val2014_000000029504.jpg,serve wine,below_threshold,,,,,15,,bowl;broccoli;carrot,False,True,False,False
+249,D:\DATASETS\mscoco\val2014\COCO_val2014_000000161605.jpg,sit comfortably,selected,dining table,0.10322931408882141,0.10322931408882141,0.9207897186279297,18,,bottle;bowl;cup;dining table;fork;person;sandwich,False,False,False,False
+250,D:\DATASETS\mscoco\val2014\COCO_val2014_000000467314.jpg,smear butter,below_threshold,,,,,17,,apple;bottle;bowl;cup;orange,False,True,False,False
+251,D:\DATASETS\mscoco\val2014\COCO_val2014_000000412753.jpg,step on something to reach top of a shelf,selected,toilet,0.19994477927684784,0.19994477927684784,0.8840770125389099,5,,sink;toilet,False,False,False,False
+252,D:\DATASETS\mscoco\val2014\COCO_val2014_000000136841.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.8858758211135864,14,bottle,bottle;person,True,True,True,True
+253,D:\DATASETS\mscoco\val2014\COCO_val2014_000000393928.jpg,dig hole,below_threshold,,,,,14,,sheep,False,True,False,False
+254,D:\DATASETS\mscoco\val2014\COCO_val2014_000000142581.jpg,extinguish fire,below_threshold,,,,,1,,clock,False,True,False,False
+255,D:\DATASETS\mscoco\val2014\COCO_val2014_000000401828.jpg,get lemon out of tea,selected,cup,0.2091376930475235,0.2091376930475235,0.7121958136558533,35,cup,backpack;cell phone;cup;handbag;person,True,True,True,True
+256,D:\DATASETS\mscoco\val2014\COCO_val2014_000000352302.jpg,get potatoes out of fire,selected,skis,0.9959355592727661,0.9959355592727661,0.7532963752746582,37,skis;snowboard,person;skis;snowboard,True,True,True,True
+257,D:\DATASETS\mscoco\val2014\COCO_val2014_000000021465.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.4072744846343994,14,chair,chair;vase,True,False,True,True
+258,D:\DATASETS\mscoco\val2014\COCO_val2014_000000003244.jpg,open parcel,below_threshold,,,,,11,,cell phone;keyboard;laptop;mouse;tv,False,True,False,False
+259,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132499.jpg,place flowers,below_threshold,,,,,2,,clock,False,True,False,False
+260,D:\DATASETS\mscoco\val2014\COCO_val2014_000000543082.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.8933647274971008,9,surfboard,kite;person;surfboard,True,True,True,True
+261,D:\DATASETS\mscoco\val2014\COCO_val2014_000000514984.jpg,pour sugar,selected,knife,0.9444102644920349,0.9444102644920349,0.08567842096090317,37,cup,cup;dining table;person;pizza,True,False,True,False
+262,D:\DATASETS\mscoco\val2014\COCO_val2014_000000230610.jpg,serve wine,below_threshold,,,,,16,,bottle;sink,False,True,False,False
+263,D:\DATASETS\mscoco\val2014\COCO_val2014_000000406899.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.8626433610916138,72,chair,backpack;chair;handbag;person;umbrella,True,True,True,True
+264,D:\DATASETS\mscoco\val2014\COCO_val2014_000000442161.jpg,smear butter,below_threshold,,,,,17,,handbag;person;wine glass,False,True,False,False
+265,D:\DATASETS\mscoco\val2014\COCO_val2014_000000441518.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.12847900390625,11,,couch;laptop;person;remote,False,False,False,False
+266,D:\DATASETS\mscoco\val2014\COCO_val2014_000000140908.jpg,water plant,below_threshold,,,,,27,,bench;bicycle;person;teddy bear,False,True,False,False
+267,D:\DATASETS\mscoco\val2014\COCO_val2014_000000153130.jpg,dig hole,selected,tennis racket,0.9961715340614319,0.9961715340614319,0.9128628373146057,5,tennis racket,person;sports ball;tennis racket,True,True,True,True
+268,D:\DATASETS\mscoco\val2014\COCO_val2014_000000360170.jpg,extinguish fire,selected,bowl,0.9219841361045837,0.9219841361045837,0.09149112552404404,86,bottle,bottle;chair;cup;dining table;fork;handbag;knife;person;tie;wine glass,True,False,True,True
+269,D:\DATASETS\mscoco\val2014\COCO_val2014_000000278365.jpg,get lemon out of tea,selected,cup,0.2091376930475235,0.2091376930475235,0.8871628046035767,15,,cell phone;chair;cup;dining table;person;pizza,False,False,False,False
+270,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000589.jpg,get potatoes out of fire,selected,frisbee,0.9826462268829346,0.9826462268829346,0.08238398283720016,4,frisbee,frisbee;person,True,True,True,True
+271,D:\DATASETS\mscoco\val2014\COCO_val2014_000000057150.jpg,open bottle of beer,below_threshold,,,,,44,,backpack;person;teddy bear,False,True,False,False
+272,D:\DATASETS\mscoco\val2014\COCO_val2014_000000453622.jpg,open parcel,below_threshold,,,,,35,,book;chair;couch;dining table;tv,False,True,False,False
+273,D:\DATASETS\mscoco\val2014\COCO_val2014_000000535902.jpg,place flowers,selected,bottle,0.9335611462593079,0.9335611462593079,0.693917989730835,14,cup,cup;sink;toothbrush,True,False,False,False
+274,D:\DATASETS\mscoco\val2014\COCO_val2014_000000201452.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.8976562023162842,4,surfboard,person;surfboard,True,True,True,True
+275,D:\DATASETS\mscoco\val2014\COCO_val2014_000000514915.jpg,pour sugar,selected,bowl,0.42996954917907715,0.42996954917907715,0.9625037312507629,4,,bowl;dog,False,False,False,False
+276,D:\DATASETS\mscoco\val2014\COCO_val2014_000000440067.jpg,serve wine,below_threshold,,,,,11,,cat;chair;dining table;fork;knife,False,True,False,False
+277,D:\DATASETS\mscoco\val2014\COCO_val2014_000000131453.jpg,sit comfortably,below_threshold,,,,,4,,elephant,False,True,False,False
+278,D:\DATASETS\mscoco\val2014\COCO_val2014_000000465643.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.27706706523895264,11,knife,cup;dining table;knife;orange;sandwich;spoon,True,True,True,True
+279,D:\DATASETS\mscoco\val2014\COCO_val2014_000000010705.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.945152997970581,77,chair,bottle;chair;cup;dining table;handbag;person;tv,True,True,True,True
+280,D:\DATASETS\mscoco\val2014\COCO_val2014_000000417668.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.6438462138175964,10,bowl,bowl;chair;cup;dining table;sandwich,True,False,True,True
+281,D:\DATASETS\mscoco\val2014\COCO_val2014_000000002613.jpg,dig hole,selected,surfboard,0.993778645992279,0.993778645992279,0.830845057964325,5,surfboard,person;surfboard,True,True,True,True
+282,D:\DATASETS\mscoco\val2014\COCO_val2014_000000284354.jpg,extinguish fire,below_threshold,,,,,5,,clock,False,True,False,False
+283,D:\DATASETS\mscoco\val2014\COCO_val2014_000000220111.jpg,get lemon out of tea,selected,spoon,0.9698700904846191,0.9698700904846191,0.06247348710894585,26,knife,bottle;bowl;cup;dining table;knife;pizza;sandwich,True,False,True,True
+284,D:\DATASETS\mscoco\val2014\COCO_val2014_000000541279.jpg,get potatoes out of fire,selected,spoon,0.9286569356918335,0.9286569356918335,0.3277464509010315,17,spoon,bottle;bowl;cup;oven;scissors;sink;spoon,True,True,True,True
+285,D:\DATASETS\mscoco\val2014\COCO_val2014_000000317479.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.10660146176815033,46,,backpack;chair;handbag;person;truck;umbrella,False,False,False,False
+286,D:\DATASETS\mscoco\val2014\COCO_val2014_000000170729.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.9663414359092712,44,knife,bottle;bowl;broccoli;chair;cup;dining table;fork;knife;person;pizza,True,True,True,True
+287,D:\DATASETS\mscoco\val2014\COCO_val2014_000000013148.jpg,place flowers,selected,vase,0.9602795839309692,0.9602795839309692,0.8111360669136047,42,vase,bottle;person;vase;wine glass,True,True,True,True
+288,D:\DATASETS\mscoco\val2014\COCO_val2014_000000006266.jpg,pound carpet,below_threshold,,,,,1,,cow,False,True,False,False
+289,D:\DATASETS\mscoco\val2014\COCO_val2014_000000065258.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.42677041888237,32,,bench;bottle;bowl;chair;cup,False,False,False,False
+290,D:\DATASETS\mscoco\val2014\COCO_val2014_000000210855.jpg,serve wine,below_threshold,,,,,10,,bottle;sink;toilet;vase,False,True,False,False
+291,D:\DATASETS\mscoco\val2014\COCO_val2014_000000022892.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.11275514215230942,7,chair,cat;chair;dining table;dog;potted plant,True,True,True,True
+292,D:\DATASETS\mscoco\val2014\COCO_val2014_000000071563.jpg,smear butter,selected,scissors,0.6903356313705444,0.6903356313705444,0.05606697499752045,18,,bottle;cup;keyboard;laptop;mouse;tv,False,False,False,False
+293,D:\DATASETS\mscoco\val2014\COCO_val2014_000000543660.jpg,step on something to reach top of a shelf,selected,toilet,0.19994473457336426,0.19994473457336426,0.9396435618400574,2,,toilet,False,False,False,False
+294,D:\DATASETS\mscoco\val2014\COCO_val2014_000000530439.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.18923209607601166,8,,laptop;person;vase,False,False,False,False
+295,D:\DATASETS\mscoco\val2014\COCO_val2014_000000161124.jpg,dig hole,selected,skis,0.9949281215667725,0.9949281215667725,0.5701149106025696,4,skis,person;skis,True,True,True,True
+296,D:\DATASETS\mscoco\val2014\COCO_val2014_000000334125.jpg,extinguish fire,selected,bottle,0.9197603464126587,0.9197603464126587,0.9227854609489441,7,bottle,backpack;book;bottle;cell phone,True,True,True,True
+297,D:\DATASETS\mscoco\val2014\COCO_val2014_000000184425.jpg,get lemon out of tea,selected,wine glass,0.38900601863861084,0.38900601863861084,0.98774254322052,9,,dining table;person;wine glass,False,False,False,False
+298,D:\DATASETS\mscoco\val2014\COCO_val2014_000000280079.jpg,get potatoes out of fire,selected,surfboard,0.9928168058395386,0.9928168058395386,0.9746527075767517,6,surfboard,person;surfboard,True,True,True,True
+299,D:\DATASETS\mscoco\val2014\COCO_val2014_000000555461.jpg,open bottle of beer,selected,chair,0.5803737640380859,0.5803737640380859,0.7744263410568237,12,,book;chair;laptop;person,False,False,False,False
+300,D:\DATASETS\mscoco\val2014\COCO_val2014_000000404678.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.23833319544792175,56,,bench;bowl;chair;couch;dining table;person;wine glass,False,False,False,False
+301,D:\DATASETS\mscoco\val2014\COCO_val2014_000000416746.jpg,place flowers,below_threshold,,,,,14,,baseball glove;bottle;person;sports ball,False,True,False,False
+302,D:\DATASETS\mscoco\val2014\COCO_val2014_000000469165.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.7775744199752808,36,baseball bat,baseball bat;baseball glove;bench;person,True,True,True,True
+303,D:\DATASETS\mscoco\val2014\COCO_val2014_000000296634.jpg,pour sugar,selected,bowl,0.42996934056282043,0.42996934056282043,0.9530684351921082,23,,bowl;broccoli;carrot,False,False,False,False
+304,D:\DATASETS\mscoco\val2014\COCO_val2014_000000015254.jpg,serve wine,below_threshold,,,,,10,,bowl;carrot;spoon,False,True,False,False
+305,D:\DATASETS\mscoco\val2014\COCO_val2014_000000554255.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.776013970375061,43,chair,chair;person;tennis racket,True,True,True,True
+306,D:\DATASETS\mscoco\val2014\COCO_val2014_000000142248.jpg,smear butter,below_threshold,,,,,18,,book;bowl;chair;couch;potted plant;vase,False,True,False,False
+307,D:\DATASETS\mscoco\val2014\COCO_val2014_000000398992.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.7732133865356445,62,chair,book;chair;cup;person;teddy bear;umbrella,True,True,True,True
+308,D:\DATASETS\mscoco\val2014\COCO_val2014_000000148737.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.29992255568504333,26,bottle,book;bottle;cat,True,True,True,True
+309,D:\DATASETS\mscoco\val2014\COCO_val2014_000000025096.jpg,dig hole,selected,knife,0.9150356650352478,0.9150356650352478,0.7183318138122559,13,knife,chair;dining table;knife;person;skateboard;zebra,True,True,True,True
+310,D:\DATASETS\mscoco\val2014\COCO_val2014_000000469919.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.885417103767395,36,,handbag;orange;person;potted plant;umbrella;vase,False,False,False,False
+311,D:\DATASETS\mscoco\val2014\COCO_val2014_000000532983.jpg,get lemon out of tea,selected,wine glass,0.38900601863861084,0.38900601863861084,0.8275630474090576,92,,chair;cup;dining table;person;train;wine glass,False,False,False,False
+312,D:\DATASETS\mscoco\val2014\COCO_val2014_000000276458.jpg,get potatoes out of fire,below_threshold,,,,,8,,kite;person,False,True,False,False
+313,D:\DATASETS\mscoco\val2014\COCO_val2014_000000352422.jpg,open bottle of beer,below_threshold,,,,,4,,bottle;sink;toilet,False,True,False,False
+314,D:\DATASETS\mscoco\val2014\COCO_val2014_000000440434.jpg,open parcel,below_threshold,,,,,6,,potted plant;vase,False,True,False,False
+315,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267725.jpg,place flowers,selected,bottle,0.9335611462593079,0.9335611462593079,0.8572728037834167,6,bottle,bottle;dog;person;suitcase,True,True,True,True
+316,D:\DATASETS\mscoco\val2014\COCO_val2014_000000532295.jpg,pound carpet,selected,skis,0.9945266842842102,0.9945266842842102,0.9202192425727844,8,skis,bench;person;skis,True,True,True,True
+317,D:\DATASETS\mscoco\val2014\COCO_val2014_000000251798.jpg,pour sugar,selected,bottle,0.7434991002082825,0.7434991002082825,0.6458979249000549,15,,bottle;hair drier;person,False,False,False,False
+318,D:\DATASETS\mscoco\val2014\COCO_val2014_000000575915.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.7526739239692688,7,,cup;pizza;spoon,False,False,False,False
+319,D:\DATASETS\mscoco\val2014\COCO_val2014_000000422025.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.9131364226341248,20,chair,chair;frisbee;person;truck,True,True,True,True
+320,D:\DATASETS\mscoco\val2014\COCO_val2014_000000205601.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.2659350335597992,28,spoon,bottle;person;spoon,True,False,True,True
+321,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527535.jpg,step on something to reach top of a shelf,selected,dining table,0.4680088758468628,0.4680088758468628,0.5169142484664917,15,dining table,banana;cake;cup;dining table;person,True,True,True,True
+322,D:\DATASETS\mscoco\val2014\COCO_val2014_000000025394.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.52724689245224,68,cup,bottle;cup;person;wine glass,True,True,True,True
+323,D:\DATASETS\mscoco\val2014\COCO_val2014_000000135361.jpg,dig hole,selected,tennis racket,0.9961715340614319,0.9961715340614319,0.891812801361084,11,tennis racket,car;person;sports ball;tennis racket;truck,True,True,True,True
+324,D:\DATASETS\mscoco\val2014\COCO_val2014_000000569917.jpg,extinguish fire,selected,bottle,0.9197603464126587,0.9197603464126587,0.06164512783288956,7,bottle,bottle;sink;toilet;toothbrush,True,True,True,True
+325,D:\DATASETS\mscoco\val2014\COCO_val2014_000000445433.jpg,get lemon out of tea,selected,wine glass,0.38900601863861084,0.38900601863861084,0.0531802736222744,14,,cup;microwave;refrigerator,False,False,False,False
+326,D:\DATASETS\mscoco\val2014\COCO_val2014_000000008010.jpg,get potatoes out of fire,selected,surfboard,0.9928168058395386,0.9928168058395386,0.8863558173179626,6,surfboard,person;surfboard,True,True,True,True
+327,D:\DATASETS\mscoco\val2014\COCO_val2014_000000050975.jpg,open bottle of beer,selected,chair,0.5803737044334412,0.5803737044334412,0.6978371739387512,56,,bench;chair;laptop;person;sports ball;tie,False,False,False,False
+328,D:\DATASETS\mscoco\val2014\COCO_val2014_000000361238.jpg,open parcel,below_threshold,,,,,23,,backpack;cup;dining table;person;pizza;potted plant,False,True,False,False
+329,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267694.jpg,place flowers,selected,bottle,0.9335611462593079,0.9335611462593079,0.972184419631958,15,bottle,bottle;dining table;fork;knife;person;pizza,True,True,True,True
+330,D:\DATASETS\mscoco\val2014\COCO_val2014_000000206413.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.8307093977928162,37,baseball bat,baseball bat;baseball glove;bench;chair;handbag;person;sports ball,True,True,True,True
+331,D:\DATASETS\mscoco\val2014\COCO_val2014_000000032964.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.2822587788105011,11,fork,bowl;fork;hot dog;spoon,True,False,True,True
+332,D:\DATASETS\mscoco\val2014\COCO_val2014_000000048910.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.48733553290367126,30,,bottle;chair;cup;oven;sink,False,False,False,False
+333,D:\DATASETS\mscoco\val2014\COCO_val2014_000000038817.jpg,sit comfortably,below_threshold,,,,,13,,book;bus;car;person;potted plant,False,True,False,False
+334,D:\DATASETS\mscoco\val2014\COCO_val2014_000000558114.jpg,smear butter,below_threshold,,,,,46,,chair;cup;laptop;person;tie,False,True,False,False
+335,D:\DATASETS\mscoco\val2014\COCO_val2014_000000014226.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.6132245659828186,13,,apple;chair;dining table;laptop;person,False,False,False,False
+336,D:\DATASETS\mscoco\val2014\COCO_val2014_000000165795.jpg,water plant,selected,vase,0.9034367203712463,0.9034367203712463,0.9604400396347046,5,vase,vase,True,True,True,True
+337,D:\DATASETS\mscoco\val2014\COCO_val2014_000000004246.jpg,dig hole,selected,potted plant,0.5639206767082214,0.5639206767082214,0.5087040066719055,26,,car;kite;motorcycle;person;truck,False,False,False,False
+338,D:\DATASETS\mscoco\val2014\COCO_val2014_000000143010.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.9194726347923279,3,,vase,False,False,False,False
+339,D:\DATASETS\mscoco\val2014\COCO_val2014_000000573796.jpg,get lemon out of tea,selected,knife,0.8426858186721802,0.8426858186721802,0.9890207648277283,5,knife,apple;dining table;knife,True,True,True,True
+340,D:\DATASETS\mscoco\val2014\COCO_val2014_000000526425.jpg,get potatoes out of fire,selected,frisbee,0.9826462268829346,0.9826462268829346,0.9592236876487732,2,frisbee,dog;frisbee,True,True,True,True
+341,D:\DATASETS\mscoco\val2014\COCO_val2014_000000051223.jpg,open bottle of beer,selected,bench,0.7257707715034485,0.7257707715034485,0.13687418401241302,16,chair,backpack;bench;chair;person,True,False,True,True
+342,D:\DATASETS\mscoco\val2014\COCO_val2014_000000034689.jpg,open parcel,selected,toothbrush,0.9518917798995972,0.9518917798995972,0.9516581892967224,2,toothbrush,toothbrush;vase,True,True,True,True
+343,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001573.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.8731434941291809,22,cup,chair;cup;knife;oven;spoon;teddy bear,True,True,True,True
+344,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001779.jpg,pound carpet,below_threshold,,,,,3,,traffic light,False,True,False,False
+345,D:\DATASETS\mscoco\val2014\COCO_val2014_000000064196.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.3537590503692627,65,knife;spoon,bowl;cake;cell phone;cup;dining table;knife;microwave;oven;person;sink;spoon;tv,True,True,True,True
+346,D:\DATASETS\mscoco\val2014\COCO_val2014_000000145488.jpg,serve wine,below_threshold,,,,,4,,bowl;refrigerator,False,True,False,False
+347,D:\DATASETS\mscoco\val2014\COCO_val2014_000000268052.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.9339015483856201,8,chair,book;cat;chair;dining table,True,True,True,True
+348,D:\DATASETS\mscoco\val2014\COCO_val2014_000000281019.jpg,smear butter,selected,toothbrush,0.7607229948043823,0.7607229948043823,0.24457912147045135,12,,cup;sink;toilet,False,False,False,False
+349,D:\DATASETS\mscoco\val2014\COCO_val2014_000000535770.jpg,step on something to reach top of a shelf,selected,couch,0.6582879424095154,0.6582879424095154,0.8447456359863281,25,couch,bottle;bowl;cell phone;couch;cup;handbag;laptop;person;potted plant,True,True,True,True
+350,D:\DATASETS\mscoco\val2014\COCO_val2014_000000552377.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.9455375671386719,44,cup,cup;dining table;person;pizza,True,True,True,True
+351,D:\DATASETS\mscoco\val2014\COCO_val2014_000000528488.jpg,dig hole,selected,frisbee,0.9906812310218811,0.9906812310218811,0.9580251574516296,2,frisbee,dog;frisbee,True,True,True,True
+352,D:\DATASETS\mscoco\val2014\COCO_val2014_000000014088.jpg,extinguish fire,selected,bowl,0.9219841361045837,0.9219841361045837,0.7071479558944702,16,,bowl;cell phone;chair;clock;dining table;laptop;mouse;person,False,False,False,False
+353,D:\DATASETS\mscoco\val2014\COCO_val2014_000000444028.jpg,get lemon out of tea,selected,bottle,0.7318172454833984,0.7318172454833984,0.8309780359268188,18,bottle,backpack;bench;bottle;person;tennis racket;umbrella,True,True,True,True
+354,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262985.jpg,get potatoes out of fire,selected,umbrella,0.8728981614112854,0.8728981614112854,0.3381268382072449,19,,boat,False,False,False,False
+355,D:\DATASETS\mscoco\val2014\COCO_val2014_000000029074.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.31479164958000183,12,dining table,bed;chair;couch;dining table;tv,True,True,True,True
+356,D:\DATASETS\mscoco\val2014\COCO_val2014_000000018824.jpg,open parcel,below_threshold,,,,,58,,chair;cup;person;umbrella,False,True,False,False
+357,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000589.jpg,place flowers,below_threshold,,,,,4,,frisbee;person,False,True,False,False
+358,D:\DATASETS\mscoco\val2014\COCO_val2014_000000337420.jpg,pound carpet,below_threshold,,,,,13,,kite;person,False,True,False,False
+359,D:\DATASETS\mscoco\val2014\COCO_val2014_000000449726.jpg,pour sugar,selected,knife,0.9444102644920349,0.9444102644920349,0.9536973834037781,11,knife,cup;dining table;fork;knife;sandwich,True,True,True,True
+360,D:\DATASETS\mscoco\val2014\COCO_val2014_000000322125.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.9111787676811218,5,cup,cup,True,True,True,True
+361,D:\DATASETS\mscoco\val2014\COCO_val2014_000000284099.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.45177173614501953,18,chair,chair;dining table;person;remote,True,True,True,True
+362,D:\DATASETS\mscoco\val2014\COCO_val2014_000000022072.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.8259963989257812,18,knife,cup;dining table;donut;fork;knife;sandwich,True,True,True,True
+363,D:\DATASETS\mscoco\val2014\COCO_val2014_000000283890.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.8882996439933777,15,chair,chair;vase,True,True,True,True
+364,D:\DATASETS\mscoco\val2014\COCO_val2014_000000022656.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.20596231520175934,15,cup,bottle;cell phone;cup;handbag;person;sink,True,True,True,True
+365,D:\DATASETS\mscoco\val2014\COCO_val2014_000000165353.jpg,dig hole,selected,baseball glove,0.62175452709198,0.62175452709198,0.9200067520141602,7,baseball glove,baseball glove;person,True,True,True,True
+366,D:\DATASETS\mscoco\val2014\COCO_val2014_000000315660.jpg,extinguish fire,below_threshold,,,,,21,,book;chair;clock;person;tennis racket,False,True,False,False
+367,D:\DATASETS\mscoco\val2014\COCO_val2014_000000444531.jpg,get lemon out of tea,selected,spoon,0.9698700904846191,0.9698700904846191,0.06163428723812103,16,,banana;bowl;clock;microwave;oven;refrigerator;sink,False,False,False,False
+368,D:\DATASETS\mscoco\val2014\COCO_val2014_000000263428.jpg,get potatoes out of fire,below_threshold,,,,,67,,person;sheep,False,True,False,False
+369,D:\DATASETS\mscoco\val2014\COCO_val2014_000000269815.jpg,open bottle of beer,selected,scissors,0.9432563781738281,0.9432563781738281,0.1236766055226326,14,bed,bed;person;potted plant,True,False,True,True
+370,D:\DATASETS\mscoco\val2014\COCO_val2014_000000200252.jpg,open parcel,below_threshold,,,,,2,,bed;book,False,True,False,False
+371,D:\DATASETS\mscoco\val2014\COCO_val2014_000000133476.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.979176938533783,10,cup,cup;dining table;sandwich;wine glass,True,True,True,True
+372,D:\DATASETS\mscoco\val2014\COCO_val2014_000000406404.jpg,pound carpet,selected,skateboard,0.99381422996521,0.99381422996521,0.8482591509819031,21,skateboard,car;person;skateboard,True,True,True,True
+373,D:\DATASETS\mscoco\val2014\COCO_val2014_000000263425.jpg,pour sugar,below_threshold,,,,,4,,person,False,True,False,False
+374,D:\DATASETS\mscoco\val2014\COCO_val2014_000000492362.jpg,serve wine,below_threshold,,,,,26,,backpack;bowl;handbag;hot dog;person;skateboard;umbrella,False,True,False,False
+375,D:\DATASETS\mscoco\val2014\COCO_val2014_000000004916.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.896052896976471,19,bed;chair,bed;book;chair;person;potted plant,True,True,True,True
+376,D:\DATASETS\mscoco\val2014\COCO_val2014_000000209856.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.14630591869354248,38,fork,book;bottle;broccoli;cup;dining table;fork;person;pizza;wine glass,True,False,True,True
+377,D:\DATASETS\mscoco\val2014\COCO_val2014_000000533156.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.9125786423683167,9,chair,cat;chair;dining table;laptop,True,True,True,True
+378,D:\DATASETS\mscoco\val2014\COCO_val2014_000000289260.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.5718035101890564,34,vase,bottle;bowl;chair;dining table;handbag;knife;orange;spoon;vase,True,False,True,True
+379,D:\DATASETS\mscoco\val2014\COCO_val2014_000000416596.jpg,dig hole,selected,baseball bat,0.9970237612724304,0.9970237612724304,0.6689584255218506,34,baseball bat,baseball bat;baseball glove;bench;bus;person,True,True,True,True
+380,D:\DATASETS\mscoco\val2014\COCO_val2014_000000069884.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.31441429257392883,22,,book;chair;cup;potted plant;teddy bear,False,False,False,False
+381,D:\DATASETS\mscoco\val2014\COCO_val2014_000000036936.jpg,get lemon out of tea,selected,bottle,0.7318172454833984,0.7318172454833984,0.19721561670303345,51,cup,book;bowl;cell phone;couch;cup;person;potted plant;remote;tv,True,False,True,True
+382,D:\DATASETS\mscoco\val2014\COCO_val2014_000000277689.jpg,get potatoes out of fire,selected,wine glass,0.7063489556312561,0.7063489556312561,0.92225182056427,23,cup;wine glass,cake;cup;dining table;wine glass,True,True,True,True
+383,D:\DATASETS\mscoco\val2014\COCO_val2014_000000189424.jpg,open bottle of beer,below_threshold,,,,,2,,toilet,False,True,False,False
+384,D:\DATASETS\mscoco\val2014\COCO_val2014_000000263011.jpg,open parcel,below_threshold,,,,,42,,backpack;bus;handbag;person,False,True,False,False
+385,D:\DATASETS\mscoco\val2014\COCO_val2014_000000283698.jpg,place flowers,selected,bottle,0.9335610270500183,0.9335610270500183,0.2089567333459854,31,,handbag;person;spoon,False,False,False,False
+386,D:\DATASETS\mscoco\val2014\COCO_val2014_000000205504.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.19071078300476074,19,baseball glove,baseball glove;car;person;sports ball;truck,True,False,True,True
+387,D:\DATASETS\mscoco\val2014\COCO_val2014_000000187776.jpg,pour sugar,selected,wine glass,0.8091553449630737,0.8091553449630737,0.8194454908370972,37,,bowl;cell phone;cup;dining table;person;sandwich;tie;wine glass,False,False,False,False
+388,D:\DATASETS\mscoco\val2014\COCO_val2014_000000315195.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.6249297261238098,51,,bottle;car;cup;fire hydrant;person;traffic light,False,False,False,False
+389,D:\DATASETS\mscoco\val2014\COCO_val2014_000000351130.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.4480054974555969,123,bench;chair,baseball bat;baseball glove;bench;chair;person,True,True,True,True
+390,D:\DATASETS\mscoco\val2014\COCO_val2014_000000204026.jpg,smear butter,selected,spoon,0.9261945486068726,0.9261945486068726,0.23640741407871246,15,fork;spoon,bowl;broccoli;fork;spoon,True,True,True,True
+391,D:\DATASETS\mscoco\val2014\COCO_val2014_000000286089.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.809933066368103,32,chair,chair;person;sports ball;tennis racket,True,True,True,True
+392,D:\DATASETS\mscoco\val2014\COCO_val2014_000000032375.jpg,water plant,below_threshold,,,,,4,,couch;teddy bear,False,True,False,False
+393,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001176.jpg,dig hole,selected,skateboard,0.99393230676651,0.99393230676651,0.7974642515182495,24,skateboard,bench;person;skateboard,True,True,True,True
+394,D:\DATASETS\mscoco\val2014\COCO_val2014_000000084454.jpg,extinguish fire,selected,bottle,0.9197603464126587,0.9197603464126587,0.2763783931732178,35,,bed;book;chair;laptop,False,False,False,False
+395,D:\DATASETS\mscoco\val2014\COCO_val2014_000000561160.jpg,get lemon out of tea,selected,fork,0.9753941297531128,0.9753941297531128,0.5773762464523315,64,fork;spoon,bowl;chair;cup;dining table;fork;person;spoon,True,True,True,True
+396,D:\DATASETS\mscoco\val2014\COCO_val2014_000000147681.jpg,get potatoes out of fire,selected,skateboard,0.9936664700508118,0.9936664700508118,0.7646040320396423,13,skateboard,bench;car;person;skateboard,True,True,True,True
+397,D:\DATASETS\mscoco\val2014\COCO_val2014_000000042790.jpg,open bottle of beer,selected,chair,0.5803737044334412,0.5803737044334412,0.7499677538871765,35,,cell phone;chair;person,False,False,False,False
+398,D:\DATASETS\mscoco\val2014\COCO_val2014_000000356742.jpg,open parcel,below_threshold,,,,,24,,bed;book,False,True,False,False
+399,D:\DATASETS\mscoco\val2014\COCO_val2014_000000268254.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.7061083316802979,6,cup,bowl;cup;microwave,True,True,True,True
+400,D:\DATASETS\mscoco\val2014\COCO_val2014_000000033368.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.8981801271438599,3,tennis racket,person;sports ball;tennis racket,True,True,True,True
+401,D:\DATASETS\mscoco\val2014\COCO_val2014_000000559312.jpg,pour sugar,selected,bottle,0.7434991598129272,0.7434991598129272,0.5346623063087463,55,,banana;bicycle;bottle;chair;handbag;person,False,False,False,False
+402,D:\DATASETS\mscoco\val2014\COCO_val2014_000000146358.jpg,serve wine,selected,wine glass,0.9694092273712158,0.9694092273712158,0.5570343136787415,28,wine glass,cake;chair;dining table;knife;person;tie;wine glass,True,True,True,True
+403,D:\DATASETS\mscoco\val2014\COCO_val2014_000000133698.jpg,sit comfortably,selected,dining table,0.10322932153940201,0.10322932153940201,0.505535364151001,4,,dining table;fork;pizza,False,False,False,False
+404,D:\DATASETS\mscoco\val2014\COCO_val2014_000000331230.jpg,smear butter,selected,fork,0.8765054941177368,0.8765054941177368,0.9464243054389954,19,fork,apple;bowl;cup;dining table;fork;vase,True,True,True,True
+405,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262325.jpg,step on something to reach top of a shelf,below_threshold,,,,,15,,bowl;broccoli;carrot,False,True,False,False
+406,D:\DATASETS\mscoco\val2014\COCO_val2014_000000286182.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.8624669313430786,47,,book;bottle;bowl;broccoli;carrot;chair;dining table;fork;person;spoon,False,False,False,False
+407,D:\DATASETS\mscoco\val2014\COCO_val2014_000000023991.jpg,dig hole,selected,skateboard,0.99393230676651,0.99393230676651,0.8934943079948425,7,skateboard,person;skateboard,True,True,True,True
+408,D:\DATASETS\mscoco\val2014\COCO_val2014_000000203131.jpg,extinguish fire,selected,cup,0.9048432111740112,0.9048432111740112,0.9671498537063599,5,cup,bed;book;cup;pizza,True,True,True,True
+409,D:\DATASETS\mscoco\val2014\COCO_val2014_000000437556.jpg,get lemon out of tea,selected,bowl,0.14181064069271088,0.14181064069271088,0.9553610682487488,4,,bowl;cat;refrigerator,False,False,False,False
+410,D:\DATASETS\mscoco\val2014\COCO_val2014_000000218561.jpg,get potatoes out of fire,selected,frisbee,0.9826462268829346,0.9826462268829346,0.9558171629905701,3,frisbee,dog;frisbee,True,True,True,True
+411,D:\DATASETS\mscoco\val2014\COCO_val2014_000000052691.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.21719512343406677,15,chair,chair;person;remote,True,False,True,True
+412,D:\DATASETS\mscoco\val2014\COCO_val2014_000000334244.jpg,open parcel,below_threshold,,,,,24,,clock;person,False,True,False,False
+413,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001340.jpg,place flowers,selected,vase,0.9602795839309692,0.9602795839309692,0.8803471326828003,3,vase,vase,True,True,True,True
+414,D:\DATASETS\mscoco\val2014\COCO_val2014_000000327701.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.9217150807380676,9,tennis racket,cup;person;sports ball;tennis racket,True,True,True,True
+415,D:\DATASETS\mscoco\val2014\COCO_val2014_000000452684.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.9499610066413879,19,,bowl;cup;dining table;orange,False,False,False,False
+416,D:\DATASETS\mscoco\val2014\COCO_val2014_000000185559.jpg,serve wine,selected,wine glass,0.9694092273712158,0.9694092273712158,0.5338263511657715,42,wine glass,cake;cell phone;cup;dining table;knife;person;potted plant;tie;vase;wine glass,True,True,True,True
+417,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262626.jpg,sit comfortably,selected,bed,0.9603727459907532,0.9603727459907532,0.8866433501243591,2,bed,bed;cat;dining table,True,True,True,True
+418,D:\DATASETS\mscoco\val2014\COCO_val2014_000000005033.jpg,smear butter,below_threshold,,,,,3,,person;train,False,True,False,False
+419,D:\DATASETS\mscoco\val2014\COCO_val2014_000000506311.jpg,step on something to reach top of a shelf,selected,couch,0.6582879424095154,0.6582879424095154,0.9492133259773254,28,,couch;laptop;mouse,False,False,False,False
+420,D:\DATASETS\mscoco\val2014\COCO_val2014_000000036962.jpg,water plant,below_threshold,,,,,14,,book;cat;chair;tv,False,True,False,False
+421,D:\DATASETS\mscoco\val2014\COCO_val2014_000000135483.jpg,dig hole,below_threshold,,,,,63,,bench;person;sports ball,False,True,False,False
+422,D:\DATASETS\mscoco\val2014\COCO_val2014_000000278184.jpg,extinguish fire,below_threshold,,,,,4,,dog;teddy bear,False,True,False,False
+423,D:\DATASETS\mscoco\val2014\COCO_val2014_000000053505.jpg,get lemon out of tea,selected,bottle,0.7318173050880432,0.7318173050880432,0.6470175385475159,9,bottle,bottle;toilet,True,True,True,True
+424,D:\DATASETS\mscoco\val2014\COCO_val2014_000000147904.jpg,get potatoes out of fire,below_threshold,,,,,5,,kite;person;sports ball,False,True,False,False
+425,D:\DATASETS\mscoco\val2014\COCO_val2014_000000014439.jpg,open bottle of beer,selected,chair,0.5803737044334412,0.5803737044334412,0.7466689944267273,46,chair,backpack;chair;kite;person,True,True,True,True
+426,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267164.jpg,open parcel,below_threshold,,,,,3,,bottle;fire hydrant,False,True,False,False
+427,D:\DATASETS\mscoco\val2014\COCO_val2014_000000140963.jpg,place flowers,selected,bottle,0.9335610270500183,0.9335610270500183,0.06302960962057114,39,bowl,bowl;car;handbag;person;potted plant;sandwich;spoon,True,False,True,True
+428,D:\DATASETS\mscoco\val2014\COCO_val2014_000000072797.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.9248708486557007,4,tennis racket,person;sports ball;tennis racket,True,True,True,True
+429,D:\DATASETS\mscoco\val2014\COCO_val2014_000000302159.jpg,pour sugar,below_threshold,,,,,17,,bowl;chair;dining table;handbag;person;sink,False,True,False,False
+430,D:\DATASETS\mscoco\val2014\COCO_val2014_000000218988.jpg,serve wine,below_threshold,,,,,29,,knife;microwave;scissors,False,True,False,False
+431,D:\DATASETS\mscoco\val2014\COCO_val2014_000000358103.jpg,sit comfortably,selected,toilet,0.9645435214042664,0.9645435214042664,0.5190201997756958,11,toilet,book;bottle;potted plant;sink;toilet;toothbrush;vase,True,True,True,True
+432,D:\DATASETS\mscoco\val2014\COCO_val2014_000000075636.jpg,smear butter,selected,fork,0.8765053749084473,0.8765053749084473,0.6327102184295654,15,fork,bottle;bowl;dining table;fork;person;pizza,True,True,True,True
+433,D:\DATASETS\mscoco\val2014\COCO_val2014_000000393271.jpg,step on something to reach top of a shelf,below_threshold,,,,,20,,person;snowboard,False,True,False,False
+434,D:\DATASETS\mscoco\val2014\COCO_val2014_000000269089.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.9594130516052246,24,cup,bowl;cup;dining table;fork;sandwich;spoon,True,True,True,True
+435,D:\DATASETS\mscoco\val2014\COCO_val2014_000000027569.jpg,dig hole,selected,skis,0.9949281215667725,0.9949281215667725,0.8957214951515198,9,skis,person;skis,True,True,True,True
+436,D:\DATASETS\mscoco\val2014\COCO_val2014_000000100604.jpg,extinguish fire,below_threshold,,,,,25,,chair;dining table;potted plant;teddy bear,False,True,False,False
+437,D:\DATASETS\mscoco\val2014\COCO_val2014_000000306247.jpg,get lemon out of tea,selected,cup,0.2091376930475235,0.2091376930475235,0.7404186129570007,7,,cup;donut;person,False,False,False,False
+438,D:\DATASETS\mscoco\val2014\COCO_val2014_000000533173.jpg,get potatoes out of fire,selected,surfboard,0.9928168058395386,0.9928168058395386,0.14875127375125885,15,,kite;person,False,False,False,False
+439,D:\DATASETS\mscoco\val2014\COCO_val2014_000000051403.jpg,open bottle of beer,selected,chair,0.5803737640380859,0.5803737640380859,0.9588531255722046,4,chair,chair;dog,True,True,True,True
+440,D:\DATASETS\mscoco\val2014\COCO_val2014_000000581450.jpg,open parcel,below_threshold,,,,,16,,bed;book;chair;couch;dining table;tv,False,True,False,False
+441,D:\DATASETS\mscoco\val2014\COCO_val2014_000000393982.jpg,place flowers,below_threshold,,,,,18,,bench;car;truck,False,True,False,False
+442,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001955.jpg,pound carpet,below_threshold,,,,,8,,car;kite;person,False,True,False,False
+443,D:\DATASETS\mscoco\val2014\COCO_val2014_000000327436.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.9566789865493774,11,spoon,bowl;cup;dining table;person;spoon,True,True,True,True
+444,D:\DATASETS\mscoco\val2014\COCO_val2014_000000570659.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.6979272961616516,75,bowl;cup,bottle;bowl;cup;knife;oven;potted plant;sink,True,True,True,True
+445,D:\DATASETS\mscoco\val2014\COCO_val2014_000000290798.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.34060919284820557,19,chair,chair;person;truck;umbrella,True,True,True,True
+446,D:\DATASETS\mscoco\val2014\COCO_val2014_000000542939.jpg,smear butter,below_threshold,,,,,42,,book;bottle;dog;person,False,True,False,False
+447,D:\DATASETS\mscoco\val2014\COCO_val2014_000000263177.jpg,step on something to reach top of a shelf,below_threshold,,,,,66,,backpack;car;handbag;person;potted plant;traffic light;umbrella,False,True,False,False
+448,D:\DATASETS\mscoco\val2014\COCO_val2014_000000008021.jpg,water plant,below_threshold,,,,,6,bottle,bottle;person;tie,True,False,False,False
+449,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000836.jpg,dig hole,selected,snowboard,0.9956026077270508,0.9956026077270508,0.9401656985282898,2,snowboard,person;snowboard,True,True,True,True
+450,D:\DATASETS\mscoco\val2014\COCO_val2014_000000075412.jpg,extinguish fire,selected,vase,0.9298223257064819,0.9298223257064819,0.6506903767585754,16,vase,chair;couch;dining table;person;vase,True,True,True,True
+451,D:\DATASETS\mscoco\val2014\COCO_val2014_000000375415.jpg,get lemon out of tea,selected,banana,0.7140114307403564,0.7140114307403564,0.8283922672271729,17,,apple;banana;orange,False,False,False,False
+452,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001146.jpg,get potatoes out of fire,below_threshold,,,,,2,,person;tie,False,True,False,False
+453,D:\DATASETS\mscoco\val2014\COCO_val2014_000000434900.jpg,open bottle of beer,selected,chair,0.5803737044334412,0.5803737044334412,0.612312376499176,105,,chair;keyboard;laptop;mouse;tv,False,False,False,False
+454,D:\DATASETS\mscoco\val2014\COCO_val2014_000000302038.jpg,open parcel,below_threshold,,,,,24,,bowl;chair;cup;dining table;potted plant;vase;wine glass,False,True,False,False
+455,D:\DATASETS\mscoco\val2014\COCO_val2014_000000265777.jpg,place flowers,selected,wine glass,0.8740708827972412,0.8740708827972412,0.9186713099479675,11,wine glass,dining table;person;pizza;wine glass,True,True,True,True
+456,D:\DATASETS\mscoco\val2014\COCO_val2014_000000067412.jpg,pound carpet,selected,umbrella,0.6243739724159241,0.6243739724159241,0.05590007081627846,53,,backpack;kite;person,False,False,False,False
+457,D:\DATASETS\mscoco\val2014\COCO_val2014_000000066632.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.9489855170249939,21,spoon,carrot;fork;knife;spoon;wine glass,True,True,True,True
+458,D:\DATASETS\mscoco\val2014\COCO_val2014_000000309405.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.8763654828071594,20,,book;bottle;bowl;chair;cup;dining table;potted plant;tv;vase,False,False,False,False
+459,D:\DATASETS\mscoco\val2014\COCO_val2014_000000393814.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.9327672123908997,35,chair,banana;bowl;broccoli;carrot;chair;dining table;laptop,True,True,True,True
+460,D:\DATASETS\mscoco\val2014\COCO_val2014_000000427750.jpg,smear butter,selected,spoon,0.9261945486068726,0.9261945486068726,0.29978621006011963,11,,bottle;oven;person,False,False,False,False
+461,D:\DATASETS\mscoco\val2014\COCO_val2014_000000010192.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.9055624604225159,13,chair,chair;clock;dining table;person;vase,True,True,True,True
+462,D:\DATASETS\mscoco\val2014\COCO_val2014_000000419653.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.3742538392543793,35,,bottle;bowl;chair;dining table;microwave;oven;potted plant;tv;vase,False,False,False,False
+463,D:\DATASETS\mscoco\val2014\COCO_val2014_000000530337.jpg,dig hole,selected,tennis racket,0.9961715340614319,0.9961715340614319,0.4266679584980011,16,tennis racket,person;sports ball;tennis racket,True,True,True,True
+464,D:\DATASETS\mscoco\val2014\COCO_val2014_000000537692.jpg,extinguish fire,below_threshold,,,,,41,,clock;scissors,False,True,False,False
+465,D:\DATASETS\mscoco\val2014\COCO_val2014_000000552563.jpg,get lemon out of tea,selected,spoon,0.9698700904846191,0.9698700904846191,0.6356886029243469,38,spoon,bottle;bowl;knife;orange;oven;sink;spoon,True,True,True,True
+466,D:\DATASETS\mscoco\val2014\COCO_val2014_000000264619.jpg,get potatoes out of fire,selected,surfboard,0.9928168058395386,0.9928168058395386,0.5209311842918396,10,surfboard,kite;person;surfboard,True,True,True,True
+467,D:\DATASETS\mscoco\val2014\COCO_val2014_000000423618.jpg,open bottle of beer,selected,knife,0.9195798635482788,0.9195798635482788,0.9792375564575195,8,knife,carrot;dining table;knife,True,True,True,True
+468,D:\DATASETS\mscoco\val2014\COCO_val2014_000000305576.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.839147686958313,15,knife,broccoli;couch;cup;fork;knife;laptop;mouse;person,True,True,True,True
+469,D:\DATASETS\mscoco\val2014\COCO_val2014_000000529631.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.15741784870624542,26,wine glass,cell phone;person;wine glass,True,False,True,True
+470,D:\DATASETS\mscoco\val2014\COCO_val2014_000000074704.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.891631543636322,9,baseball bat,baseball bat;person;sports ball,True,True,True,True
+471,D:\DATASETS\mscoco\val2014\COCO_val2014_000000038336.jpg,pour sugar,selected,bottle,0.7434991598129272,0.7434991598129272,0.3477557897567749,84,,book;bottle;chair;laptop;person,False,False,False,False
+472,D:\DATASETS\mscoco\val2014\COCO_val2014_000000295593.jpg,serve wine,selected,wine glass,0.9694092273712158,0.9694092273712158,0.10331782698631287,18,,bottle;person;remote;tv,False,False,False,False
+473,D:\DATASETS\mscoco\val2014\COCO_val2014_000000502749.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.8820521831512451,27,chair,apple;banana;bowl;chair;dining table;orange;oven;potted plant;remote;tv,True,True,True,True
+474,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132622.jpg,smear butter,below_threshold,,,,,1,,bear,False,True,False,False
+475,D:\DATASETS\mscoco\val2014\COCO_val2014_000000274541.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.4274980127811432,50,chair;couch,cell phone;chair;couch;cup;keyboard;laptop;person;potted plant,True,True,True,True
+476,D:\DATASETS\mscoco\val2014\COCO_val2014_000000397433.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.3071586787700653,23,cup,cell phone;cup;mouse;person,True,True,True,True
+477,D:\DATASETS\mscoco\val2014\COCO_val2014_000000007559.jpg,dig hole,selected,cup,0.907092273235321,0.907092273235321,0.9814770817756653,15,cup,cup;toothbrush,True,True,True,True
+478,D:\DATASETS\mscoco\val2014\COCO_val2014_000000530052.jpg,extinguish fire,below_threshold,,,,,37,,carrot,False,True,False,False
+479,D:\DATASETS\mscoco\val2014\COCO_val2014_000000178671.jpg,get lemon out of tea,selected,cup,0.2091376930475235,0.2091376930475235,0.08871068060398102,9,,apple;banana;bed;chair;cup;dining table;orange;tv;vase,False,False,False,False
+480,D:\DATASETS\mscoco\val2014\COCO_val2014_000000535668.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.8975701332092285,6,baseball bat,baseball bat;person;sports ball,True,True,True,True
+481,D:\DATASETS\mscoco\val2014\COCO_val2014_000000415619.jpg,open bottle of beer,below_threshold,,,,,1,,bed,False,True,False,False
+482,D:\DATASETS\mscoco\val2014\COCO_val2014_000000550784.jpg,open parcel,below_threshold,,,,,7,,bed;bottle;dining table;remote,False,True,False,False
+483,D:\DATASETS\mscoco\val2014\COCO_val2014_000000543322.jpg,place flowers,below_threshold,,,,,6,,broccoli;knife,False,True,False,False
+484,D:\DATASETS\mscoco\val2014\COCO_val2014_000000399538.jpg,pound carpet,below_threshold,,,,,6,,boat,False,True,False,False
+485,D:\DATASETS\mscoco\val2014\COCO_val2014_000000067686.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.3222818076610565,16,,bowl;cake;dining table;wine glass,False,False,False,False
+486,D:\DATASETS\mscoco\val2014\COCO_val2014_000000311553.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.1940973699092865,28,,bowl;broccoli;carrot;cup;dining table;spoon,False,False,False,False
+487,D:\DATASETS\mscoco\val2014\COCO_val2014_000000135117.jpg,sit comfortably,selected,toilet,0.9645435214042664,0.9645435214042664,0.8931871056556702,13,,person;sink;tie;toilet,False,False,False,False
+488,D:\DATASETS\mscoco\val2014\COCO_val2014_000000543268.jpg,smear butter,below_threshold,,,,,43,,cake;cup;oven;sandwich,False,True,False,False
+489,D:\DATASETS\mscoco\val2014\COCO_val2014_000000406813.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.7932614088058472,7,chair,bed;chair;tv,True,True,True,True
+490,D:\DATASETS\mscoco\val2014\COCO_val2014_000000397705.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.20785337686538696,13,,bed;book;cat;cup;person,False,False,False,False
+491,D:\DATASETS\mscoco\val2014\COCO_val2014_000000021979.jpg,dig hole,selected,snowboard,0.9956026077270508,0.9956026077270508,0.3860776424407959,10,skis;snowboard,backpack;person;skis;snowboard,True,True,True,True
+492,D:\DATASETS\mscoco\val2014\COCO_val2014_000000274657.jpg,extinguish fire,below_threshold,,,,,3,,car;teddy bear,False,True,False,False
+493,D:\DATASETS\mscoco\val2014\COCO_val2014_000000526257.jpg,get lemon out of tea,selected,baseball bat,0.11071138828992844,0.11071138828992844,0.18285618722438812,42,,baseball glove;person;sports ball,False,False,False,False
+494,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132987.jpg,get potatoes out of fire,selected,surfboard,0.9928168058395386,0.9928168058395386,0.8017147183418274,3,surfboard,person;surfboard,True,True,True,True
+495,D:\DATASETS\mscoco\val2014\COCO_val2014_000000554618.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.06303777545690536,5,,chair;couch,False,False,False,False
+496,D:\DATASETS\mscoco\val2014\COCO_val2014_000000326021.jpg,open parcel,below_threshold,,,,,10,,dining table;person;teddy bear,False,True,False,False
+497,D:\DATASETS\mscoco\val2014\COCO_val2014_000000536990.jpg,place flowers,selected,vase,0.9602795839309692,0.9602795839309692,0.9461691379547119,8,vase,cup;potted plant;vase,True,True,True,True
+498,D:\DATASETS\mscoco\val2014\COCO_val2014_000000467479.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.8702179789543152,7,surfboard,person;surfboard,True,True,True,True
+499,D:\DATASETS\mscoco\val2014\COCO_val2014_000000410225.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.924216628074646,12,spoon,bowl;cup;fork;laptop;spoon,True,True,True,True
+500,D:\DATASETS\mscoco\val2014\COCO_val2014_000000151670.jpg,serve wine,below_threshold,,,,,9,,bottle;toilet,False,True,False,False
+501,D:\DATASETS\mscoco\val2014\COCO_val2014_000000545564.jpg,sit comfortably,selected,couch,0.9868879914283752,0.9868879914283752,0.9490574598312378,7,chair;couch,chair;couch;vase,True,True,True,True
+502,D:\DATASETS\mscoco\val2014\COCO_val2014_000000463703.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.1057935580611229,8,fork,cup;dining table;fork;pizza,True,False,True,True
+503,D:\DATASETS\mscoco\val2014\COCO_val2014_000000288769.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.8677424192428589,71,chair,bicycle;chair;person,True,True,True,True
+504,D:\DATASETS\mscoco\val2014\COCO_val2014_000000415420.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.11902865022420883,41,bottle,book;bottle;cake;dining table;donut;microwave;person,True,False,True,True
+505,D:\DATASETS\mscoco\val2014\COCO_val2014_000000551001.jpg,dig hole,selected,tennis racket,0.9961715340614319,0.9961715340614319,0.9609115719795227,12,tennis racket,person;sports ball;tennis racket,True,True,True,True
+506,D:\DATASETS\mscoco\val2014\COCO_val2014_000000346968.jpg,extinguish fire,below_threshold,,,,,8,,book;cell phone;chair;person,False,True,False,False
+507,D:\DATASETS\mscoco\val2014\COCO_val2014_000000166244.jpg,get lemon out of tea,selected,bottle,0.7318172454833984,0.7318172454833984,0.8276724815368652,25,bottle,book;bottle;cup;keyboard;laptop;mouse;tv,True,True,True,True
+508,D:\DATASETS\mscoco\val2014\COCO_val2014_000000140840.jpg,get potatoes out of fire,below_threshold,,,,,53,,kite;person;truck,False,True,False,False
+509,D:\DATASETS\mscoco\val2014\COCO_val2014_000000021776.jpg,open bottle of beer,selected,knife,0.9195798635482788,0.9195798635482788,0.7867836952209473,7,knife,apple;dining table;knife;person,True,True,True,True
+510,D:\DATASETS\mscoco\val2014\COCO_val2014_000000186705.jpg,open parcel,selected,spoon,0.8423804044723511,0.8423804044723511,0.0956249013543129,47,,chair;dining table;person;umbrella;wine glass,False,False,False,False
+511,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132059.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.9738283157348633,7,cup,cup;donut;spoon,True,True,True,True
+512,D:\DATASETS\mscoco\val2014\COCO_val2014_000000282659.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.767488420009613,61,baseball bat,baseball bat;baseball glove;chair;person,True,True,True,True
+513,D:\DATASETS\mscoco\val2014\COCO_val2014_000000027717.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.9521355032920837,8,cup,cup;keyboard;laptop,True,True,True,True
+514,D:\DATASETS\mscoco\val2014\COCO_val2014_000000233311.jpg,serve wine,below_threshold,,,,,16,,bowl;dining table;orange,False,True,False,False
+515,D:\DATASETS\mscoco\val2014\COCO_val2014_000000555048.jpg,sit comfortably,selected,couch,0.9868879914283752,0.9868879914283752,0.9293417930603027,16,couch,car;couch;vase,True,True,True,True
+516,D:\DATASETS\mscoco\val2014\COCO_val2014_000000339096.jpg,smear butter,below_threshold,,,,,16,,bowl;cup;dining table;pizza;wine glass,False,True,False,False
+517,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000985.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.5215287208557129,28,,bus;chair;person,False,False,False,False
+518,D:\DATASETS\mscoco\val2014\COCO_val2014_000000291597.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.14451290667057037,35,,chair;couch;dining table;microwave;refrigerator;sink;spoon;toaster;tv,False,False,False,False
+519,D:\DATASETS\mscoco\val2014\COCO_val2014_000000005728.jpg,dig hole,selected,frisbee,0.9906812310218811,0.9906812310218811,0.8917924165725708,9,frisbee,bench;frisbee;person,True,True,True,True
+520,D:\DATASETS\mscoco\val2014\COCO_val2014_000000071090.jpg,extinguish fire,below_threshold,,,,,12,,book;cat;teddy bear,False,True,False,False
+521,D:\DATASETS\mscoco\val2014\COCO_val2014_000000168650.jpg,get lemon out of tea,selected,bottle,0.7318173050880432,0.7318173050880432,0.8755766153335571,13,bottle,bed;bottle;cup;handbag;laptop;person,True,True,True,True
+522,D:\DATASETS\mscoco\val2014\COCO_val2014_000000004554.jpg,get potatoes out of fire,selected,skis,0.9959355592727661,0.9959355592727661,0.5863932967185974,15,skis;snowboard,person;skis;snowboard,True,True,True,True
+523,D:\DATASETS\mscoco\val2014\COCO_val2014_000000005314.jpg,open bottle of beer,below_threshold,,,,,4,,sink;toilet,False,True,False,False
+524,D:\DATASETS\mscoco\val2014\COCO_val2014_000000537132.jpg,open parcel,below_threshold,,,,,51,,bench;bottle;dining table;handbag;person;wine glass,False,True,False,False
+525,D:\DATASETS\mscoco\val2014\COCO_val2014_000000532610.jpg,place flowers,selected,cup,0.9395426511764526,0.9395426511764526,0.7138776779174805,53,cup,bottle;bowl;cup;oven;sink;spoon,True,True,True,True
+526,D:\DATASETS\mscoco\val2014\COCO_val2014_000000184276.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.40946680307388306,7,tennis racket,person;sports ball;tennis racket,True,True,True,True
+527,D:\DATASETS\mscoco\val2014\COCO_val2014_000000237011.jpg,pour sugar,selected,wine glass,0.8091554045677185,0.8091554045677185,0.8803695440292358,9,wine glass,dining table;pizza;wine glass,True,True,True,True
+528,D:\DATASETS\mscoco\val2014\COCO_val2014_000000178028.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.8013518452644348,12,cup,bottle;cup;hair drier;sink;wine glass,True,True,True,True
+529,D:\DATASETS\mscoco\val2014\COCO_val2014_000000264625.jpg,sit comfortably,selected,dining table,0.10322932153940201,0.10322932153940201,0.597819983959198,4,,cup;dining table;vase,False,False,False,False
+530,D:\DATASETS\mscoco\val2014\COCO_val2014_000000569272.jpg,smear butter,selected,scissors,0.6903356313705444,0.6903356313705444,0.920958936214447,46,scissors,book;cat;cell phone;chair;cup;keyboard;mouse;person;scissors;sports ball;tv,True,True,True,True
+531,D:\DATASETS\mscoco\val2014\COCO_val2014_000000273855.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.8693650960922241,30,chair,bottle;bowl;chair;clock;cup;dining table;person;sink;spoon,True,True,True,True
+532,D:\DATASETS\mscoco\val2014\COCO_val2014_000000297085.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.43268269300460815,22,,cat;teddy bear;tv,False,False,False,False
+533,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000785.jpg,dig hole,selected,skis,0.9949281215667725,0.9949281215667725,0.6937427520751953,5,skis,person;skis,True,True,True,True
+534,D:\DATASETS\mscoco\val2014\COCO_val2014_000000207675.jpg,extinguish fire,below_threshold,,,,,3,,clock,False,True,False,False
+535,D:\DATASETS\mscoco\val2014\COCO_val2014_000000429985.jpg,get lemon out of tea,selected,knife,0.8426859378814697,0.8426859378814697,0.7098605632781982,19,knife,bottle;cake;chair;cup;dining table;knife;person,True,True,True,True
+536,D:\DATASETS\mscoco\val2014\COCO_val2014_000000134888.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.8934568166732788,29,baseball bat,baseball bat;baseball glove;cup;person,True,True,True,True
+537,D:\DATASETS\mscoco\val2014\COCO_val2014_000000278966.jpg,open bottle of beer,below_threshold,,,,,5,,person;toilet,False,True,False,False
+538,D:\DATASETS\mscoco\val2014\COCO_val2014_000000311954.jpg,open parcel,below_threshold,,,,,83,,book;chair;couch;dining table;potted plant;tv;vase,False,True,False,False
+539,D:\DATASETS\mscoco\val2014\COCO_val2014_000000144534.jpg,place flowers,selected,bottle,0.9335610270500183,0.9335610270500183,0.713446855545044,58,bottle,bottle;bowl;broccoli;carrot;oven,True,True,True,True
+540,D:\DATASETS\mscoco\val2014\COCO_val2014_000000137370.jpg,pound carpet,selected,suitcase,0.23057159781455994,0.23057159781455994,0.9168830513954163,62,,backpack;person;suitcase;tie,False,False,False,False
+541,D:\DATASETS\mscoco\val2014\COCO_val2014_000000549224.jpg,pour sugar,selected,knife,0.9444101452827454,0.9444101452827454,0.9505481123924255,24,knife,broccoli;fork;knife;pizza,True,True,True,True
+542,D:\DATASETS\mscoco\val2014\COCO_val2014_000000268233.jpg,serve wine,below_threshold,,,,,27,,carrot;oven;sandwich;spoon,False,True,False,False
+543,D:\DATASETS\mscoco\val2014\COCO_val2014_000000545390.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.4997729957103729,19,chair,chair;dining table;person;pizza,True,True,True,True
+544,D:\DATASETS\mscoco\val2014\COCO_val2014_000000205134.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.20414072275161743,20,knife,cake;cell phone;cup;dining table;knife;person;tie,True,True,True,True
+545,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000776.jpg,step on something to reach top of a shelf,selected,couch,0.6582880616188049,0.6582880616188049,0.5356070399284363,6,,bed;teddy bear,False,False,False,False
+546,D:\DATASETS\mscoco\val2014\COCO_val2014_000000397658.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.1417204886674881,24,bottle,bottle;cell phone;handbag;person,True,True,True,True
+547,D:\DATASETS\mscoco\val2014\COCO_val2014_000000396966.jpg,dig hole,below_threshold,,,,,9,,kite;person,False,True,False,False
+548,D:\DATASETS\mscoco\val2014\COCO_val2014_000000529917.jpg,extinguish fire,below_threshold,,,,,22,,bench;handbag;person;tie,False,True,False,False
+549,D:\DATASETS\mscoco\val2014\COCO_val2014_000000171461.jpg,get lemon out of tea,selected,wine glass,0.38900601863861084,0.38900601863861084,0.8525420427322388,11,,backpack;person;wine glass,False,False,False,False
+550,D:\DATASETS\mscoco\val2014\COCO_val2014_000000271852.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.8865265846252441,5,baseball bat,baseball bat;baseball glove;person,True,True,True,True
+551,D:\DATASETS\mscoco\val2014\COCO_val2014_000000284715.jpg,open bottle of beer,below_threshold,,,,,6,,bed;cup;dog,False,True,False,False
+552,D:\DATASETS\mscoco\val2014\COCO_val2014_000000222075.jpg,open parcel,selected,scissors,0.9640410542488098,0.9640410542488098,0.058611005544662476,11,,book;bottle;cell phone;handbag;horse,False,False,False,False
+553,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000641.jpg,place flowers,below_threshold,,,,,22,,bicycle;bus;person,False,True,False,False
+554,D:\DATASETS\mscoco\val2014\COCO_val2014_000000328374.jpg,pound carpet,selected,skis,0.9945266842842102,0.9945266842842102,0.7934952974319458,28,skis,person;skis,True,True,True,True
+555,D:\DATASETS\mscoco\val2014\COCO_val2014_000000149298.jpg,pour sugar,selected,bottle,0.7434991002082825,0.7434991002082825,0.8105963468551636,16,bottle,bottle;refrigerator,True,True,True,True
+556,D:\DATASETS\mscoco\val2014\COCO_val2014_000000180787.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.7035267949104309,37,,cup;dining table;knife;oven;person;refrigerator,False,False,False,False
+557,D:\DATASETS\mscoco\val2014\COCO_val2014_000000292697.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.13789038360118866,63,chair,baseball bat;baseball glove;chair;person;sports ball,True,True,True,True
+558,D:\DATASETS\mscoco\val2014\COCO_val2014_000000210032.jpg,smear butter,selected,fork,0.8765053749084473,0.8765053749084473,0.7266728281974792,23,knife,bird;chair;cup;dining table;fork;knife;person;sandwich,True,False,False,False
+559,D:\DATASETS\mscoco\val2014\COCO_val2014_000000277020.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.40360450744628906,15,chair,bowl;chair;cup;dining table;person;tie,True,True,True,True
+560,D:\DATASETS\mscoco\val2014\COCO_val2014_000000525184.jpg,water plant,below_threshold,,,,,4,,person;teddy bear,False,True,False,False
+561,D:\DATASETS\mscoco\val2014\COCO_val2014_000000416098.jpg,dig hole,selected,umbrella,0.6602099537849426,0.6602099537849426,0.6276082396507263,38,,bicycle;handbag;kite;person;umbrella,False,False,False,False
+562,D:\DATASETS\mscoco\val2014\COCO_val2014_000000022420.jpg,extinguish fire,below_threshold,,,,,26,,book;motorcycle,False,True,False,False
+563,D:\DATASETS\mscoco\val2014\COCO_val2014_000000557324.jpg,get lemon out of tea,selected,fork,0.9753941297531128,0.9753941297531128,0.713894248008728,7,fork,cup;fork;knife;pizza,True,True,True,True
+564,D:\DATASETS\mscoco\val2014\COCO_val2014_000000286711.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.5980584621429443,49,baseball bat,baseball bat;baseball glove;person,True,True,True,True
+565,D:\DATASETS\mscoco\val2014\COCO_val2014_000000577796.jpg,open bottle of beer,below_threshold,,,,,3,,toilet,False,True,False,False
+566,D:\DATASETS\mscoco\val2014\COCO_val2014_000000304744.jpg,open parcel,below_threshold,,,,,27,,bottle;cake;cell phone;cup;dining table;person,False,True,False,False
+567,D:\DATASETS\mscoco\val2014\COCO_val2014_000000535933.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.9355500936508179,10,cup,cell phone;cup;dining table;person;pizza,True,True,True,True
+568,D:\DATASETS\mscoco\val2014\COCO_val2014_000000212801.jpg,pound carpet,below_threshold,,,,,7,,kite,False,True,False,False
+569,D:\DATASETS\mscoco\val2014\COCO_val2014_000000045775.jpg,pour sugar,selected,knife,0.9444101452827454,0.9444101452827454,0.962833821773529,26,knife,book;carrot;cup;dining table;fork;knife;sandwich,True,True,True,True
+570,D:\DATASETS\mscoco\val2014\COCO_val2014_000000222299.jpg,serve wine,below_threshold,,,,,17,,bed;book;bottle;cell phone;laptop,False,True,False,False
+571,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262360.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.08711475878953934,18,bench;chair,bench;bicycle;car;chair;dining table;vase,True,True,True,True
+572,D:\DATASETS\mscoco\val2014\COCO_val2014_000000137321.jpg,smear butter,below_threshold,,,,,4,,bed;bowl;cat;dog,False,True,False,False
+573,D:\DATASETS\mscoco\val2014\COCO_val2014_000000417854.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.7073634266853333,29,,baseball bat;baseball glove;chair;person,False,False,False,False
+574,D:\DATASETS\mscoco\val2014\COCO_val2014_000000161983.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.46658018231391907,7,cup,cup;sink,True,True,True,True
+575,D:\DATASETS\mscoco\val2014\COCO_val2014_000000423001.jpg,dig hole,selected,skis,0.9949281215667725,0.9949281215667725,0.9006937146186829,6,skis,person;skis,True,True,True,True
+576,D:\DATASETS\mscoco\val2014\COCO_val2014_000000099938.jpg,extinguish fire,below_threshold,,,,,9,,bed;book;person,False,True,False,False
+577,D:\DATASETS\mscoco\val2014\COCO_val2014_000000394517.jpg,get lemon out of tea,selected,toothbrush,0.9414254426956177,0.9414254426956177,0.5138688087463379,12,toothbrush,bottle;cup;sink;toothbrush,True,True,True,True
+578,D:\DATASETS\mscoco\val2014\COCO_val2014_000000133556.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.7689230442047119,51,baseball bat,baseball bat;baseball glove;person;tie,True,True,True,True
+579,D:\DATASETS\mscoco\val2014\COCO_val2014_000000410482.jpg,open bottle of beer,below_threshold,,,,,3,,vase,False,True,False,False
+580,D:\DATASETS\mscoco\val2014\COCO_val2014_000000306688.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.9020368456840515,25,knife,bowl;carrot;dining table;fork;knife;person;pizza,True,True,True,True
+581,D:\DATASETS\mscoco\val2014\COCO_val2014_000000151092.jpg,place flowers,below_threshold,,,,,9,,clock,False,True,False,False
+582,D:\DATASETS\mscoco\val2014\COCO_val2014_000000067881.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.725677490234375,12,baseball bat,baseball bat;bench;cup;person;sports ball,True,True,True,True
+583,D:\DATASETS\mscoco\val2014\COCO_val2014_000000549763.jpg,pour sugar,selected,bottle,0.7434991002082825,0.7434991002082825,0.5509178638458252,7,bottle,bottle;microwave;oven;refrigerator;sink,True,True,True,True
+584,D:\DATASETS\mscoco\val2014\COCO_val2014_000000483330.jpg,serve wine,below_threshold,,,,,3,,bowl;broccoli,False,True,False,False
+585,D:\DATASETS\mscoco\val2014\COCO_val2014_000000137246.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.5767017006874084,33,bench,bench;dining table;hot dog;person;potted plant;umbrella,True,False,True,False
+586,D:\DATASETS\mscoco\val2014\COCO_val2014_000000140642.jpg,smear butter,below_threshold,,,,,31,,chair;cup;dining table;person;umbrella,False,True,False,False
+587,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000136.jpg,step on something to reach top of a shelf,below_threshold,,,,,6,,giraffe;person,False,True,False,False
+588,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132612.jpg,water plant,below_threshold,,,,,7,,giraffe;zebra,False,True,False,False
+589,D:\DATASETS\mscoco\val2014\COCO_val2014_000000265407.jpg,dig hole,selected,bottle,0.7164002060890198,0.7164002060890198,0.07159227877855301,7,,person;sports ball,False,False,False,False
+590,D:\DATASETS\mscoco\val2014\COCO_val2014_000000537860.jpg,extinguish fire,selected,bottle,0.9197603464126587,0.9197603464126587,0.16832506656646729,7,,person;toothbrush,False,False,False,False
+591,D:\DATASETS\mscoco\val2014\COCO_val2014_000000555009.jpg,get lemon out of tea,selected,bottle,0.7318173050880432,0.7318173050880432,0.886121392250061,12,,bottle;cup;keyboard;laptop;mouse;tv,False,False,False,False
+592,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001342.jpg,get potatoes out of fire,selected,book,0.6600486636161804,0.6600486636161804,0.941591739654541,27,book,airplane;book;person;train,True,True,True,True
+593,D:\DATASETS\mscoco\val2014\COCO_val2014_000000042968.jpg,open bottle of beer,below_threshold,,,,,2,,airplane;potted plant,False,True,False,False
+594,D:\DATASETS\mscoco\val2014\COCO_val2014_000000568202.jpg,open parcel,selected,fork,0.8960486650466919,0.8960486650466919,0.10533206909894943,98,spoon,bowl;chair;cup;dining table;person;potted plant;spoon;wine glass,True,False,True,True
+595,D:\DATASETS\mscoco\val2014\COCO_val2014_000000003661.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.7616236805915833,14,cup,banana;cup;keyboard,True,True,True,True
+596,D:\DATASETS\mscoco\val2014\COCO_val2014_000000400907.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.925514280796051,2,surfboard,person;surfboard,True,True,True,True
+597,D:\DATASETS\mscoco\val2014\COCO_val2014_000000387482.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.1694292277097702,13,,bed;chair;cup;remote;suitcase;tv,False,False,False,False
+598,D:\DATASETS\mscoco\val2014\COCO_val2014_000000177935.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.13281390070915222,33,,clock;knife;oven;spoon,False,False,False,False
+599,D:\DATASETS\mscoco\val2014\COCO_val2014_000000020305.jpg,sit comfortably,selected,couch,0.9868879914283752,0.9868879914283752,0.061567094177007675,36,chair,bed;book;chair;person;potted plant;remote,True,False,True,True
+600,D:\DATASETS\mscoco\val2014\COCO_val2014_000000462576.jpg,smear butter,below_threshold,,,,,7,,bowl;cup;dining table;orange,False,True,False,False
+601,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000133.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.10497397184371948,5,,bed;teddy bear,False,False,False,False
+602,D:\DATASETS\mscoco\val2014\COCO_val2014_000000152004.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.6597685217857361,10,vase,car;cup;vase,True,False,False,False
+603,D:\DATASETS\mscoco\val2014\COCO_val2014_000000138517.jpg,dig hole,selected,wine glass,0.9404186010360718,0.9404186010360718,0.9369277358055115,8,,person;vase;wine glass,False,False,False,False
+604,D:\DATASETS\mscoco\val2014\COCO_val2014_000000351489.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.13536328077316284,22,,book;chair;couch;dining table;person;remote;tv,False,False,False,False
+605,D:\DATASETS\mscoco\val2014\COCO_val2014_000000007574.jpg,get lemon out of tea,selected,knife,0.8426859378814697,0.8426859378814697,0.06921657174825668,34,,bottle;bowl;microwave;oven;refrigerator;sink;vase;wine glass,False,False,False,False
+606,D:\DATASETS\mscoco\val2014\COCO_val2014_000000409331.jpg,get potatoes out of fire,selected,umbrella,0.8728981614112854,0.8728981614112854,0.7968271970748901,25,,book;clock;person;umbrella,False,False,False,False
+607,D:\DATASETS\mscoco\val2014\COCO_val2014_000000422464.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.0932355523109436,8,,bed;chair,False,False,False,False
+608,D:\DATASETS\mscoco\val2014\COCO_val2014_000000535770.jpg,open parcel,below_threshold,,,,,25,,bottle;bowl;cell phone;couch;cup;handbag;laptop;person;potted plant,False,True,False,False
+609,D:\DATASETS\mscoco\val2014\COCO_val2014_000000400235.jpg,place flowers,below_threshold,,,,,3,,clock,False,True,False,False
+610,D:\DATASETS\mscoco\val2014\COCO_val2014_000000074617.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.8649918437004089,16,tennis racket,person;sports ball;tennis racket,True,True,True,True
+611,D:\DATASETS\mscoco\val2014\COCO_val2014_000000017714.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.9037845134735107,12,spoon,banana;cup;dining table;fork;knife;pizza;spoon,True,True,True,True
+612,D:\DATASETS\mscoco\val2014\COCO_val2014_000000425609.jpg,serve wine,below_threshold,,,,,6,,cake;dining table;fork,False,True,False,False
+613,D:\DATASETS\mscoco\val2014\COCO_val2014_000000280819.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.8560063242912292,39,chair,banana;book;bottle;bowl;chair;dining table;handbag;person;spoon,True,True,True,True
+614,D:\DATASETS\mscoco\val2014\COCO_val2014_000000135478.jpg,smear butter,below_threshold,,,,,10,,cup;laptop;person,False,True,False,False
+615,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262658.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.35013294219970703,37,dining table,bottle;bowl;chair;cup;dining table;fork;knife;person;spoon;wine glass,True,False,True,True
+616,D:\DATASETS\mscoco\val2014\COCO_val2014_000000284042.jpg,water plant,below_threshold,,,,,4,,book;scissors,False,True,False,False
+617,D:\DATASETS\mscoco\val2014\COCO_val2014_000000157593.jpg,dig hole,selected,clock,0.13290558755397797,0.13290558755397797,0.5486558079719543,16,,bicycle;clock;person;sports ball,False,False,False,False
+618,D:\DATASETS\mscoco\val2014\COCO_val2014_000000177375.jpg,extinguish fire,below_threshold,,,,,31,,book;chair;handbag;person;refrigerator;toothbrush,False,True,False,False
+619,D:\DATASETS\mscoco\val2014\COCO_val2014_000000009914.jpg,get lemon out of tea,selected,spoon,0.9698700904846191,0.9698700904846191,0.05736999586224556,11,knife,bowl;dining table;hot dog;knife;sandwich,True,False,True,True
+620,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527023.jpg,get potatoes out of fire,selected,tennis racket,0.9950190782546997,0.9950190782546997,0.507426381111145,65,tennis racket,bench;person;tennis racket,True,True,True,True
+621,D:\DATASETS\mscoco\val2014\COCO_val2014_000000059920.jpg,open bottle of beer,below_threshold,,,,,5,,toilet,False,True,False,False
+622,D:\DATASETS\mscoco\val2014\COCO_val2014_000000198415.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.2586615979671478,95,,chair;cup;dining table;handbag;person;tv,False,False,False,False
+623,D:\DATASETS\mscoco\val2014\COCO_val2014_000000131920.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.8811035752296448,6,cup,bottle;cup,True,True,True,True
+624,D:\DATASETS\mscoco\val2014\COCO_val2014_000000085434.jpg,pound carpet,selected,skis,0.9945266842842102,0.9945266842842102,0.9415590763092041,18,skis,person;skis,True,True,True,True
+625,D:\DATASETS\mscoco\val2014\COCO_val2014_000000058232.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.233590230345726,36,,bottle;bowl;cup;person,False,False,False,False
+626,D:\DATASETS\mscoco\val2014\COCO_val2014_000000163518.jpg,serve wine,below_threshold,,,,,47,,bowl;chair;dining table;oven;person,False,True,False,False
+627,D:\DATASETS\mscoco\val2014\COCO_val2014_000000131557.jpg,sit comfortably,selected,dining table,0.10322929173707962,0.10322929173707962,0.2321704477071762,2,,dining table;pizza,False,False,False,False
+628,D:\DATASETS\mscoco\val2014\COCO_val2014_000000071929.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.6858555674552917,12,knife,bowl;dining table;fork;knife,True,True,True,True
+629,D:\DATASETS\mscoco\val2014\COCO_val2014_000000273645.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.39705130457878113,83,chair,chair;person;umbrella,True,True,True,True
+630,D:\DATASETS\mscoco\val2014\COCO_val2014_000000137004.jpg,water plant,selected,bowl,0.8974255323410034,0.8974255323410034,0.9300776124000549,39,,bowl;orange,False,False,False,False
+631,D:\DATASETS\mscoco\val2014\COCO_val2014_000000002453.jpg,dig hole,selected,boat,0.3023730516433716,0.3023730516433716,0.781572163105011,8,,bench;boat,False,False,False,False
+632,D:\DATASETS\mscoco\val2014\COCO_val2014_000000166096.jpg,extinguish fire,below_threshold,,,,,3,,clock,False,True,False,False
+633,D:\DATASETS\mscoco\val2014\COCO_val2014_000000375915.jpg,get lemon out of tea,selected,knife,0.8426858186721802,0.8426858186721802,0.6549363136291504,10,knife,bowl;dining table;knife;pizza;wine glass,True,True,True,True
+634,D:\DATASETS\mscoco\val2014\COCO_val2014_000000505133.jpg,get potatoes out of fire,selected,fork,0.9614343643188477,0.9614343643188477,0.8642477989196777,34,fork,bottle;bowl;carrot;cup;fork;oven,True,True,True,True
+635,D:\DATASETS\mscoco\val2014\COCO_val2014_000000512182.jpg,open bottle of beer,selected,spoon,0.8507602214813232,0.8507602214813232,0.12129519879817963,24,,book;person;remote;tv,False,False,False,False
+636,D:\DATASETS\mscoco\val2014\COCO_val2014_000000045383.jpg,open parcel,below_threshold,,,,,8,,potted plant;vase,False,True,False,False
+637,D:\DATASETS\mscoco\val2014\COCO_val2014_000000529235.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.8525863885879517,15,cup,cup;person;pizza;wine glass,True,True,True,True
+638,D:\DATASETS\mscoco\val2014\COCO_val2014_000000461334.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.5735303163528442,11,baseball bat,baseball bat;baseball glove;person;sports ball,True,True,True,True
+639,D:\DATASETS\mscoco\val2014\COCO_val2014_000000057936.jpg,pour sugar,below_threshold,,,,,12,cup,apple;bottle;cup;dining table;dog;oven;person;refrigerator,True,False,False,False
+640,D:\DATASETS\mscoco\val2014\COCO_val2014_000000146614.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.4883098304271698,20,,bottle;bowl;couch;cup;potted plant;vase,False,False,False,False
+641,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000133.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.10497397184371948,5,bed,bed;teddy bear,True,False,True,True
+642,D:\DATASETS\mscoco\val2014\COCO_val2014_000000470545.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.2515316903591156,27,fork,chair;cup;dining table;fork;orange;person;pizza,True,False,True,True
+643,D:\DATASETS\mscoco\val2014\COCO_val2014_000000137315.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.811965823173523,26,chair,bowl;chair;cup;dining table;person,True,True,True,True
+644,D:\DATASETS\mscoco\val2014\COCO_val2014_000000269918.jpg,water plant,below_threshold,,,,,26,,book;cat;chair;couch;person,False,True,False,False
+645,D:\DATASETS\mscoco\val2014\COCO_val2014_000000558013.jpg,dig hole,selected,boat,0.3023730218410492,0.3023730218410492,0.0992848202586174,66,,boat;kite;person,False,False,False,False
+646,D:\DATASETS\mscoco\val2014\COCO_val2014_000000451449.jpg,extinguish fire,selected,cup,0.9048432111740112,0.9048432111740112,0.21047155559062958,58,,bed;book;dog,False,False,False,False
+647,D:\DATASETS\mscoco\val2014\COCO_val2014_000000157789.jpg,get lemon out of tea,selected,fork,0.9753941297531128,0.9753941297531128,0.8714612722396851,4,fork,fork;knife;pizza,True,True,True,True
+648,D:\DATASETS\mscoco\val2014\COCO_val2014_000000149962.jpg,get potatoes out of fire,selected,skateboard,0.9936664700508118,0.9936664700508118,0.9335830807685852,6,skateboard,person;skateboard,True,True,True,True
+649,D:\DATASETS\mscoco\val2014\COCO_val2014_000000301817.jpg,open bottle of beer,selected,bench,0.7257707715034485,0.7257707715034485,0.07477255165576935,23,,car;clock;person;traffic light,False,False,False,False
+650,D:\DATASETS\mscoco\val2014\COCO_val2014_000000452622.jpg,open parcel,below_threshold,,,,,7,,potted plant;vase,False,True,False,False
+651,D:\DATASETS\mscoco\val2014\COCO_val2014_000000005001.jpg,place flowers,below_threshold,,,,,48,,bicycle;handbag;person;scissors,False,True,False,False
+652,D:\DATASETS\mscoco\val2014\COCO_val2014_000000019432.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.8901386857032776,35,tennis racket,chair;person;sports ball;tennis racket,True,True,True,True
+653,D:\DATASETS\mscoco\val2014\COCO_val2014_000000507235.jpg,pour sugar,selected,bowl,0.42996954917907715,0.42996954917907715,0.9139686226844788,11,bowl,bowl;dining table,True,True,True,True
+654,D:\DATASETS\mscoco\val2014\COCO_val2014_000000265547.jpg,serve wine,below_threshold,,,,,25,,person;umbrella,False,True,False,False
+655,D:\DATASETS\mscoco\val2014\COCO_val2014_000000432570.jpg,sit comfortably,selected,dining table,0.10322932153940201,0.10322932153940201,0.2874677777290344,7,,potted plant;vase,False,False,False,False
+656,D:\DATASETS\mscoco\val2014\COCO_val2014_000000412592.jpg,smear butter,selected,spoon,0.9261945486068726,0.9261945486068726,0.9596329927444458,34,spoon,bowl;broccoli;spoon,True,True,True,True
+657,D:\DATASETS\mscoco\val2014\COCO_val2014_000000538963.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.9015610218048096,4,chair,bed;chair;laptop,True,True,True,True
+658,D:\DATASETS\mscoco\val2014\COCO_val2014_000000558673.jpg,water plant,below_threshold,,,,,22,,book;chair;couch;dining table;microwave;refrigerator;tv,False,True,False,False
+659,D:\DATASETS\mscoco\val2014\COCO_val2014_000000328430.jpg,dig hole,selected,tennis racket,0.9961715340614319,0.9961715340614319,0.8708558082580566,18,tennis racket,chair;person;sports ball;tennis racket,True,True,True,True
+660,D:\DATASETS\mscoco\val2014\COCO_val2014_000000019455.jpg,extinguish fire,below_threshold,,,,,6,,book;couch;remote;tv,False,True,False,False
+661,D:\DATASETS\mscoco\val2014\COCO_val2014_000000165014.jpg,get lemon out of tea,selected,fork,0.9753941297531128,0.9753941297531128,0.8364261984825134,13,fork,cup;dining table;fork;person,True,True,True,True
+662,D:\DATASETS\mscoco\val2014\COCO_val2014_000000395512.jpg,get potatoes out of fire,selected,cup,0.5711650848388672,0.5711650848388672,0.8316743969917297,11,,cup;microwave;oven;sink,False,False,False,False
+663,D:\DATASETS\mscoco\val2014\COCO_val2014_000000133867.jpg,open bottle of beer,below_threshold,,,,,27,,elephant;person,False,True,False,False
+664,D:\DATASETS\mscoco\val2014\COCO_val2014_000000044220.jpg,open parcel,below_threshold,,,,,6,,person;remote;tv,False,True,False,False
+665,D:\DATASETS\mscoco\val2014\COCO_val2014_000000398554.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.8322993516921997,25,cup,bottle;cup;sink,True,True,True,True
+666,D:\DATASETS\mscoco\val2014\COCO_val2014_000000413666.jpg,pound carpet,selected,skateboard,0.99381422996521,0.99381422996521,0.9126216173171997,37,skateboard,bicycle;person;skateboard,True,True,True,True
+667,D:\DATASETS\mscoco\val2014\COCO_val2014_000000004772.jpg,pour sugar,below_threshold,,,,,4,,person,False,True,False,False
+668,D:\DATASETS\mscoco\val2014\COCO_val2014_000000357418.jpg,serve wine,below_threshold,,,,,7,,bowl;broccoli;carrot;dining table;spoon,False,True,False,False
+669,D:\DATASETS\mscoco\val2014\COCO_val2014_000000040011.jpg,sit comfortably,selected,bench,0.9515352249145508,0.9515352249145508,0.8900152444839478,8,bench;chair,bench;chair;train,True,True,True,True
+670,D:\DATASETS\mscoco\val2014\COCO_val2014_000000076384.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.9543049931526184,14,knife,bottle;bowl;cup;dining table;knife;potted plant;sandwich;spoon,True,True,True,True
+671,D:\DATASETS\mscoco\val2014\COCO_val2014_000000133679.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.9191620349884033,22,chair,bowl;chair;potted plant;refrigerator,True,True,True,True
+672,D:\DATASETS\mscoco\val2014\COCO_val2014_000000291981.jpg,water plant,below_threshold,,,,,19,,book;chair;dining table;laptop;oven,False,True,False,False
+673,D:\DATASETS\mscoco\val2014\COCO_val2014_000000353644.jpg,dig hole,selected,skateboard,0.99393230676651,0.99393230676651,0.9222592115402222,7,skateboard,dog;person;skateboard,True,True,True,True
+674,D:\DATASETS\mscoco\val2014\COCO_val2014_000000136715.jpg,extinguish fire,below_threshold,,,,,58,,car;motorcycle;person;truck,False,True,False,False
+675,D:\DATASETS\mscoco\val2014\COCO_val2014_000000050407.jpg,get lemon out of tea,selected,bottle,0.7318173050880432,0.7318173050880432,0.8160818219184875,12,bottle,bottle;chair;person;sports ball;tennis racket,True,True,True,True
+676,D:\DATASETS\mscoco\val2014\COCO_val2014_000000399991.jpg,get potatoes out of fire,selected,baseball glove,0.8041966557502747,0.8041966557502747,0.891696572303772,10,baseball glove,baseball glove;person;sports ball,True,True,True,True
+677,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001647.jpg,open bottle of beer,selected,scissors,0.9432564377784729,0.9432564377784729,0.9762241244316101,1,scissors,scissors,True,True,True,True
+678,D:\DATASETS\mscoco\val2014\COCO_val2014_000000446835.jpg,open parcel,selected,toothbrush,0.9518917798995972,0.9518917798995972,0.8186671733856201,10,,cell phone;person;potted plant;toothbrush,False,False,False,False
+679,D:\DATASETS\mscoco\val2014\COCO_val2014_000000307731.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.9622523188591003,12,cup,cup;dining table;donut;spoon,True,True,True,True
+680,D:\DATASETS\mscoco\val2014\COCO_val2014_000000202923.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.45580410957336426,11,baseball bat,baseball bat;baseball glove;person,True,True,True,True
+681,D:\DATASETS\mscoco\val2014\COCO_val2014_000000112677.jpg,pour sugar,below_threshold,,,,,5,bottle,boat;bottle;dog,True,False,False,False
+682,D:\DATASETS\mscoco\val2014\COCO_val2014_000000224523.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.7949976921081543,21,cup,cell phone;chair;cup;person,True,True,True,True
+683,D:\DATASETS\mscoco\val2014\COCO_val2014_000000561386.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.8188324570655823,36,chair,baseball bat;baseball glove;chair;person,True,True,True,True
+684,D:\DATASETS\mscoco\val2014\COCO_val2014_000000461254.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.8992744088172913,12,knife,cup;dining table;knife;spoon,True,True,True,True
+685,D:\DATASETS\mscoco\val2014\COCO_val2014_000000413626.jpg,step on something to reach top of a shelf,selected,bench,0.7107954621315002,0.7107954621315002,0.9399347305297852,53,,bench;car;dining table;umbrella,False,False,False,False
+686,D:\DATASETS\mscoco\val2014\COCO_val2014_000000183456.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.9214111566543579,48,cup,bowl;broccoli;carrot;cup;dining table;fork;person;pizza,True,True,True,True
+687,D:\DATASETS\mscoco\val2014\COCO_val2014_000000011182.jpg,dig hole,selected,clock,0.13290558755397797,0.13290558755397797,0.7296661138534546,9,,car;clock;person,False,False,False,False
+688,D:\DATASETS\mscoco\val2014\COCO_val2014_000000153307.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.9559062719345093,2,vase,vase,True,True,True,True
+689,D:\DATASETS\mscoco\val2014\COCO_val2014_000000432150.jpg,get lemon out of tea,selected,bottle,0.7318172454833984,0.7318172454833984,0.7048355340957642,20,bottle,book;bottle;cup;microwave;oven;refrigerator;sink,True,True,True,True
+690,D:\DATASETS\mscoco\val2014\COCO_val2014_000000526892.jpg,get potatoes out of fire,selected,surfboard,0.9928168058395386,0.9928168058395386,0.844506561756134,26,,book;person;surfboard,False,False,False,False
+691,D:\DATASETS\mscoco\val2014\COCO_val2014_000000188766.jpg,open bottle of beer,below_threshold,,,,,9,,bench;clock;person,False,True,False,False
+692,D:\DATASETS\mscoco\val2014\COCO_val2014_000000401682.jpg,open parcel,below_threshold,,,,,9,,dining table;teddy bear,False,True,False,False
+693,D:\DATASETS\mscoco\val2014\COCO_val2014_000000275202.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.9521031975746155,8,cup,cup;dining table;fork;knife;pizza;wine glass,True,True,True,True
+694,D:\DATASETS\mscoco\val2014\COCO_val2014_000000137362.jpg,pound carpet,below_threshold,,,,,6,,boat;person,False,True,False,False
+695,D:\DATASETS\mscoco\val2014\COCO_val2014_000000501281.jpg,pour sugar,selected,bottle,0.7434991598129272,0.7434991598129272,0.209983229637146,46,,backpack;book;bottle;handbag;person;sports ball;tennis racket,False,False,False,False
+696,D:\DATASETS\mscoco\val2014\COCO_val2014_000000570947.jpg,serve wine,selected,wine glass,0.9694092273712158,0.9694092273712158,0.6934088468551636,14,bottle,bottle;dining table;fork;knife;pizza,True,False,True,False
+697,D:\DATASETS\mscoco\val2014\COCO_val2014_000000167725.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.5911662578582764,49,chair,baseball bat;baseball glove;bench;chair;person,True,True,True,True
+698,D:\DATASETS\mscoco\val2014\COCO_val2014_000000136285.jpg,smear butter,below_threshold,,,,,5,,horse;person,False,True,False,False
+699,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132796.jpg,step on something to reach top of a shelf,selected,bench,0.7107954621315002,0.7107954621315002,0.5758007168769836,12,,backpack;bench;chair;elephant;person,False,False,False,False
+700,D:\DATASETS\mscoco\val2014\COCO_val2014_000000293832.jpg,water plant,below_threshold,,,,,12,,toothbrush,False,True,False,False
+701,D:\DATASETS\mscoco\val2014\COCO_val2014_000000151629.jpg,dig hole,selected,tennis racket,0.9961715340614319,0.9961715340614319,0.8800420165061951,5,tennis racket,person;sports ball;tennis racket,True,True,True,True
+702,D:\DATASETS\mscoco\val2014\COCO_val2014_000000222635.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.05475972965359688,46,,book;person;tv,False,False,False,False
+703,D:\DATASETS\mscoco\val2014\COCO_val2014_000000433373.jpg,get lemon out of tea,selected,bowl,0.1418106108903885,0.1418106108903885,0.817841112613678,18,,bird;bowl;chair;dining table;potted plant,False,False,False,False
+704,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001668.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.7880489230155945,7,baseball bat,baseball bat;baseball glove;person,True,True,True,True
+705,D:\DATASETS\mscoco\val2014\COCO_val2014_000000159842.jpg,open bottle of beer,selected,chair,0.5803737640380859,0.5803737640380859,0.932629406452179,5,chair,chair;person;teddy bear,True,True,True,True
+706,D:\DATASETS\mscoco\val2014\COCO_val2014_000000439215.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.11301366239786148,9,spoon,cake;cup;dining table;spoon,True,False,True,True
+707,D:\DATASETS\mscoco\val2014\COCO_val2014_000000005724.jpg,place flowers,selected,bowl,0.643997848033905,0.643997848033905,0.1598503142595291,18,,cake;carrot;dining table;fork;knife,False,False,False,False
+708,D:\DATASETS\mscoco\val2014\COCO_val2014_000000055074.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.917811393737793,7,baseball bat,baseball bat;baseball glove;person;sports ball,True,True,True,True
+709,D:\DATASETS\mscoco\val2014\COCO_val2014_000000062510.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.5470942854881287,27,cup,bottle;bowl;clock;cup;laptop;oven;sink;spoon,True,True,True,True
+710,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267670.jpg,serve wine,below_threshold,,,,,4,,bottle;sink,False,True,False,False
+711,D:\DATASETS\mscoco\val2014\COCO_val2014_000000131115.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.20230333507061005,51,,baseball bat;baseball glove;person,False,False,False,False
+712,D:\DATASETS\mscoco\val2014\COCO_val2014_000000265771.jpg,smear butter,selected,spoon,0.9261945486068726,0.9261945486068726,0.1392827033996582,9,,bowl;chair;dining table;microwave,False,False,False,False
+713,D:\DATASETS\mscoco\val2014\COCO_val2014_000000275979.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.935827910900116,16,chair,cat;chair;couch;scissors,True,True,True,True
+714,D:\DATASETS\mscoco\val2014\COCO_val2014_000000008876.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.8985703587532043,21,bottle,bottle;refrigerator,True,True,True,True
+715,D:\DATASETS\mscoco\val2014\COCO_val2014_000000511760.jpg,dig hole,below_threshold,,,,,18,,car;kite;person,False,True,False,False
+716,D:\DATASETS\mscoco\val2014\COCO_val2014_000000227893.jpg,extinguish fire,selected,bowl,0.9219841361045837,0.9219841361045837,0.22352436184883118,25,,bus;person;vase,False,False,False,False
+717,D:\DATASETS\mscoco\val2014\COCO_val2014_000000094103.jpg,get lemon out of tea,selected,bowl,0.1418106108903885,0.1418106108903885,0.9581519365310669,21,,bowl;cake;carrot;dining table;pizza,False,False,False,False
+718,D:\DATASETS\mscoco\val2014\COCO_val2014_000000535179.jpg,get potatoes out of fire,selected,skis,0.9959355592727661,0.9959355592727661,0.7961515188217163,2,skis;snowboard,person;skis;snowboard,True,True,True,True
+719,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267903.jpg,open bottle of beer,below_threshold,,,,,2,,sink;toilet,False,True,False,False
+720,D:\DATASETS\mscoco\val2014\COCO_val2014_000000187647.jpg,open parcel,below_threshold,,,,,9,,chair;dining table;potted plant;teddy bear,False,True,False,False
+721,D:\DATASETS\mscoco\val2014\COCO_val2014_000000141328.jpg,place flowers,selected,bowl,0.6439977884292603,0.6439977884292603,0.5046485662460327,26,bowl,bowl;broccoli;spoon,True,True,True,True
+722,D:\DATASETS\mscoco\val2014\COCO_val2014_000000227599.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.9555985331535339,11,surfboard,person;surfboard,True,True,True,True
+723,D:\DATASETS\mscoco\val2014\COCO_val2014_000000321579.jpg,pour sugar,selected,knife,0.9444102644920349,0.9444102644920349,0.9525478482246399,12,knife,dining table;fork;knife;person;pizza;wine glass,True,True,True,True
+724,D:\DATASETS\mscoco\val2014\COCO_val2014_000000445658.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.5198405385017395,27,,bottle;bowl;microwave;oven;refrigerator;sink;teddy bear,False,False,False,False
+725,D:\DATASETS\mscoco\val2014\COCO_val2014_000000524656.jpg,sit comfortably,selected,dining table,0.10322931408882141,0.10322931408882141,0.06670347601175308,70,,bottle;bowl;cup;knife;microwave;oven;refrigerator;sink;spoon;wine glass,False,False,False,False
+726,D:\DATASETS\mscoco\val2014\COCO_val2014_000000333095.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.8070025444030762,106,knife,bottle;bowl;chair;cup;dining table;fork;knife;person;spoon,True,True,True,True
+727,D:\DATASETS\mscoco\val2014\COCO_val2014_000000400453.jpg,step on something to reach top of a shelf,selected,bench,0.7107954025268555,0.7107954025268555,0.05917421728372574,27,dining table,car;cell phone;dining table;person;potted plant;sandwich;wine glass,True,False,True,True
+728,D:\DATASETS\mscoco\val2014\COCO_val2014_000000136795.jpg,water plant,selected,wine glass,0.8966996073722839,0.8966996073722839,0.9460042715072632,11,wine glass,broccoli;carrot;dining table;fork;wine glass,True,True,True,True
+729,D:\DATASETS\mscoco\val2014\COCO_val2014_000000430529.jpg,dig hole,selected,surfboard,0.993778645992279,0.993778645992279,0.5380989909172058,14,,kite;person,False,False,False,False
+730,D:\DATASETS\mscoco\val2014\COCO_val2014_000000441969.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.22778405249118805,21,,potted plant;teddy bear;vase,False,False,False,False
+731,D:\DATASETS\mscoco\val2014\COCO_val2014_000000443602.jpg,get lemon out of tea,selected,cup,0.2091376930475235,0.2091376930475235,0.8981127142906189,59,,cup;donut;person;stop sign,False,False,False,False
+732,D:\DATASETS\mscoco\val2014\COCO_val2014_000000394510.jpg,get potatoes out of fire,selected,skateboard,0.9936664700508118,0.9936664700508118,0.930748701095581,9,skateboard,bicycle;car;person;skateboard,True,True,True,True
+733,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000757.jpg,open bottle of beer,below_threshold,,,,,6,,elephant,False,True,False,False
+734,D:\DATASETS\mscoco\val2014\COCO_val2014_000000302806.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.9335559606552124,16,knife,bottle;cup;knife;microwave;oven,True,True,True,True
+735,D:\DATASETS\mscoco\val2014\COCO_val2014_000000280536.jpg,place flowers,selected,bowl,0.643997848033905,0.643997848033905,0.8949153423309326,49,bowl,bowl;carrot;dining table;orange,True,True,True,True
+736,D:\DATASETS\mscoco\val2014\COCO_val2014_000000076632.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.9455392956733704,12,baseball glove,baseball glove;person;truck,True,False,True,True
+737,D:\DATASETS\mscoco\val2014\COCO_val2014_000000140017.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.26299911737442017,23,bowl,bowl;oven;pizza,True,False,True,False
+738,D:\DATASETS\mscoco\val2014\COCO_val2014_000000473555.jpg,serve wine,below_threshold,,,,,10,,bowl;cat;chair;couch;tv,False,True,False,False
+739,D:\DATASETS\mscoco\val2014\COCO_val2014_000000040998.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.4459783732891083,12,chair,chair;person;teddy bear,True,True,True,True
+740,D:\DATASETS\mscoco\val2014\COCO_val2014_000000437664.jpg,smear butter,below_threshold,,,,,7,,bed;bottle;person,False,True,False,False
+741,D:\DATASETS\mscoco\val2014\COCO_val2014_000000530656.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.3839236795902252,41,chair,chair;person;sports ball;tennis racket,True,True,True,True
+742,D:\DATASETS\mscoco\val2014\COCO_val2014_000000161720.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.6688024997711182,5,bottle,bottle;sink;toilet,True,True,True,True
+743,D:\DATASETS\mscoco\val2014\COCO_val2014_000000421833.jpg,dig hole,selected,frisbee,0.9906812310218811,0.9906812310218811,0.9341358542442322,34,frisbee,frisbee;person,True,True,True,True
+744,D:\DATASETS\mscoco\val2014\COCO_val2014_000000275898.jpg,extinguish fire,below_threshold,,,,,8,,chair;teddy bear;tie,False,True,False,False
+745,D:\DATASETS\mscoco\val2014\COCO_val2014_000000143236.jpg,get lemon out of tea,selected,bowl,0.14181064069271088,0.14181064069271088,0.8817362189292908,6,,bowl;carrot;dining table,False,False,False,False
+746,D:\DATASETS\mscoco\val2014\COCO_val2014_000000021900.jpg,get potatoes out of fire,below_threshold,,,,,4,,horse;person,False,True,False,False
+747,D:\DATASETS\mscoco\val2014\COCO_val2014_000000525058.jpg,open bottle of beer,below_threshold,,,,,15,,backpack;bicycle;car;motorcycle;person;traffic light,False,True,False,False
+748,D:\DATASETS\mscoco\val2014\COCO_val2014_000000307564.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.6396795511245728,44,,banana;bottle;bowl;broccoli;chair;cup;dining table;fork;knife;oven;potted plant;sink;spoon;vase,False,False,False,False
+749,D:\DATASETS\mscoco\val2014\COCO_val2014_000000265851.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.13464906811714172,9,,chair;handbag;teddy bear,False,False,False,False
+750,D:\DATASETS\mscoco\val2014\COCO_val2014_000000207561.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.6004487872123718,12,surfboard,person;surfboard,True,True,True,True
+751,D:\DATASETS\mscoco\val2014\COCO_val2014_000000135846.jpg,pour sugar,below_threshold,,,,,6,,boat;person,False,True,False,False
+752,D:\DATASETS\mscoco\val2014\COCO_val2014_000000032334.jpg,serve wine,selected,wine glass,0.9694092273712158,0.9694092273712158,0.9348822832107544,18,wine glass,car;chair;person;wine glass,True,True,True,True
+753,D:\DATASETS\mscoco\val2014\COCO_val2014_000000264976.jpg,sit comfortably,selected,toilet,0.9645435214042664,0.9645435214042664,0.9373056292533875,5,toilet,bottle;cat;toilet,True,True,True,True
+754,D:\DATASETS\mscoco\val2014\COCO_val2014_000000202998.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.07822708040475845,11,spoon,bowl;cup;dining table;keyboard;mouse;sandwich;spoon,True,False,True,True
+755,D:\DATASETS\mscoco\val2014\COCO_val2014_000000410068.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.5609780550003052,62,chair,car;chair;person;truck;umbrella,True,True,True,True
+756,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132690.jpg,water plant,below_threshold,,,,,4,,cat,False,True,False,False
+757,D:\DATASETS\mscoco\val2014\COCO_val2014_000000002532.jpg,dig hole,selected,skis,0.9949281215667725,0.9949281215667725,0.8297672271728516,2,skis,person;skis,True,True,True,True
+758,D:\DATASETS\mscoco\val2014\COCO_val2014_000000144269.jpg,extinguish fire,below_threshold,,,,,35,,clock;handbag;person,False,True,False,False
+759,D:\DATASETS\mscoco\val2014\COCO_val2014_000000540253.jpg,get lemon out of tea,selected,wine glass,0.38900601863861084,0.38900601863861084,0.14667221903800964,75,,book;chair;cup;laptop;mouse;person,False,False,False,False
+760,D:\DATASETS\mscoco\val2014\COCO_val2014_000000412587.jpg,get potatoes out of fire,below_threshold,,,,,8,,kite;person,False,True,False,False
+761,D:\DATASETS\mscoco\val2014\COCO_val2014_000000532747.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.38297829031944275,14,dining table,backpack;bowl;couch;dining table;handbag;potted plant;tv,True,True,True,True
+762,D:\DATASETS\mscoco\val2014\COCO_val2014_000000196594.jpg,open parcel,below_threshold,,,,,3,,clock,False,True,False,False
+763,D:\DATASETS\mscoco\val2014\COCO_val2014_000000007991.jpg,place flowers,selected,cup,0.9395426511764526,0.9395426511764526,0.755218505859375,17,,carrot;knife,False,False,False,False
+764,D:\DATASETS\mscoco\val2014\COCO_val2014_000000006226.jpg,pound carpet,below_threshold,,,,,2,,traffic light;train,False,True,False,False
+765,D:\DATASETS\mscoco\val2014\COCO_val2014_000000560890.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.49279552698135376,33,cup,backpack;cup;handbag;person;surfboard;umbrella,True,True,True,True
+766,D:\DATASETS\mscoco\val2014\COCO_val2014_000000314074.jpg,serve wine,below_threshold,,,,,35,,bottle;cake;cell phone;chair;dining table;knife;person;teddy bear;tie;wine glass,False,True,False,False
+767,D:\DATASETS\mscoco\val2014\COCO_val2014_000000398992.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.7732133865356445,62,chair,book;chair;cup;person;teddy bear;umbrella,True,True,True,True
+768,D:\DATASETS\mscoco\val2014\COCO_val2014_000000448275.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.851794421672821,47,fork;spoon,bowl;chair;cup;dining table;fork;orange;person;spoon,True,False,True,True
+769,D:\DATASETS\mscoco\val2014\COCO_val2014_000000273494.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.8868319392204285,29,chair,backpack;bed;bowl;chair;cup;dining table;knife,True,True,True,True
+770,D:\DATASETS\mscoco\val2014\COCO_val2014_000000154892.jpg,water plant,below_threshold,,,,,9,,cake;chair;clock;dining table;fork;person,False,True,False,False
+771,D:\DATASETS\mscoco\val2014\COCO_val2014_000000557977.jpg,dig hole,selected,baseball bat,0.9970237612724304,0.9970237612724304,0.846653163433075,15,baseball bat,baseball bat;baseball glove;person,True,True,True,True
+772,D:\DATASETS\mscoco\val2014\COCO_val2014_000000471082.jpg,extinguish fire,selected,vase,0.9298223257064819,0.9298223257064819,0.93408203125,7,vase,vase,True,True,True,True
+773,D:\DATASETS\mscoco\val2014\COCO_val2014_000000295693.jpg,get lemon out of tea,selected,cup,0.2091376930475235,0.2091376930475235,0.8792425394058228,25,,book;bowl;cat;chair;couch;cup;handbag;laptop;person;potted plant;remote;tv;wine glass,False,False,False,False
+774,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001176.jpg,get potatoes out of fire,selected,skateboard,0.9936664700508118,0.9936664700508118,0.7974642515182495,24,skateboard,bench;person;skateboard,True,True,True,True
+775,D:\DATASETS\mscoco\val2014\COCO_val2014_000000263723.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.21273601055145264,17,,carrot;dining table;pizza,False,False,False,False
+776,D:\DATASETS\mscoco\val2014\COCO_val2014_000000547816.jpg,open parcel,below_threshold,,,,,7,,bottle;sink;toilet,False,True,False,False
+777,D:\DATASETS\mscoco\val2014\COCO_val2014_000000136911.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.9251821637153625,14,,bowl;cup;dining table;knife,False,False,False,False
+778,D:\DATASETS\mscoco\val2014\COCO_val2014_000000532209.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.859122633934021,3,surfboard,person;surfboard,True,True,True,True
+779,D:\DATASETS\mscoco\val2014\COCO_val2014_000000452003.jpg,pour sugar,selected,knife,0.9444102644920349,0.9444102644920349,0.9439853429794312,14,knife,bottle;cup;dining table;fork;knife;pizza;wine glass,True,True,True,True
+780,D:\DATASETS\mscoco\val2014\COCO_val2014_000000472253.jpg,serve wine,selected,wine glass,0.9694092273712158,0.9694092273712158,0.15404178202152252,55,cup,chair;cup;dining table;person;tv,True,False,True,True
+781,D:\DATASETS\mscoco\val2014\COCO_val2014_000000002434.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.5185742974281311,11,chair,cell phone;chair;laptop,True,True,True,True
+782,D:\DATASETS\mscoco\val2014\COCO_val2014_000000465545.jpg,smear butter,below_threshold,,,,,12,,bowl;cup;sink;toilet;toothbrush;vase,False,True,False,False
+783,D:\DATASETS\mscoco\val2014\COCO_val2014_000000530061.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.8428080677986145,8,chair,bowl;chair;couch;dining table;person;spoon,True,True,True,True
+784,D:\DATASETS\mscoco\val2014\COCO_val2014_000000300276.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.6952885985374451,87,bowl,bench;bowl;cake;chair;dining table;person,True,False,True,True
+785,D:\DATASETS\mscoco\val2014\COCO_val2014_000000031482.jpg,dig hole,selected,snowboard,0.9956026077270508,0.9956026077270508,0.378555566072464,25,skis,person;skis;snowboard,True,False,True,True
+786,D:\DATASETS\mscoco\val2014\COCO_val2014_000000273772.jpg,extinguish fire,below_threshold,,,,,2,,bench;book,False,True,False,False
+787,D:\DATASETS\mscoco\val2014\COCO_val2014_000000442161.jpg,get lemon out of tea,selected,wine glass,0.38900595903396606,0.38900595903396606,0.9438529014587402,17,,handbag;person;wine glass,False,False,False,False
+788,D:\DATASETS\mscoco\val2014\COCO_val2014_000000000360.jpg,get potatoes out of fire,selected,snowboard,0.9953094124794006,0.9953094124794006,0.8676336407661438,3,snowboard,person;snowboard,True,True,True,True
+789,D:\DATASETS\mscoco\val2014\COCO_val2014_000000293891.jpg,open bottle of beer,selected,bench,0.7257707118988037,0.7257707118988037,0.1719045639038086,44,,chair;frisbee;person,False,False,False,False
+790,D:\DATASETS\mscoco\val2014\COCO_val2014_000000331372.jpg,open parcel,below_threshold,,,,,8,,potted plant;vase,False,True,False,False
+791,D:\DATASETS\mscoco\val2014\COCO_val2014_000000022724.jpg,place flowers,below_threshold,,,,,2,,clock,False,True,False,False
+792,D:\DATASETS\mscoco\val2014\COCO_val2014_000000121839.jpg,pound carpet,selected,skis,0.9945266842842102,0.9945266842842102,0.6980107426643372,18,skis;snowboard,backpack;person;skis;snowboard,True,True,True,True
+793,D:\DATASETS\mscoco\val2014\COCO_val2014_000000327807.jpg,pour sugar,selected,bottle,0.7434991598129272,0.7434991598129272,0.7521754503250122,38,bottle,banana;bottle;bowl;chair;person;train,True,True,True,True
+794,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132132.jpg,serve wine,below_threshold,,,,,44,,apple;backpack;banana;handbag;orange;person,False,True,False,False
+795,D:\DATASETS\mscoco\val2014\COCO_val2014_000000160864.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.2598314881324768,34,chair,baseball bat;baseball glove;chair;person;sports ball,True,True,True,True
+796,D:\DATASETS\mscoco\val2014\COCO_val2014_000000263588.jpg,smear butter,below_threshold,,,,,5,,bird;cat;tv,False,True,False,False
+797,D:\DATASETS\mscoco\val2014\COCO_val2014_000000003145.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.8786992430686951,49,chair,book;chair;couch;dining table;handbag;person;tv,True,True,True,True
+798,D:\DATASETS\mscoco\val2014\COCO_val2014_000000432234.jpg,water plant,below_threshold,,,,,3,,chair;teddy bear,False,True,False,False
+799,D:\DATASETS\mscoco\val2014\COCO_val2014_000000280022.jpg,dig hole,selected,tennis racket,0.9961715340614319,0.9961715340614319,0.9399233460426331,3,tennis racket,person;sports ball;tennis racket,True,True,True,True
+800,D:\DATASETS\mscoco\val2014\COCO_val2014_000000220137.jpg,extinguish fire,selected,vase,0.9298223257064819,0.9298223257064819,0.9273455142974854,10,,vase,False,False,False,False
+801,D:\DATASETS\mscoco\val2014\COCO_val2014_000000142941.jpg,get lemon out of tea,selected,spoon,0.9698700904846191,0.9698700904846191,0.1409575343132019,13,,bird;chair;cup;person;remote,False,False,False,False
+802,D:\DATASETS\mscoco\val2014\COCO_val2014_000000396167.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.9240150451660156,9,baseball bat,baseball bat;person,True,True,True,True
+803,D:\DATASETS\mscoco\val2014\COCO_val2014_000000272713.jpg,open bottle of beer,below_threshold,,,,,9,,cat;potted plant;vase,False,True,False,False
+804,D:\DATASETS\mscoco\val2014\COCO_val2014_000000280536.jpg,open parcel,below_threshold,,,,,49,,bowl;carrot;dining table;orange,False,True,False,False
+805,D:\DATASETS\mscoco\val2014\COCO_val2014_000000137188.jpg,place flowers,below_threshold,,,,,11,,book;cat;teddy bear,False,True,False,False
+806,D:\DATASETS\mscoco\val2014\COCO_val2014_000000399091.jpg,pound carpet,below_threshold,,,,,2,,bench,False,True,False,False
+807,D:\DATASETS\mscoco\val2014\COCO_val2014_000000063848.jpg,pour sugar,selected,fork,0.9068748950958252,0.9068748950958252,0.9010874629020691,5,fork,cup;dining table;fork,True,True,True,True
+808,D:\DATASETS\mscoco\val2014\COCO_val2014_000000291179.jpg,serve wine,below_threshold,,,,,45,,backpack;bicycle;bottle;car;frisbee;person;umbrella,False,True,False,False
+809,D:\DATASETS\mscoco\val2014\COCO_val2014_000000151911.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.933122992515564,27,chair,bottle;chair;dining table;microwave;oven;potted plant;refrigerator;sink,True,True,True,True
+810,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267314.jpg,smear butter,below_threshold,,,,,2,,person;suitcase,False,True,False,False
+811,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262175.jpg,step on something to reach top of a shelf,selected,bench,0.710795521736145,0.710795521736145,0.137455552816391,4,,person;tie,False,False,False,False
+812,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267998.jpg,water plant,below_threshold,,,,,6,,knife;scissors,False,True,False,False
+813,D:\DATASETS\mscoco\val2014\COCO_val2014_000000548209.jpg,dig hole,selected,skis,0.9949281215667725,0.9949281215667725,0.8487653732299805,10,skis,person;skis,True,True,True,True
+814,D:\DATASETS\mscoco\val2014\COCO_val2014_000000477064.jpg,extinguish fire,selected,bowl,0.9219841361045837,0.9219841361045837,0.12230744957923889,13,,book;couch,False,False,False,False
+815,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001948.jpg,get lemon out of tea,below_threshold,,,,,2,,bird;person,False,True,False,False
+816,D:\DATASETS\mscoco\val2014\COCO_val2014_000000524638.jpg,get potatoes out of fire,selected,frisbee,0.9826462268829346,0.9826462268829346,0.9098386764526367,2,frisbee,frisbee;person,True,True,True,True
+817,D:\DATASETS\mscoco\val2014\COCO_val2014_000000540133.jpg,open bottle of beer,below_threshold,,,,,4,,book;couch;person;remote,False,True,False,False
+818,D:\DATASETS\mscoco\val2014\COCO_val2014_000000170178.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.6803632378578186,25,knife,bottle;bowl;cup;knife;oven;person;sink,True,True,True,True
+819,D:\DATASETS\mscoco\val2014\COCO_val2014_000000148403.jpg,place flowers,below_threshold,,,,,3,,clock,False,True,False,False
+820,D:\DATASETS\mscoco\val2014\COCO_val2014_000000062363.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.6993988156318665,8,surfboard,person;surfboard,True,True,True,True
+821,D:\DATASETS\mscoco\val2014\COCO_val2014_000000123071.jpg,pour sugar,selected,knife,0.9444102644920349,0.9444102644920349,0.7294354438781738,7,knife,knife;person;pizza,True,True,True,True
+822,D:\DATASETS\mscoco\val2014\COCO_val2014_000000160860.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.9424586892127991,12,cup,bowl;cake;cup;knife,True,True,True,True
+823,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527464.jpg,sit comfortably,selected,couch,0.9868879914283752,0.9868879914283752,0.9579361081123352,19,chair;couch,bird;chair;clock;couch,True,True,True,True
+824,D:\DATASETS\mscoco\val2014\COCO_val2014_000000295768.jpg,smear butter,below_threshold,,,,,8,,cell phone;cup;keyboard;tv,False,True,False,False
+825,D:\DATASETS\mscoco\val2014\COCO_val2014_000000376233.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.38570311665534973,13,chair,chair;dining table;person;potted plant;sandwich,True,True,True,True
+826,D:\DATASETS\mscoco\val2014\COCO_val2014_000000263613.jpg,water plant,below_threshold,,,,,5,,cow;horse;person,False,True,False,False
+827,D:\DATASETS\mscoco\val2014\COCO_val2014_000000396167.jpg,dig hole,selected,baseball bat,0.9970237612724304,0.9970237612724304,0.9240150451660156,9,baseball bat,baseball bat;person,True,True,True,True
+828,D:\DATASETS\mscoco\val2014\COCO_val2014_000000233140.jpg,extinguish fire,selected,vase,0.9298223257064819,0.9298223257064819,0.9018518328666687,9,vase,bed;vase,True,True,True,True
+829,D:\DATASETS\mscoco\val2014\COCO_val2014_000000274494.jpg,get lemon out of tea,selected,bottle,0.7318173050880432,0.7318173050880432,0.20272205770015717,5,bottle,bottle;sink,True,True,True,True
+830,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262986.jpg,get potatoes out of fire,below_threshold,,,,,1,,bear,False,True,False,False
+831,D:\DATASETS\mscoco\val2014\COCO_val2014_000000414201.jpg,open bottle of beer,selected,knife,0.9195798635482788,0.9195798635482788,0.8073062896728516,6,knife,cake;dining table;knife;person;tie,True,True,True,True
+832,D:\DATASETS\mscoco\val2014\COCO_val2014_000000173776.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.16572308540344238,46,fork;spoon,bottle;dining table;fork;microwave;person;spoon,True,False,True,True
+833,D:\DATASETS\mscoco\val2014\COCO_val2014_000000272615.jpg,place flowers,selected,bowl,0.6439977884292603,0.6439977884292603,0.9692535996437073,25,bowl,banana;bowl;broccoli;carrot;dining table,True,True,True,True
+834,D:\DATASETS\mscoco\val2014\COCO_val2014_000000412301.jpg,pound carpet,selected,skateboard,0.99381422996521,0.99381422996521,0.8101357221603394,11,skateboard,bus;car;fire hydrant;person;skateboard;traffic light;truck,True,True,True,True
+835,D:\DATASETS\mscoco\val2014\COCO_val2014_000000327590.jpg,pour sugar,selected,spoon,0.9663859605789185,0.9663859605789185,0.06405776739120483,24,fork;knife,chair;dining table;fork;hot dog;knife,True,False,True,True
+836,D:\DATASETS\mscoco\val2014\COCO_val2014_000000575834.jpg,serve wine,below_threshold,,,,,9,,bottle;bowl;refrigerator,False,True,False,False
+837,D:\DATASETS\mscoco\val2014\COCO_val2014_000000568041.jpg,sit comfortably,selected,couch,0.9868879914283752,0.9868879914283752,0.9667568206787109,39,couch,book;bowl;couch;vase,True,True,True,True
+838,D:\DATASETS\mscoco\val2014\COCO_val2014_000000558794.jpg,smear butter,below_threshold,,,,,10,,backpack;bottle;handbag;person;suitcase;train,False,True,False,False
+839,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267135.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.7184038162231445,14,chair,banana;book;bottle;bowl;cell phone;chair;cup;dining table;remote;sink;vase,True,True,True,True
+840,D:\DATASETS\mscoco\val2014\COCO_val2014_000000049445.jpg,water plant,below_threshold,,,,,6,,cell phone;knife,False,True,False,False
+841,D:\DATASETS\mscoco\val2014\COCO_val2014_000000265462.jpg,dig hole,selected,skateboard,0.99393230676651,0.99393230676651,0.9102616310119629,11,skateboard,person;skateboard,True,True,True,True
+842,D:\DATASETS\mscoco\val2014\COCO_val2014_000000346587.jpg,extinguish fire,below_threshold,,,,,32,,clock;person,False,True,False,False
+843,D:\DATASETS\mscoco\val2014\COCO_val2014_000000432859.jpg,get lemon out of tea,selected,bottle,0.7318173050880432,0.7318173050880432,0.12278351187705994,13,,cup;laptop;mouse,False,False,False,False
+844,D:\DATASETS\mscoco\val2014\COCO_val2014_000000088817.jpg,get potatoes out of fire,selected,surfboard,0.9928168058395386,0.9928168058395386,0.6928410530090332,31,surfboard,kite;person;surfboard,True,True,True,True
+845,D:\DATASETS\mscoco\val2014\COCO_val2014_000000137961.jpg,open bottle of beer,selected,chair,0.5803737640380859,0.5803737640380859,0.8558027148246765,4,chair,cat;chair;dining table,True,True,True,True
+846,D:\DATASETS\mscoco\val2014\COCO_val2014_000000044136.jpg,open parcel,below_threshold,,,,,50,,bottle;dining table;person;tie;wine glass,False,True,False,False
+847,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527784.jpg,place flowers,selected,bottle,0.9335610270500183,0.9335610270500183,0.9318450689315796,17,vase,bottle;dining table;fork;sandwich;vase,True,False,False,False
+848,D:\DATASETS\mscoco\val2014\COCO_val2014_000000216096.jpg,pound carpet,selected,surfboard,0.9926055669784546,0.9926055669784546,0.6963107585906982,17,surfboard,person;surfboard,True,True,True,True
+849,D:\DATASETS\mscoco\val2014\COCO_val2014_000000256916.jpg,pour sugar,selected,knife,0.9444102644920349,0.9444102644920349,0.8025248646736145,18,knife,chair;dining table;knife;pizza,True,True,True,True
+850,D:\DATASETS\mscoco\val2014\COCO_val2014_000000538092.jpg,serve wine,below_threshold,,,,,13,,bottle;cup;oven;person;refrigerator;sink,False,True,False,False
+851,D:\DATASETS\mscoco\val2014\COCO_val2014_000000415048.jpg,sit comfortably,selected,couch,0.9868879914283752,0.9868879914283752,0.9332746863365173,40,chair;couch,book;chair;couch;handbag;vase,True,True,True,True
+852,D:\DATASETS\mscoco\val2014\COCO_val2014_000000335690.jpg,smear butter,below_threshold,,,,,26,,bottle;bowl;cake;cup;donut;horse;orange;person,False,True,False,False
+853,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262275.jpg,step on something to reach top of a shelf,below_threshold,,,,,5,,horse;person,False,True,False,False
+854,D:\DATASETS\mscoco\val2014\COCO_val2014_000000151790.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.9600937366485596,5,cup,cup;scissors,True,True,True,True
+855,D:\DATASETS\mscoco\val2014\COCO_val2014_000000266922.jpg,dig hole,selected,skis,0.9949281215667725,0.9949281215667725,0.6593479514122009,9,skis,person;skis,True,True,True,True
+856,D:\DATASETS\mscoco\val2014\COCO_val2014_000000223540.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.1905493438243866,56,,book;cell phone;chair;couch;keyboard;laptop;mouse;tv,False,False,False,False
+857,D:\DATASETS\mscoco\val2014\COCO_val2014_000000010138.jpg,get lemon out of tea,selected,spoon,0.9698700904846191,0.9698700904846191,0.7395806312561035,34,spoon,bottle;bowl;cake;cell phone;chair;cup;dining table;knife;oven;person;potted plant;refrigerator;sink;spoon,True,True,True,True
+858,D:\DATASETS\mscoco\val2014\COCO_val2014_000000279558.jpg,get potatoes out of fire,below_threshold,,,,,65,,bicycle;kite;person,False,True,False,False
+859,D:\DATASETS\mscoco\val2014\COCO_val2014_000000531111.jpg,open bottle of beer,selected,toothbrush,0.2736634612083435,0.2736634612083435,0.45789673924446106,10,,sink;toilet;toothbrush,False,False,False,False
+860,D:\DATASETS\mscoco\val2014\COCO_val2014_000000283698.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.3025641143321991,31,,handbag;person;spoon,False,False,False,False
+861,D:\DATASETS\mscoco\val2014\COCO_val2014_000000537604.jpg,place flowers,selected,vase,0.9602795839309692,0.9602795839309692,0.10570364445447922,11,cup,cake;cup;dining table;dog,True,False,True,True
+862,D:\DATASETS\mscoco\val2014\COCO_val2014_000000461945.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.8765671253204346,4,tennis racket,person;sports ball;tennis racket,True,True,True,True
+863,D:\DATASETS\mscoco\val2014\COCO_val2014_000000023840.jpg,pour sugar,selected,knife,0.9444102644920349,0.9444102644920349,0.9521224498748779,6,knife,banana;knife,True,True,True,True
+864,D:\DATASETS\mscoco\val2014\COCO_val2014_000000099348.jpg,serve wine,below_threshold,,,,,34,,backpack;bottle;person;surfboard,False,True,False,False
+865,D:\DATASETS\mscoco\val2014\COCO_val2014_000000269395.jpg,sit comfortably,selected,dining table,0.10322932153940201,0.10322932153940201,0.3890758454799652,10,,book;bowl;cake;dining table;knife,False,False,False,False
+866,D:\DATASETS\mscoco\val2014\COCO_val2014_000000208871.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.23602941632270813,19,,bowl;cup;oven;person;sink,False,False,False,False
+867,D:\DATASETS\mscoco\val2014\COCO_val2014_000000135029.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.9232542514801025,15,chair,chair;cup;dining table;sandwich;spoon,True,True,True,True
+868,D:\DATASETS\mscoco\val2014\COCO_val2014_000000266379.jpg,water plant,below_threshold,,,,,7,,cat;person;scissors,False,True,False,False
+869,D:\DATASETS\mscoco\val2014\COCO_val2014_000000423165.jpg,dig hole,selected,cup,0.907092273235321,0.907092273235321,0.22655145823955536,8,vase,bottle;sink;toilet;toothbrush;vase,True,False,False,False
+870,D:\DATASETS\mscoco\val2014\COCO_val2014_000000350054.jpg,extinguish fire,below_threshold,,,,,9,,cat;teddy bear;tv,False,True,False,False
+871,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001799.jpg,get lemon out of tea,below_threshold,,,,,18,,car;motorcycle;person;truck,False,True,False,False
+872,D:\DATASETS\mscoco\val2014\COCO_val2014_000000539793.jpg,get potatoes out of fire,selected,skateboard,0.9936664700508118,0.9936664700508118,0.8688243627548218,44,skateboard,bench;bicycle;person;skateboard;train,True,True,True,True
+873,D:\DATASETS\mscoco\val2014\COCO_val2014_000000149304.jpg,open bottle of beer,below_threshold,,,,,5,,sink;toilet,False,True,False,False
+874,D:\DATASETS\mscoco\val2014\COCO_val2014_000000039659.jpg,open parcel,selected,fork,0.8960486650466919,0.8960486650466919,0.9391779899597168,32,fork,cup;dining table;donut;fork;sandwich;wine glass,True,True,True,True
+875,D:\DATASETS\mscoco\val2014\COCO_val2014_000000539423.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.053974878042936325,14,,book;chair;microwave;oven,False,False,False,False
+876,D:\DATASETS\mscoco\val2014\COCO_val2014_000000137682.jpg,pound carpet,selected,surfboard,0.992605447769165,0.992605447769165,0.8349528908729553,2,surfboard,person;surfboard,True,True,True,True
+877,D:\DATASETS\mscoco\val2014\COCO_val2014_000000543047.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.057269178330898285,18,bowl,book;bowl;chair;couch;cup;dining table;handbag;microwave;sink,True,False,False,False
+878,D:\DATASETS\mscoco\val2014\COCO_val2014_000000309022.jpg,serve wine,below_threshold,,,,,32,,bottle;bowl;oven;sink,False,True,False,False
+879,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527086.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.8428899049758911,67,chair,bottle;chair;cup;dining table;knife;person;spoon,True,True,True,True
+880,D:\DATASETS\mscoco\val2014\COCO_val2014_000000142337.jpg,smear butter,below_threshold,,,,,6,,bottle;sink;toilet,False,True,False,False
+881,D:\DATASETS\mscoco\val2014\COCO_val2014_000000393288.jpg,step on something to reach top of a shelf,below_threshold,,,,,16,,car;motorcycle;traffic light;truck,False,True,False,False
+882,D:\DATASETS\mscoco\val2014\COCO_val2014_000000113040.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.9566015005111694,14,bowl;cup,bottle;bowl;cake;cup;dining table;knife,True,True,True,True
+883,D:\DATASETS\mscoco\val2014\COCO_val2014_000000152158.jpg,dig hole,selected,baseball bat,0.9970237612724304,0.9970237612724304,0.6744572520256042,17,baseball bat,baseball bat;baseball glove;person;sports ball,True,True,True,True
+884,D:\DATASETS\mscoco\val2014\COCO_val2014_000000312298.jpg,extinguish fire,below_threshold,,,,,10,,book;chair;dining table;person;teddy bear,False,True,False,False
+885,D:\DATASETS\mscoco\val2014\COCO_val2014_000000405196.jpg,get lemon out of tea,selected,bowl,0.14181064069271088,0.14181064069271088,0.935413122177124,7,,bowl;broccoli;carrot,False,False,False,False
+886,D:\DATASETS\mscoco\val2014\COCO_val2014_000000284623.jpg,get potatoes out of fire,selected,bottle,0.7121155858039856,0.7121155858039856,0.844893753528595,6,,bottle;cat;sink;toothbrush,False,False,False,False
+887,D:\DATASETS\mscoco\val2014\COCO_val2014_000000283412.jpg,open bottle of beer,selected,dining table,0.6293187737464905,0.6293187737464905,0.13512516021728516,6,,bed;cup;dog,False,False,False,False
+888,D:\DATASETS\mscoco\val2014\COCO_val2014_000000334511.jpg,open parcel,below_threshold,,,,,61,,banana;bird;boat;bowl;handbag;person,False,True,False,False
+889,D:\DATASETS\mscoco\val2014\COCO_val2014_000000135613.jpg,place flowers,selected,bottle,0.9335611462593079,0.9335611462593079,0.432712197303772,6,,bottle;sink;toilet,False,False,False,False
+890,D:\DATASETS\mscoco\val2014\COCO_val2014_000000192095.jpg,pound carpet,selected,baseball bat,0.9964422583580017,0.9964422583580017,0.1164931207895279,4,baseball glove,baseball glove;person;sports ball,True,False,True,True
+891,D:\DATASETS\mscoco\val2014\COCO_val2014_000000382999.jpg,pour sugar,selected,bottle,0.7434991002082825,0.7434991002082825,0.8838655352592468,5,,bottle;person;sink,False,False,False,False
+892,D:\DATASETS\mscoco\val2014\COCO_val2014_000000146965.jpg,serve wine,selected,wine glass,0.9694092273712158,0.9694092273712158,0.15230242908000946,26,wine glass,bed;bottle;chair;clock;couch;potted plant;vase;wine glass,True,True,True,True
+893,D:\DATASETS\mscoco\val2014\COCO_val2014_000000033815.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.887185275554657,24,chair,chair;motorcycle;person,True,True,True,True
+894,D:\DATASETS\mscoco\val2014\COCO_val2014_000000203849.jpg,smear butter,below_threshold,,,,,20,,bottle;chair;couch;potted plant;tv;vase;wine glass,False,True,False,False
+895,D:\DATASETS\mscoco\val2014\COCO_val2014_000000140661.jpg,step on something to reach top of a shelf,selected,couch,0.6582880616188049,0.6582880616188049,0.24060796201229095,15,,couch;handbag;microwave;oven;person;potted plant,False,False,False,False
+896,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001296.jpg,water plant,below_threshold,,,,,18,,cell phone;clock;person,False,True,False,False
+897,D:\DATASETS\mscoco\val2014\COCO_val2014_000000331856.jpg,dig hole,selected,tennis racket,0.9961715340614319,0.9961715340614319,0.8395031690597534,6,tennis racket,person;tennis racket,True,True,True,True
+898,D:\DATASETS\mscoco\val2014\COCO_val2014_000000485773.jpg,extinguish fire,below_threshold,,,,,2,,clock,False,True,False,False
+899,D:\DATASETS\mscoco\val2014\COCO_val2014_000000564283.jpg,get lemon out of tea,selected,scissors,0.9159294962882996,0.9159294962882996,0.3757934868335724,20,knife;scissors,bottle;bowl;knife;microwave;refrigerator;scissors;sink;toaster,True,True,True,True
+900,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527375.jpg,get potatoes out of fire,selected,scissors,0.9267882704734802,0.9267882704734802,0.21760661900043488,24,,apple;book;bus;chair;keyboard;laptop;mouse;teddy bear;tv,False,False,False,False
+901,D:\DATASETS\mscoco\val2014\COCO_val2014_000000002690.jpg,open bottle of beer,below_threshold,,,,,43,,boat,False,True,False,False
+902,D:\DATASETS\mscoco\val2014\COCO_val2014_000000531875.jpg,open parcel,selected,spoon,0.8423804044723511,0.8423804044723511,0.8163986802101135,10,spoon,bottle;carrot;spoon,True,True,True,True
+903,D:\DATASETS\mscoco\val2014\COCO_val2014_000000528176.jpg,place flowers,selected,vase,0.9602795839309692,0.9602795839309692,0.8454222679138184,13,vase,banana;cup;dining table;vase,True,True,True,True
+904,D:\DATASETS\mscoco\val2014\COCO_val2014_000000139261.jpg,pound carpet,selected,skis,0.9945266842842102,0.9945266842842102,0.8192522525787354,2,skis,person;skis,True,True,True,True
+905,D:\DATASETS\mscoco\val2014\COCO_val2014_000000130732.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.10044212639331818,38,bottle,book;bottle;donut;hair drier;person;sink,True,False,True,True
+906,D:\DATASETS\mscoco\val2014\COCO_val2014_000000396673.jpg,serve wine,below_threshold,,,,,25,,airplane;car;person;truck,False,True,False,False
+907,D:\DATASETS\mscoco\val2014\COCO_val2014_000000430567.jpg,sit comfortably,below_threshold,,,,,6,,cat;potted plant;umbrella,False,True,False,False
+908,D:\DATASETS\mscoco\val2014\COCO_val2014_000000203416.jpg,smear butter,selected,knife,0.9532027244567871,0.9532027244567871,0.27506810426712036,29,fork;spoon,bowl;broccoli;chair;dining table;fork;person;spoon,True,False,True,True
+909,D:\DATASETS\mscoco\val2014\COCO_val2014_000000481214.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.25989460945129395,3,,chair;person;tie,False,False,False,False
+910,D:\DATASETS\mscoco\val2014\COCO_val2014_000000288313.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.854579746723175,15,cup,bowl;cup;dining table;fork;knife;spoon,True,True,True,True
+911,D:\DATASETS\mscoco\val2014\COCO_val2014_000000295599.jpg,dig hole,selected,vase,0.798703134059906,0.798703134059906,0.7985248565673828,11,,bottle;chair;dining table;person;potted plant;vase,False,False,False,False
+912,D:\DATASETS\mscoco\val2014\COCO_val2014_000000177496.jpg,extinguish fire,selected,vase,0.9298223257064819,0.9298223257064819,0.07600854337215424,18,bowl,apple;book;bowl;chair;couch;remote;suitcase;tv,True,False,True,True
+913,D:\DATASETS\mscoco\val2014\COCO_val2014_000000243090.jpg,get lemon out of tea,selected,bottle,0.7318172454833984,0.7318172454833984,0.8577624559402466,22,,bottle;refrigerator,False,False,False,False
+914,D:\DATASETS\mscoco\val2014\COCO_val2014_000000286524.jpg,get potatoes out of fire,selected,spoon,0.9286569356918335,0.9286569356918335,0.2717073857784271,32,spoon,apple;book;cell phone;orange;spoon,True,True,True,True
+915,D:\DATASETS\mscoco\val2014\COCO_val2014_000000159133.jpg,open bottle of beer,below_threshold,,,,,3,,book;toilet,False,True,False,False
+916,D:\DATASETS\mscoco\val2014\COCO_val2014_000000133999.jpg,open parcel,below_threshold,,,,,24,,bus;car;person,False,True,False,False
+917,D:\DATASETS\mscoco\val2014\COCO_val2014_000000503978.jpg,place flowers,selected,wine glass,0.8740710020065308,0.8740710020065308,0.9163119792938232,21,,broccoli;carrot;dining table;fork;spoon;wine glass,False,False,False,False
+918,D:\DATASETS\mscoco\val2014\COCO_val2014_000000332025.jpg,pound carpet,selected,skis,0.9945266842842102,0.9945266842842102,0.25988268852233887,22,skis;snowboard,backpack;cell phone;dog;person;skis;snowboard,True,True,True,True
+919,D:\DATASETS\mscoco\val2014\COCO_val2014_000000519387.jpg,pour sugar,selected,bottle,0.7434991002082825,0.7434991002082825,0.3323279619216919,29,bottle,bicycle;bottle;person;umbrella,True,True,True,True
+920,D:\DATASETS\mscoco\val2014\COCO_val2014_000000242946.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.9010064601898193,68,cup,bowl;carrot;chair;cup;dining table;person;spoon,True,True,True,True
+921,D:\DATASETS\mscoco\val2014\COCO_val2014_000000039630.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.6501542925834656,38,chair,chair;person;tennis racket,True,True,True,True
+922,D:\DATASETS\mscoco\val2014\COCO_val2014_000000505709.jpg,smear butter,below_threshold,,,,,81,,bottle;chair;dining table;wine glass,False,True,False,False
+923,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001180.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.8992692828178406,38,chair,bowl;cake;chair;dining table;fork;knife;person,True,True,True,True
+924,D:\DATASETS\mscoco\val2014\COCO_val2014_000000417111.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.7709328532218933,88,cup,bottle;cup;orange;person;wine glass,True,True,True,True
+925,D:\DATASETS\mscoco\val2014\COCO_val2014_000000291816.jpg,dig hole,selected,book,0.14991608262062073,0.14991608262062073,0.37458667159080505,37,clock,book;clock;laptop;teddy bear,True,False,True,False
+926,D:\DATASETS\mscoco\val2014\COCO_val2014_000000450655.jpg,extinguish fire,selected,bottle,0.9197603464126587,0.9197603464126587,0.9207141995429993,4,bottle,bottle;chair;clock,True,True,True,True
+927,D:\DATASETS\mscoco\val2014\COCO_val2014_000000298732.jpg,get lemon out of tea,selected,toothbrush,0.9414254426956177,0.9414254426956177,0.4898080825805664,19,toothbrush,cup;sink;toothbrush,True,True,True,True
+928,D:\DATASETS\mscoco\val2014\COCO_val2014_000000002240.jpg,get potatoes out of fire,selected,book,0.6600486040115356,0.6600486040115356,0.08064431697130203,10,,teddy bear,False,False,False,False
+929,D:\DATASETS\mscoco\val2014\COCO_val2014_000000027805.jpg,open bottle of beer,selected,toothbrush,0.2736634612083435,0.2736634612083435,0.6620376706123352,7,,bed;person;toothbrush,False,False,False,False
+930,D:\DATASETS\mscoco\val2014\COCO_val2014_000000326086.jpg,open parcel,below_threshold,,,,,24,,bottle;couch;person;remote,False,True,False,False
+931,D:\DATASETS\mscoco\val2014\COCO_val2014_000000132644.jpg,place flowers,selected,bottle,0.9335610270500183,0.9335610270500183,0.8758999109268188,20,bottle,bottle;bowl;carrot;oven;person,True,True,True,True
+932,D:\DATASETS\mscoco\val2014\COCO_val2014_000000324338.jpg,pound carpet,selected,frisbee,0.9866327047348022,0.9866327047348022,0.9329169392585754,8,,bottle;frisbee;person,False,False,False,False
+933,D:\DATASETS\mscoco\val2014\COCO_val2014_000000552352.jpg,pour sugar,selected,fork,0.9068748950958252,0.9068748950958252,0.9864075183868408,3,fork,cake;fork,True,True,True,True
+934,D:\DATASETS\mscoco\val2014\COCO_val2014_000000187169.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.3773145377635956,12,cup,bowl;chair;couch;cup;vase,True,True,True,True
+935,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267643.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.7670011520385742,63,chair,backpack;book;chair;person;suitcase,True,True,True,True
+936,D:\DATASETS\mscoco\val2014\COCO_val2014_000000297300.jpg,smear butter,selected,fork,0.8765053749084473,0.8765053749084473,0.9753022789955139,5,fork,apple;dining table;fork,True,True,True,True
+937,D:\DATASETS\mscoco\val2014\COCO_val2014_000000568710.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.8037106990814209,16,chair,book;chair;couch;dining table;oven;person;potted plant;vase,True,True,True,True
+938,D:\DATASETS\mscoco\val2014\COCO_val2014_000000245311.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.08059801161289215,36,,bowl;donut;person,False,False,False,False
+939,D:\DATASETS\mscoco\val2014\COCO_val2014_000000421431.jpg,dig hole,selected,snowboard,0.9956026077270508,0.9956026077270508,0.45244094729423523,4,snowboard,person;snowboard,True,True,True,True
+940,D:\DATASETS\mscoco\val2014\COCO_val2014_000000191304.jpg,extinguish fire,selected,bottle,0.9197603464126587,0.9197603464126587,0.2550663352012634,51,,book;bottle;chair;clock;dining table;remote,False,False,False,False
+941,D:\DATASETS\mscoco\val2014\COCO_val2014_000000532780.jpg,get lemon out of tea,selected,wine glass,0.38900601863861084,0.38900601863861084,0.9681544303894043,9,wine glass,bowl;dining table;sandwich;wine glass,True,True,True,True
+942,D:\DATASETS\mscoco\val2014\COCO_val2014_000000264424.jpg,get potatoes out of fire,selected,baseball bat,0.9960362315177917,0.9960362315177917,0.49220508337020874,11,baseball bat,baseball bat;baseball glove;person,True,True,True,True
+943,D:\DATASETS\mscoco\val2014\COCO_val2014_000000550350.jpg,open bottle of beer,below_threshold,,,,,4,,bottle;couch;remote,False,True,False,False
+944,D:\DATASETS\mscoco\val2014\COCO_val2014_000000265153.jpg,open parcel,below_threshold,,,,,13,,elephant;person;traffic light,False,True,False,False
+945,D:\DATASETS\mscoco\val2014\COCO_val2014_000000265227.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.9515544176101685,15,cup,cup;dining table;fork;knife;person;spoon,True,True,True,True
+946,D:\DATASETS\mscoco\val2014\COCO_val2014_000000461860.jpg,pound carpet,selected,tennis racket,0.9960851669311523,0.9960851669311523,0.9089658856391907,4,tennis racket,person;sports ball;tennis racket,True,True,True,True
+947,D:\DATASETS\mscoco\val2014\COCO_val2014_000000511453.jpg,pour sugar,selected,cup,0.8007528185844421,0.8007528185844421,0.5652828216552734,6,bottle,bottle;pizza,True,False,True,True
+948,D:\DATASETS\mscoco\val2014\COCO_val2014_000000440724.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.880176842212677,14,cup,broccoli;carrot;cup;dining table;fork,True,True,True,True
+949,D:\DATASETS\mscoco\val2014\COCO_val2014_000000266117.jpg,sit comfortably,selected,couch,0.9868879914283752,0.9868879914283752,0.9650996923446655,39,chair;couch,book;bottle;cell phone;chair;couch;dog;remote;teddy bear,True,True,True,True
+950,D:\DATASETS\mscoco\val2014\COCO_val2014_000000033931.jpg,smear butter,selected,spoon,0.9261945486068726,0.9261945486068726,0.9408236742019653,2,spoon,spoon,True,True,True,True
+951,D:\DATASETS\mscoco\val2014\COCO_val2014_000000414698.jpg,step on something to reach top of a shelf,selected,chair,0.9576459527015686,0.9576459527015686,0.5577848553657532,20,,chair;person;sports ball;tennis racket,False,False,False,False
+952,D:\DATASETS\mscoco\val2014\COCO_val2014_000000156341.jpg,water plant,below_threshold,,,,,53,,baseball bat;baseball glove;cup;person,False,True,False,False
+953,D:\DATASETS\mscoco\val2014\COCO_val2014_000000030992.jpg,dig hole,selected,baseball bat,0.9970237612724304,0.9970237612724304,0.822913646697998,7,baseball bat,baseball bat;baseball glove;person;sports ball,True,True,True,True
+954,D:\DATASETS\mscoco\val2014\COCO_val2014_000000335233.jpg,extinguish fire,selected,cup,0.9048432111740112,0.9048432111740112,0.928250253200531,17,cup,backpack;book;cell phone;cup;laptop,True,True,True,True
+955,D:\DATASETS\mscoco\val2014\COCO_val2014_000000278313.jpg,get lemon out of tea,selected,cup,0.2091376930475235,0.2091376930475235,0.8538341522216797,22,,book;couch;cup;remote;tv,False,False,False,False
+956,D:\DATASETS\mscoco\val2014\COCO_val2014_000000405365.jpg,get potatoes out of fire,selected,skis,0.9959355592727661,0.9959355592727661,0.7330675721168518,23,skis,person;skis,True,True,True,True
+957,D:\DATASETS\mscoco\val2014\COCO_val2014_000000578524.jpg,open bottle of beer,below_threshold,,,,,6,,bed;remote;tv,False,True,False,False
+958,D:\DATASETS\mscoco\val2014\COCO_val2014_000000435807.jpg,open parcel,below_threshold,,,,,80,,bed;book;couch;keyboard;person;potted plant;remote;tv,False,True,False,False
+959,D:\DATASETS\mscoco\val2014\COCO_val2014_000000271607.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.05960379168391228,4,,person;teddy bear,False,False,False,False
+960,D:\DATASETS\mscoco\val2014\COCO_val2014_000000195715.jpg,pound carpet,selected,baseball glove,0.7420501112937927,0.7420501112937927,0.9994199275970459,3,baseball glove,baseball glove;sports ball,True,True,True,True
+961,D:\DATASETS\mscoco\val2014\COCO_val2014_000000528098.jpg,pour sugar,selected,bottle,0.7434991002082825,0.7434991002082825,0.9091804623603821,10,bottle,bottle;person;tv,True,True,True,True
+962,D:\DATASETS\mscoco\val2014\COCO_val2014_000000406426.jpg,serve wine,below_threshold,,,,,11,,bottle;broccoli,False,True,False,False
+963,D:\DATASETS\mscoco\val2014\COCO_val2014_000000526555.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.4656108021736145,58,chair,bottle;cell phone;chair;cup;dining table;person;tie;wine glass,True,True,True,True
+964,D:\DATASETS\mscoco\val2014\COCO_val2014_000000152298.jpg,smear butter,selected,toothbrush,0.7607229948043823,0.7607229948043823,0.11302398890256882,8,,bottle;cup;sink;toilet,False,False,False,False
+965,D:\DATASETS\mscoco\val2014\COCO_val2014_000000395405.jpg,step on something to reach top of a shelf,selected,chair,0.957645833492279,0.957645833492279,0.9044647216796875,43,chair,book;chair;clock;couch;dining table,True,True,True,True
+966,D:\DATASETS\mscoco\val2014\COCO_val2014_000000135976.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.06510923057794571,9,,book;laptop;mouse,False,False,False,False
+967,D:\DATASETS\mscoco\val2014\COCO_val2014_000000416309.jpg,dig hole,selected,tennis racket,0.9961715340614319,0.9961715340614319,0.9372935891151428,3,tennis racket,clock;person;tennis racket,True,True,True,True
+968,D:\DATASETS\mscoco\val2014\COCO_val2014_000000086336.jpg,extinguish fire,below_threshold,,,,,6,,clock,False,True,False,False
+969,D:\DATASETS\mscoco\val2014\COCO_val2014_000000043673.jpg,get lemon out of tea,selected,cup,0.2091376930475235,0.2091376930475235,0.9355036616325378,13,,chair;cup;potted plant;teddy bear,False,False,False,False
+970,D:\DATASETS\mscoco\val2014\COCO_val2014_000000536933.jpg,get potatoes out of fire,selected,skis,0.9959355592727661,0.9959355592727661,0.8010214567184448,46,skis,backpack;person;skis,True,True,True,True
+971,D:\DATASETS\mscoco\val2014\COCO_val2014_000000306281.jpg,open bottle of beer,below_threshold,,,,,23,,broccoli,False,True,False,False
+972,D:\DATASETS\mscoco\val2014\COCO_val2014_000000559778.jpg,open parcel,below_threshold,,,,,26,,book;couch;dog;person;teddy bear,False,True,False,False
+973,D:\DATASETS\mscoco\val2014\COCO_val2014_000000002240.jpg,place flowers,below_threshold,,,,,10,,teddy bear,False,True,False,False
+974,D:\DATASETS\mscoco\val2014\COCO_val2014_000000147681.jpg,pound carpet,selected,skateboard,0.99381422996521,0.99381422996521,0.7646040320396423,13,skateboard,bench;car;person;skateboard,True,True,True,True
+975,D:\DATASETS\mscoco\val2014\COCO_val2014_000000118607.jpg,pour sugar,selected,bowl,0.42996954917907715,0.42996954917907715,0.9723030924797058,7,bowl,bowl;broccoli,True,True,True,True
+976,D:\DATASETS\mscoco\val2014\COCO_val2014_000000047570.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.8965193629264832,72,cup,bottle;bowl;chair;cup;dining table;fork;knife;microwave;person;sandwich;spoon,True,True,True,True
+977,D:\DATASETS\mscoco\val2014\COCO_val2014_000000004175.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.8377587199211121,48,chair,chair;person;sports ball;tennis racket,True,True,True,True
+978,D:\DATASETS\mscoco\val2014\COCO_val2014_000000571585.jpg,smear butter,below_threshold,,,,,17,,bowl;refrigerator,False,True,False,False
+979,D:\DATASETS\mscoco\val2014\COCO_val2014_000000262386.jpg,step on something to reach top of a shelf,selected,toilet,0.1999446600675583,0.1999446600675583,0.9578502178192139,1,,toilet,False,False,False,False
+980,D:\DATASETS\mscoco\val2014\COCO_val2014_000000022850.jpg,water plant,selected,bottle,0.9150616526603699,0.9150616526603699,0.09465453028678894,18,,cake;clock;dining table;knife;person,False,False,False,False
+981,D:\DATASETS\mscoco\val2014\COCO_val2014_000000264506.jpg,dig hole,below_threshold,,,,,33,,sheep,False,True,False,False
+982,D:\DATASETS\mscoco\val2014\COCO_val2014_000000468022.jpg,extinguish fire,selected,vase,0.9298224449157715,0.9298224449157715,0.8057274222373962,28,vase,bowl;cake;chair;dining table;person;vase,True,True,True,True
+983,D:\DATASETS\mscoco\val2014\COCO_val2014_000000324710.jpg,get lemon out of tea,selected,bottle,0.7318172454833984,0.7318172454833984,0.056401804089546204,17,,bench;couch;cup;sheep,False,False,False,False
+984,D:\DATASETS\mscoco\val2014\COCO_val2014_000000529539.jpg,get potatoes out of fire,selected,tennis racket,0.9950190782546997,0.9950190782546997,0.9357014298439026,12,tennis racket,person;sports ball;tennis racket,True,True,True,True
+985,D:\DATASETS\mscoco\val2014\COCO_val2014_000000549300.jpg,open bottle of beer,selected,bench,0.7257707715034485,0.7257707715034485,0.07535933703184128,6,,potted plant;vase,False,False,False,False
+986,D:\DATASETS\mscoco\val2014\COCO_val2014_000000142620.jpg,open parcel,selected,knife,0.9677996635437012,0.9677996635437012,0.2725440263748169,36,knife,bottle;bowl;chair;cup;dining table;knife;orange;person;spoon,True,True,True,True
+987,D:\DATASETS\mscoco\val2014\COCO_val2014_000000003091.jpg,place flowers,selected,cup,0.9395425319671631,0.9395425319671631,0.917331337928772,15,cup,bottle;cake;cup;dining table;fork;person;spoon,True,True,True,True
+988,D:\DATASETS\mscoco\val2014\COCO_val2014_000000478977.jpg,pound carpet,selected,skis,0.9945266842842102,0.9945266842842102,0.4806419909000397,9,skis,dog;person;skis,True,True,True,True
+989,D:\DATASETS\mscoco\val2014\COCO_val2014_000000135902.jpg,pour sugar,below_threshold,,,,,3,,person;train,False,True,False,False
+990,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001089.jpg,serve wine,selected,cup,0.9340070486068726,0.9340070486068726,0.9035598635673523,3,cup,cup;person;tie,True,True,True,True
+991,D:\DATASETS\mscoco\val2014\COCO_val2014_000000505709.jpg,sit comfortably,selected,chair,0.9823980927467346,0.9823980927467346,0.8884995579719543,81,chair,bottle;chair;dining table;wine glass,True,True,True,True
+992,D:\DATASETS\mscoco\val2014\COCO_val2014_000000172877.jpg,smear butter,below_threshold,,,,,13,,bottle;clock;couch;person;tie,False,True,False,False
+993,D:\DATASETS\mscoco\val2014\COCO_val2014_000000524575.jpg,step on something to reach top of a shelf,below_threshold,,,,,4,,cow;giraffe,False,True,False,False
+994,D:\DATASETS\mscoco\val2014\COCO_val2014_000000550784.jpg,water plant,selected,cup,0.9308979511260986,0.9308979511260986,0.06737369298934937,7,bottle,bed;bottle;dining table;remote,True,False,True,True
+995,D:\DATASETS\mscoco\val2014\COCO_val2014_000000542024.jpg,dig hole,selected,baseball bat,0.9970237612724304,0.9970237612724304,0.718742311000824,12,baseball bat,baseball bat;baseball glove;person;sports ball,True,True,True,True
+996,D:\DATASETS\mscoco\val2014\COCO_val2014_000000267875.jpg,extinguish fire,below_threshold,,,,,49,,motorcycle;person;traffic light,False,True,False,False
+997,D:\DATASETS\mscoco\val2014\COCO_val2014_000000526341.jpg,get lemon out of tea,below_threshold,,,,,2,,giraffe,False,True,False,False
+998,D:\DATASETS\mscoco\val2014\COCO_val2014_000000001987.jpg,get potatoes out of fire,selected,frisbee,0.9826462268829346,0.9826462268829346,0.8847235441207886,2,frisbee,frisbee;person,True,True,True,True
+999,D:\DATASETS\mscoco\val2014\COCO_val2014_000000527054.jpg,open bottle of beer,selected,fire hydrant,0.7823830842971802,0.7823830842971802,0.8996101021766663,5,,fire hydrant;handbag;person;stop sign;umbrella,False,False,False,False
+1000,D:\DATASETS\mscoco\val2014\COCO_val2014_000000070657.jpg,open parcel,selected,spoon,0.8423804044723511,0.8423804044723511,0.1401863992214203,14,,banana;bowl;dining table,False,False,False,False

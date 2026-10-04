@@ -1,0 +1,167 @@
+% ============================================================================
+% Acceleration Achieved -- paste into the report body.
+% Requires in preamble:
+%   \usepackage{booktabs}
+%   \usepackage{amsmath}
+%   \usepackage{listings}
+%   \usepackage{xcolor}
+%   \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,
+%           frame=single,columns=fullflexible,keepspaces=true}
+% ============================================================================
+
+\section{Acceleration Achieved}
+
+This section quantifies the speed-up of the systolic-array accelerator over a
+scalar-CPU baseline for the GEMM it computes, $Y = X\cdot K + \text{bias}$.
+
+\subsection{Definition}
+
+\begin{equation*}
+  \text{Speedup} \;=\;
+  \frac{\text{cycles a scalar CPU needs for the same MACs}}
+       {\text{cycles the accelerator needs for those MACs}}
+\end{equation*}
+
+\begin{itemize}
+  \item \textbf{Work} for a GEMM $(M\times T)\cdot(T\times N)$ is
+        $M\cdot N\cdot T$ multiply--accumulates (MACs).
+  \item \textbf{Scalar CPU:} $\text{MACs}\times \text{cyc\_per\_mac}$ cycles.
+        $\text{cyc\_per\_mac}=1$ is the ideal 1-MAC/cycle core; $\approx 4$ is
+        realistic for a simple in-order RISC-V (Vega / Ibex class) doing
+        load--load--multiply--add without SIMD.
+  \item \textbf{Accelerator:} the $R\times C$ array performs $R\cdot C$ MACs
+        every cycle (one per PE), so it needs $\text{MACs}/(R\cdot C)$ cycles
+        plus a fixed pipeline fill/drain of $(R+C-1)+L_M+L_A$ per tile (from the
+        \texttt{axis\_sa} RTL, with $L_M=L_A=1$).
+\end{itemize}
+
+\noindent\textbf{Headline result:} in steady state the speed-up converges to
+\begin{equation}
+  \text{Speedup} \;\approx\; (R\cdot C)\,\times\,\text{cyc\_per\_mac},
+\end{equation}
+i.e.\ the acceleration \emph{equals the number of parallel MAC units (PEs)}
+times how many cycles a scalar core spends per MAC.
+
+\subsection{Measured Point from Simulation ($R=C=2$, $T=2$)}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Quantity} & \textbf{Value} & \textbf{Source} \\
+\midrule
+MACs in the job & $8\;(=R\cdot C\cdot T)$ & by construction \\
+Active compute cycles (\texttt{s\_valid\&s\_ready}) & $2\;(=T)$ & measured \\
+START$\rightarrow$DONE (job, incl.\ DMA) & 52 cycles (585--1105\,ns) & measured \\
+Reset$\rightarrow$\texttt{\$finish} (full test) & 131 cycles & measured \\
+Scalar CPU for 8 MACs (@1 / @4 cyc/MAC) & 8 / 32 cycles & model \\
+\textbf{Compute-only speedup} (scalar@4 $\div$ active) & \textbf{$16\times$ ($=R\cdot C\times4$)} & derived \\
+End-to-end speedup at this size (scalar@4 $\div$ 52) & $0.6\times$ (overhead-bound) & derived \\
+\bottomrule
+\end{tabular}
+\caption{Acceleration figures measured from the behavioural simulation.}
+\end{table}
+
+The array does $R\cdot C=4$ MACs in each of the 2 active cycles ($\Rightarrow 8$
+MACs), i.e.\ full 4-MAC/cycle throughput---exactly the architectural figure.
+The 131 cycles is the reset-to-\texttt{\$finish} span (the counter ran the whole
+sim, not just the job); the START$\rightarrow$DONE job window is 52 cycles.
+
+\paragraph{Honest reading.} At this $2\times2$ demonstration size there is no
+real \emph{end-to-end} speed-up---the one-time AXI-Lite configuration and
+single-beat DMA overhead dominate, and the actual compute is only $\sim$7
+cycles. The purpose of this testbench is to prove \textbf{functional correctness
+and the full autonomous AXI flow}, which it does ($Y_\text{dut}=Y_\text{ref}$).
+Acceleration is an \emph{architectural} property that appears once the array and
+the problem are scaled up, as shown next.
+
+\subsection{Architectural Speed-up vs.\ Array Size}
+
+For a fixed $64\times64\times64$ GEMM ($262{,}144$ MACs):
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Array ($R\times C$)} & \textbf{PEs} & \textbf{Accel cycles} &
+\textbf{Speedup vs CPU@1} & \textbf{Speedup vs CPU@4} \\
+\midrule
+$2\times2$   & 4    & $70{,}656$ & $3.7\times$  & $14.8\times$ \\
+$4\times4$   & 16   & $18{,}688$ & $14.0\times$ & $56.1\times$ \\
+$8\times8$   & 64   & $5{,}184$  & $50.6\times$ & $202\times$  \\
+$16\times16$ & 256  & $1{,}552$  & $169\times$  & $676\times$  \\
+$32\times32$ & 1024 & $516$      & $508\times$  & $2032\times$ \\
+\bottomrule
+\end{tabular}
+\caption{Speed-up scales almost linearly with the PE count $R\cdot C$.}
+\end{table}
+
+The array size is a \texttt{config.svh} parameter ($R$, $C$)---no RTL rewrite is
+needed to scale. The small shortfall at $2\times2$ is pipeline fill/drain
+overhead, which amortises away as the array grows.
+
+\subsection{Mapping to a YOLOv8x Convolution (im2col $\rightarrow$ GEMM)}
+
+A representative mid-stage layer ($3\times3$ conv, $C_\text{in}=C_\text{out}=256$,
+$40\times40$ output) is $\sim\!9.4\times10^{8}$ MACs. Treated as one GEMM:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Array @ clock} & \textbf{Accel time} &
+\textbf{Scalar @1\,GHz (1 MAC/cyc)} & \textbf{Speedup} \\
+\midrule
+$8\times8$ @100\,MHz   & 147\,ms  & 944\,ms & $6.4\times$  \\
+$16\times16$ @100\,MHz & 36.9\,ms & 944\,ms & $25.6\times$ \\
+$16\times16$ @200\,MHz & 18.4\,ms & 944\,ms & $51.2\times$ \\
+$32\times32$ @200\,MHz & 4.6\,ms  & 944\,ms & $205\times$  \\
+\bottomrule
+\end{tabular}
+\caption{Throughput-bound estimate; assumes the burst-capable AXI master keeps
+the array fed (\texttt{AXI\_MAX\_BURST\_LEN}~$>$~1).}
+\end{table}
+
+\subsection{Direct Measurement from Simulation}
+
+A gated counter window is added to \texttt{tb\_top\_axi\_int.sv}. Two points:
+(a)~the window is gated to START$\rightarrow$DONE rather than the whole sim, and
+(b)~it counts real operand beats \texttt{s\_valid \& s\_ready}, \emph{not}
+\texttt{en\_mac} (which is high even when the array is idle and would
+over-count).
+
+\begin{lstlisting}[language=Verilog]
+localparam int CYC_PER_MAC = 4;     // scalar-CPU baseline assumption
+int  cyc_e2e   = 0;                 // cycles inside the START..DONE window
+int  cyc_active= 0;                 // cycles a real operand beat enters the array
+bit  measuring = 1'b0;              // window enable
+
+always @(posedge clk) if (rstn && measuring) begin
+  cyc_e2e++;
+  if (DUT.s_valid && DUT.s_ready) cyc_active++;   // each beat = R*C MACs
+end
+
+// open the window just before START, close it after the DONE poll:
+//   measuring <= 1'b1;  reg_write(A_START, 32'h1);  ... poll ...  measuring <= 1'b0;
+
+int unsigned macs       = R*C*T;
+int unsigned scalar_cyc = macs * CYC_PER_MAC;
+$display("MACs=%0d active=%0d e2e=%0d scalar=%0d", macs, cyc_active, cyc_e2e, scalar_cyc);
+$display("compute-only speedup = %0.1fx", real'(scalar_cyc)/cyc_active); // -> 16.0x
+$display("end-to-end   speedup = %0.2fx", real'(scalar_cyc)/cyc_e2e);    // -> 0.6x
+\end{lstlisting}
+
+For the current $2\times2$, $T=2$ run: \texttt{active=2}, \texttt{e2e}$\approx$52,
+\texttt{scalar=32} $\Rightarrow$ compute-only $16\times$, end-to-end $0.6\times$.
+
+\subsection{Summary}
+
+The accelerator performs $R\cdot C$ INT8 multiply--accumulates per clock, so
+against a scalar 1-MAC/cycle baseline its speed-up equals the PE count
+($R\cdot C$): $4\times$ at the demonstrated $2\times2$, scaling to $\sim\!256\times$
+at $16\times16$ and $\sim\!1024\times$ at $32\times32$, and proportionally more
+versus a realistic multi-cycle-per-MAC core. At the $2\times2$ verification size
+the end-to-end job is overhead-bound (52 cycles for 8 MACs), so this stage
+demonstrates correct AXI integration and data flow; the throughput advantage is
+realised at deployment-scale array and matrix dimensions, e.g.\ $\sim\!25$--$50\times$
+on a representative YOLOv8x $3\times3$ convolution layer at a $16\times16$ array.

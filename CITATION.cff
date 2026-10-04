@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Task-Aware Object Selection on a RISC-V FPGA — DVCon India 2026 Design Contest (Winner), Team 43 Silicon Syndicate"
+type: software
+authors:
+  - family-names: Ranaweera
+    given-names: Dulina
+    affiliation: "University of Moratuwa, Sri Lanka"
+  - family-names: Peiris
+    given-names: Ishan
+    affiliation: "University of Moratuwa, Sri Lanka"
+repository-code: "https://github.com/Dulina14/dvcon2026-task-aware-riscv-fpga"
+license: MIT
+date-released: "2026-10-04"
+keywords:
+  - FPGA
+  - RISC-V
+  - systolic array
+  - hardware accelerator
+  - task-driven object detection
+  - YOLOv8
+  - MiniLM
+  - INT8
+  - DVCon India
+references:
+  - type: conference-paper
+    title: "What Object Should I Use? - Task Driven Object Detection"
+    authors:
+      - family-names: Sawatzky
+        given-names: Johann
+      - family-names: Souri
+        given-names: Yaser
+      - family-names: Grund
+        given-names: Christian
+      - family-names: Gall
+        given-names: Juergen
+    collection-title: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    year: 2019

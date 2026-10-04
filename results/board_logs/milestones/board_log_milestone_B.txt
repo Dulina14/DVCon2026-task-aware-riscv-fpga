@@ -1,0 +1,35 @@
+TEAM 43 -- MILESTONE B on hardware, 16 August 2026
+
+/tmp/team43/team43_minilm_b --task "serve wine" --quiet --checkpack
+
+  checkpack L0.q.w  [384,384]      147456 bytes : identical
+  checkpack L0.f1.w [384,1536]     589824 bytes : identical
+  checkpack L0.f2.w [1536,384]     589824 bytes : identical
+  checkpack head0.w [1536,384]     589824 bytes : identical
+
+tokens: [CLS] task : serve wine [SEP] [PAD] [PAD]
+ids   : [101, 4708, 1024, 3710, 4511, 102, 0, 0]
+task_emb[0..3] : +0.018800 -0.028369 +0.063699 -0.006796
+
+--- RANKED OBJECTS FOR TASK "serve wine" ---
+  1. wine glass      0.970027
+  2. cup             0.933609
+  3. bowl            0.089686
+  4. vase            0.079406
+  5. bottle          0.046360
+  6. spoon           0.023431
+  7. knife           0.012295
+  8. hair drier      0.007672
+
+--- WORK ---
+accelerator invocations : 259104
+syscalls                : 1315589
+encoder time            : 90.56 s
+operand upload time     : 7.00 s
+weight packing (VEGA)   : 7.61 s
+accelerator inner loop  : 92.32 s    (356.3 us/invocation)
+accumulator seed/harvest: 2.80 s
+everything else (VEGA)  : 25.99 s
+total wall time         : 135.71 s
+
+FP32 golden from export_minilm_int8.py: wine glass 0.969409

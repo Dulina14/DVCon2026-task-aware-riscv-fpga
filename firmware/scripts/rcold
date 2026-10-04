@@ -1,0 +1,18 @@
+#!/bin/sh
+# Cold-start deploy, timed. Run this on the board after a power cycle,
+# once the network is up. Everything is pulled from the dev PC.
+DEV=Team43@192.168.1.1
+SRC=/home/Team43/Desktop/DVCon_2026
+mkdir -p /tmp/team43
+cd /tmp/team43
+echo "START $(date)"
+for f in team43_pipeline team43_minilm_int8.bin team43_yolo_int8.bin \
+         team43_minilm_packed.bin vocab.txt demo_image.jpg \
+         demo_serve_wine_glasses.ppm r128 r192 rdemo; do
+    echo "--- $f"
+    scp $DEV:$SRC/$f .
+done
+chmod +x team43_pipeline r128 r192 rdemo
+echo "END   $(date)"
+echo "files in /tmp/team43:"
+ls -l

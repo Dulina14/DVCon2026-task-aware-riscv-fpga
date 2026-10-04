@@ -1,0 +1,9 @@
+#!/bin/sh
+# 128 px with the NEW defaults (product ranking, conf 0.02, top-8 drawn).
+# Same canvas as every previous milestone, so the runtime should be unchanged
+# at ~528 s. What changes is the shortlist and, on some images, the selection.
+cd /tmp/team43
+./team43_pipeline --image demo_image.jpg --task "serve wine" \
+    --imgsz 128 \
+    --packed /tmp/team43/team43_minilm_packed.bin \
+    --out ./result_128_new.ppm 2>&1 | tee log_128_new.txt

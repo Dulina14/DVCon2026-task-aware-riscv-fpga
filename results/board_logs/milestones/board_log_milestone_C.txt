@@ -1,0 +1,21 @@
+TEAM 43 -- MILESTONE C on hardware, 17 August 2026
+
+/tmp/team43/team43_yolo_c --image /tmp/team43/sit_comfortably_1.ppm --imgsz 128 --quiet
+
+=== TEAM43 MILESTONE C -- YOLOv8n detection on the accelerator ===
+image : /tmp/team43/sit_comfortably_1.ppm
+imgsz : 128    mode: accelerator
+source: 640 x 480
+--- DETECTIONS (conf >= 0.25) ---
+  person          0.488   box [75 142 316 481]
+--- WORK ---
+  accelerator invocations : 342160
+  syscalls                : 1736147
+  GEMM loop               : 135.67 s
+  im2col + tile packing   : 77.39 s
+  operand upload          : 4.06 s
+  VEGA float work         : 51.29 s
+  total wall time         : 267.53 s
+
+An earlier --sim run of the same binary and image on the board reproduced the
+host golden exactly, isolating any difference to the device path.

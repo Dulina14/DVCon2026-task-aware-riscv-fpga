@@ -1,0 +1,142 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Wed Aug  5 07:56:32 2026
+| Host         : dev-laptop running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 4 -file D:/HDL/verilator/DVCon_2026_SUBMISSION/Env/GEN_BIT_OUT/stage3a_8x8_utilization_hier.rpt
+| Design       : Top
+| Device       : xc7k325tffg900-2
+| Speed File   : -2
+| Design State : Synthesized
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------------------+----------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+|              Instance             |                 Module                 | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP Blocks |
++-----------------------------------+----------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+| Top                               |                                  (top) |      95749 |      94003 |    1638 |  108 | 50086 |     40 |     82 |         50 |
+|   (Top)                           |                                  (top) |        576 |        576 |       0 |    0 |     0 |      0 |      0 |          0 |
+|   u_AS1061_SYSTEM_TOP             |                      AS1061_SYSTEM_TOP |      82576 |      81093 |    1440 |   43 | 37239 |     32 |     82 |         50 |
+|     (u_AS1061_SYSTEM_TOP)         |                      AS1061_SYSTEM_TOP |         54 |         54 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     u_soc_top_64                  |                             soc_top_64 |      82485 |      81002 |    1440 |   43 | 37203 |     32 |     82 |         50 |
+|       u_sram_128kb_axi            |                         sram_128kb_axi |        303 |        294 |       8 |    1 |   141 |     32 |      0 |          0 |
+|         U0                        |      sram_128kb_axi_blk_mem_gen_v8_4_1 |        303 |        294 |       8 |    1 |   141 |     32 |      0 |          0 |
+|       u_AXI4_SYS_CTRL_Top         |                      AXI4_SYS_CTRL_Top |        914 |        902 |       0 |   12 |  1126 |      0 |      0 |          0 |
+|         (u_AXI4_SYS_CTRL_Top)     |                      AXI4_SYS_CTRL_Top |         73 |         73 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         u_SYS_CTRL_REG_scl        |                       SYS_CTRL_REG_scl |        590 |        590 |       0 |    0 |   788 |      0 |      0 |          0 |
+|         u_axi_bram_ctrl_0         |                        axi_bram_ctrl_0 |        251 |        239 |       0 |   12 |   338 |      0 |      0 |          0 |
+|       u_Processor_top             |                          Processor_top |      75450 |      74018 |    1432 |    0 | 31518 |      0 |     82 |         50 |
+|         u_AS1061_Top              |                             AS1061_Top |      75450 |      74018 |    1432 |    0 | 31518 |      0 |     82 |         50 |
+|       u_axi4_crossbar_top         |                      axi4_crossbar_top |       3181 |       3151 |       0 |   30 |  1918 |      0 |      0 |          0 |
+|         u_axi_crossbar_top        |                       axi_crossbar_top |       3181 |       3151 |       0 |   30 |  1918 |      0 |      0 |          0 |
+|       u_axi_plic_top              |                           axi_plic_top |       2374 |       2374 |       0 |    0 |  2242 |      0 |      0 |          0 |
+|         u_mkIc_top                |                               mkIc_top |       2374 |       2374 |       0 |    0 |  2242 |      0 |      0 |          0 |
+|       u_axi_uart1                 |                              axi_uart1 |        259 |        259 |       0 |    0 |   258 |      0 |      0 |          0 |
+|         U0                        |                axi_uart1_axi_uart16550 |        259 |        259 |       0 |    0 |   258 |      0 |      0 |          0 |
+|   u_Accelerator_Top               |                        Accelerator_Top |      12404 |      12150 |     190 |   64 | 12711 |      0 |      0 |          0 |
+|     u_accel                       |                            top_axi_int |      12162 |      11908 |     190 |   64 | 12253 |      0 |      0 |          0 |
+|       ADAPTER_MM2S_A              |  alex_axis_adapter_any__parameterized0 |         42 |         42 |       0 |    0 |   325 |      0 |      0 |          0 |
+|         SLAVE_ADAPTER             |                           axis_adapter |         42 |         42 |       0 |    0 |   325 |      0 |      0 |          0 |
+|       ADAPTER_S2MM                |  alex_axis_adapter_any__parameterized1 |        233 |        233 |       0 |    0 |   331 |      0 |      0 |          0 |
+|         MASTER_ADAPTER            |           axis_adapter__parameterized0 |        233 |        233 |       0 |    0 |   331 |      0 |      0 |          0 |
+|       AXIL2RAM                    |                       alex_axilite_ram |        334 |        334 |       0 |    0 |   137 |      0 |      0 |          0 |
+|         axilite_wr_inst           |                        alex_axilite_wr |        332 |        332 |       0 |    0 |    98 |      0 |      0 |          0 |
+|       CONTROLLER                  |                         dma_controller |        332 |        332 |       0 |    0 |   512 |      0 |      0 |          0 |
+|       CROSSBAR                    |                           axi_crossbar |        902 |        902 |       0 |    0 |  1531 |      0 |      0 |          0 |
+|         axi_crossbar_wr_inst      |                        axi_crossbar_wr |        230 |        230 |       0 |    0 |   560 |      0 |      0 |          0 |
+|         axi_crossbar_rd_inst      |                        axi_crossbar_rd |        652 |        652 |       0 |    0 |   971 |      0 |      0 |          0 |
+|       MM2S_0_DMA                  |                        alex_axi_dma_rd |        554 |        508 |      46 |    0 |   445 |      0 |      0 |          0 |
+|       MM2S_1_DMA                  |        alex_axi_dma_rd__parameterized0 |        553 |        507 |      46 |    0 |   445 |      0 |      0 |          0 |
+|       MM2S_2_DMA                  |        alex_axi_dma_rd__parameterized1 |        553 |        507 |      46 |    0 |   445 |      0 |      0 |          0 |
+|       S2MM_DMA                    |                        alex_axi_dma_wr |        752 |        700 |      52 |    0 |   424 |      0 |      0 |          0 |
+|       SA                          |                                axis_sa |       7168 |       7104 |       0 |   64 |  6336 |      0 |      0 |          0 |
+|         (SA)                      |                                axis_sa |         18 |         18 |       0 |    0 |    60 |      0 |      0 |          0 |
+|         PER[0].PEC[0].PE          |                                     pe |        115 |        115 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[0].PEC[1].PE          |                                   pe_1 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[0].PEC[2].PE          |                                   pe_2 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[0].PEC[3].PE          |                                   pe_3 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[0].PEC[4].PE          |                                   pe_4 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[0].PEC[5].PE          |                                   pe_5 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[0].PEC[6].PE          |                                   pe_6 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[0].PEC[7].PE          |                                   pe_7 |        136 |        136 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[1].PEC[0].PE          |                                   pe_8 |        115 |        115 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[1].PEC[1].PE          |                                   pe_9 |        131 |        131 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[1].PEC[2].PE          |                                  pe_10 |        131 |        131 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[1].PEC[3].PE          |                                  pe_11 |        131 |        131 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[1].PEC[4].PE          |                                  pe_12 |        131 |        131 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[1].PEC[5].PE          |                                  pe_13 |        131 |        131 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[1].PEC[6].PE          |                                  pe_14 |        115 |        115 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[1].PEC[7].PE          |                                  pe_15 |        136 |        136 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[2].PEC[0].PE          |                                  pe_16 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[2].PEC[1].PE          |                                  pe_17 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[2].PEC[2].PE          |                                  pe_18 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[2].PEC[3].PE          |                                  pe_19 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[2].PEC[4].PE          |                                  pe_20 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[2].PEC[5].PE          |                                  pe_21 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[2].PEC[6].PE          |                                  pe_22 |        115 |        115 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[2].PEC[7].PE          |                                  pe_23 |        136 |        136 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[3].PEC[0].PE          |                                  pe_24 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[3].PEC[1].PE          |                                  pe_25 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[3].PEC[2].PE          |                                  pe_26 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[3].PEC[3].PE          |                                  pe_27 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[3].PEC[4].PE          |                                  pe_28 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[3].PEC[5].PE          |                                  pe_29 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[3].PEC[6].PE          |                                  pe_30 |        115 |        115 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[3].PEC[7].PE          |                                  pe_31 |        135 |        135 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[4].PEC[0].PE          |                                  pe_32 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[4].PEC[1].PE          |                                  pe_33 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[4].PEC[2].PE          |                                  pe_34 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[4].PEC[3].PE          |                                  pe_35 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[4].PEC[4].PE          |                                  pe_36 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[4].PEC[5].PE          |                                  pe_37 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[4].PEC[6].PE          |                                  pe_38 |        116 |        116 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[4].PEC[7].PE          |                                  pe_39 |        135 |        135 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[5].PEC[0].PE          |                                  pe_40 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[5].PEC[1].PE          |                                  pe_41 |        130 |        130 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[5].PEC[2].PE          |                                  pe_42 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[5].PEC[3].PE          |                                  pe_43 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[5].PEC[4].PE          |                                  pe_44 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[5].PEC[5].PE          |                                  pe_45 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[5].PEC[6].PE          |                                  pe_46 |        116 |        116 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[5].PEC[7].PE          |                                  pe_47 |        135 |        135 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[6].PEC[0].PE          |                                  pe_48 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[6].PEC[1].PE          |                                  pe_49 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[6].PEC[2].PE          |                                  pe_50 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[6].PEC[3].PE          |                                  pe_51 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[6].PEC[4].PE          |                                  pe_52 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[6].PEC[5].PE          |                                  pe_53 |        114 |        114 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[6].PEC[6].PE          |                                  pe_54 |        116 |        116 |       0 |    0 |    96 |      0 |      0 |          0 |
+|         PER[6].PEC[7].PE          |                                  pe_55 |        135 |        135 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[7].PEC[0].PE          |                                  pe_56 |         93 |         93 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[7].PEC[1].PE          |                                  pe_57 |         93 |         93 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[7].PEC[2].PE          |                                  pe_58 |         93 |         93 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[7].PEC[3].PE          |                                  pe_59 |         92 |         92 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[7].PEC[4].PE          |                                  pe_60 |         92 |         92 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[7].PEC[5].PE          |                                  pe_61 |         92 |         92 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[7].PEC[6].PE          |                                  pe_62 |         94 |         94 |       0 |    0 |    88 |      0 |      0 |          0 |
+|         PER[7].PEC[7].PE          |                                  pe_63 |        130 |        130 |       0 |    0 |    80 |      0 |      0 |          0 |
+|         TRI_K                     |                             tri_buffer |        202 |        170 |       0 |   32 |   112 |      0 |      0 |          0 |
+|         TRI_X                     |                          tri_buffer_64 |        136 |        104 |       0 |   32 |   118 |      0 |      0 |          0 |
+|       SKID_A                      |            skid_buffer__parameterized0 |        273 |        273 |       0 |    0 |   526 |      0 |      0 |          0 |
+|       SKID_K                      |                            skid_buffer |         93 |         93 |       0 |    0 |   134 |      0 |      0 |          0 |
+|       SKID_X                      |                          skid_buffer_0 |         81 |         81 |       0 |    0 |   134 |      0 |      0 |          0 |
+|       SKID_Y                      |            skid_buffer__parameterized1 |        306 |        306 |       0 |    0 |   528 |      0 |      0 |          0 |
+|     u_cfg_bridge                  |                       axi_axil_adapter |        242 |        242 |       0 |    0 |   458 |      0 |      0 |          0 |
+|       axi_axil_adapter_rd_inst    |                    axi_axil_adapter_rd |        107 |        107 |       0 |    0 |   188 |      0 |      0 |          0 |
+|       axi_axil_adapter_wr_inst    |                    axi_axil_adapter_wr |        135 |        135 |       0 |    0 |   270 |      0 |      0 |          0 |
+|   u_rom_32KB_axi                  |                           rom_32KB_axi |        193 |        184 |       8 |    1 |   136 |      8 |      0 |          0 |
+|     U0                            |        rom_32KB_axi_blk_mem_gen_v8_4_1 |        193 |        184 |       8 |    1 |   136 |      8 |      0 |          0 |
+|       inst_blk_mem_gen            |  rom_32KB_axi_blk_mem_gen_v8_4_1_synth |        193 |        184 |       8 |    1 |   136 |      8 |      0 |          0 |
+|         gnbram.gaxibmg.axi_rd_sm  |  rom_32KB_axi_blk_mem_axi_read_wrapper |        101 |        101 |       0 |    0 |    67 |      0 |      0 |          0 |
+|         gnbram.gaxibmg.axi_wr_fsm | rom_32KB_axi_blk_mem_axi_write_wrapper |         86 |         78 |       8 |    0 |    60 |      0 |      0 |          0 |
++-----------------------------------+----------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+
+

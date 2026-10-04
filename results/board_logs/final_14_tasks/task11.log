@@ -1,0 +1,84 @@
+=== TEAM43 -- task-aware object selection, standalone on the board ===
+image : COCO_val2014_000000393682.jpg
+task  : "pour sugar"
+imgsz : 256x256    rank-by: product    mode: accelerator
+build : Aug 26 2026 09:38:04   jpeg: integer islow IDCT + table colour
+kdepth : whole K per invocation
+silu   : expf
+fpcheck: 34800000 3efe65ea be54d74a   (host and board must match)
+regs   : 5 syscalls/tile (correct)
+weights: pre-packed cache
+ddr    : K/X windows 2 MB each, largest weight block 1179648 bytes
+format: JPEG, decoded on the board
+source: 640 x 480
+
+  yolo op 20/103
+  yolo op 40/103
+  yolo op 60/103
+  yolo op 80/103
+  yolo op 100/103
+
+--- DETECTED (7) ---
+  fork             0.866
+  cake             0.612
+  fork             0.454
+  cake             0.403
+  dining table     0.243
+  cake             0.140
+  knife            0.047
+
+tokens: [CLS] task : pour sugar [SEP] [PAD] [PAD]
+  minilm layer 1/6
+  minilm layer 2/6
+  minilm layer 3/6
+  minilm layer 4/6
+  minilm layer 5/6
+  minilm layer 6/6
+
+--- TASK-AWARE RANKING (minilm x yolo) ---
+  fork             yolo 0.866  minilm 0.91712  rank 0.79435   <== SELECTED
+  fork             yolo 0.454  minilm 0.91712  rank 0.41642
+  knife            yolo 0.047  minilm 0.94984  rank 0.04482
+  dining table     yolo 0.243  minilm 0.00201  rank 0.00049
+  cake             yolo 0.612  minilm 0.00055  rank 0.00034
+  cake             yolo 0.403  minilm 0.00055  rank 0.00022
+  cake             yolo 0.140  minilm 0.00055  rank 0.00008
+
+--- RESULT ---
+  SELECTED : fork   (rank 0.79435)
+  marked image written to ./ev_s256/task11.ppm
+
+--- WORK ---
+  detection   : 68432 invocations, 250.5 s
+  minilm      : 3001 invocations, 16.4 s  (head over 4 detected classes,
+                                          not all 80)
+  total       : 71433 invocations, 274.5 s
+  output tiles: 71433   (mean K-tiles per output tile 65.1)
+  if the k0 loop were streamed as one accumulation:
+     invocations 71433 -> 71433   (1.0x fewer)
+     syscalls    500031 -> 500031   (1.0x fewer)
+  GEMM loop 122.9 s | packing 43.5 s | upload 26.8 s | VEGA float 96.7 s
+  --- float breakdown (all of it inside VEGA float) ---
+    amax scan       :    5.91 s  over   5939200 elements  (1.00 us/elem)
+    quantise convert:   20.04 s  over   5939200 elements  (3.37 us/elem)
+    dequant + silu  :   64.30 s  over   4379648 elements  (14.68 us/elem, 4186112 through silu)
+    accounted       :   90.25 s of 96.75 s
+
+--- PACKING BREAKDOWN ---
+  detection  im2col      :    42.06 s  over      66 calls
+  detection  W tile copy :     1.35 s  over      63 calls, 10.6 MB  (7.9 MB/s)
+  minilm     activations :     0.10 s  over     182 calls
+  minilm     weights     :     1.31 s  over      38 calls, 10.7 MB  (8.15 MB/s)  [from cache]
+  cache hits             : 38 blocks, 10.7 MB copied
+  minilm     act-as-wgt  :     0.03 s  over     144 calls
+  ------------------------------------------------------------
+  detection subtotal     :    43.41 s
+  minilm    subtotal     :     1.44 s
+  sum vs g_pack_us       :    44.86 s vs 43.51 s   (W tile copy is extra, it was never counted before)
+
+--- JPEG DECODE ---
+  total                  :     4.31 s
+  huffman + dequant      :     1.87 s   (scan 3.52 s minus IDCT)
+  IDCT                   :     1.65 s   over 14400 blocks  (115 us/block)
+  YCbCr -> RGB           :     0.78 s   over 307200 pixels  (2.5 us/pixel)
+  unaccounted            :     0.01 s   (headers, allocation)

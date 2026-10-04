@@ -1,0 +1,35 @@
+TEAM 43 -- MILESTONE D on hardware, 17 August 2026
+Full pipeline: image + task in, marked image out.
+
+/tmp/team43/team43_pipeline --image /tmp/team43/demo_serve_wine_glasses.ppm \
+    --task "serve wine" --imgsz 128 --out /tmp/team43/result.ppm
+
+=== TEAM43 -- task-aware object selection, standalone on the board ===
+image : /tmp/team43/demo_serve_wine_glasses.ppm
+task  : "serve wine"
+imgsz : 128    rank-by: minilm    mode: accelerator
+source: 640 x 427
+  yolo op 20/103 ... 100/103
+--- DETECTED (4) ---
+  wine glass      0.668
+  wine glass      0.642
+  wine glass      0.505
+  dining table    0.369
+tokens: [CLS] task : serve wine [SEP] [PAD] [PAD]
+  minilm layer 1/6 ... 6/6
+--- TASK-AWARE RANKING (minilm) ---
+  wine glass      yolo 0.668  minilm 0.97006  rank 0.97006   <== SELECTED
+  wine glass      yolo 0.642  minilm 0.97006  rank 0.97006
+  wine glass      yolo 0.505  minilm 0.97006  rank 0.97006
+  dining table    yolo 0.369  minilm 0.00117  rank 0.00117
+--- RESULT ---
+  SELECTED : wine glass   (rank 0.97006)
+  marked image written to /tmp/team43/result.ppm
+--- WORK ---
+  detection   : 342160 invocations, 302.3 s
+  minilm      : 175728 invocations, 225.8 s  (head over 2 detected classes,
+                                              not all 80)
+  total       : 517888 invocations, 538.8 s
+  GEMM loop 259.7 s | packing 193.2 s | upload 11.4 s | VEGA float 52.3 s
+
+The written result.ppm is byte-for-byte what the host --sim run predicted.

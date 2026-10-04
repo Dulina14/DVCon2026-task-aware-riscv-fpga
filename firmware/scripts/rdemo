@@ -1,0 +1,15 @@
+#!/bin/sh
+# The paper's Figure 1 contrast, both on hardware.
+# A: wine glass present -> wine glass.   B: no wine glass -> cup.
+cd /tmp/team43
+echo "=== A: demo_serve_wine_glasses.ppm ==="
+./team43_pipeline --image demo_serve_wine_glasses.ppm --task "serve wine" \
+    --imgsz 128 --conf 0.05 \
+    --packed /tmp/team43/team43_minilm_packed.bin \
+    --out ./demo_A.ppm 2>&1 | tee log_demo_A.txt
+echo "=== B: demo_image.jpg ==="
+./team43_pipeline --image demo_image.jpg --task "serve wine" \
+    --imgsz 128 --conf 0.05 \
+    --packed /tmp/team43/team43_minilm_packed.bin \
+    --out ./demo_B.ppm 2>&1 | tee log_demo_B.txt
+echo "=== expected: A wine glass 0.97006   B cup 0.93395 ==="

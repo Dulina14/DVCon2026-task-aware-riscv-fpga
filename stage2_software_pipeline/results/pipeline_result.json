@@ -1,0 +1,91 @@
+{
+  "image": "D:\\datasets\\mscoco\\val2014\\COCO_val2014_000000004386.jpg",
+  "task": "what is the best object to get a lemon out of tea",
+  "device": "cuda",
+  "rank_by": "minilm",
+  "text_mode": "finetuned",
+  "yolo_weights": "D:\\task-aware-object-detection-pipeline\\yolov8x.pt",
+  "minilm_checkpoint": "D:\\task-aware-object-detection-pipeline\\checkpoints\\finetuned_text\\minilm_task_text_best.pt",
+  "minilm_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "num_detections": 4,
+  "selected_object": "fork",
+  "selected_detection": {
+    "detection_id": 2,
+    "bbox_xyxy": [
+      111.73294067382812,
+      207.9617156982422,
+      152.68389892578125,
+      224.12449645996094
+    ],
+    "class_id": 42,
+    "class_name": "fork",
+    "yolo_conf": 0.7734741568565369,
+    "minilm_score": 0.9654480218887329,
+    "product_score": 0.746749094719199,
+    "rank_score": 0.9654480218887329
+  },
+  "all_detections": [
+    {
+      "detection_id": 0,
+      "bbox_xyxy": [
+        28.40289306640625,
+        9.2794189453125,
+        413.04681396484375,
+        606.2344970703125
+      ],
+      "class_id": 0,
+      "class_name": "person",
+      "yolo_conf": 0.9741681814193726,
+      "minilm_score": 0.0006344585563056171,
+      "product_score": 0.0006180693379822036,
+      "rank_score": 0.0006344585563056171
+    },
+    {
+      "detection_id": 1,
+      "bbox_xyxy": [
+        175.77720642089844,
+        214.5380859375,
+        242.6815948486328,
+        272.33233642578125
+      ],
+      "class_id": 48,
+      "class_name": "sandwich",
+      "yolo_conf": 0.924176037311554,
+      "minilm_score": 0.00020142088760621846,
+      "product_score": 0.00018614835773969086,
+      "rank_score": 0.00020142088760621846
+    },
+    {
+      "detection_id": 2,
+      "bbox_xyxy": [
+        111.73294067382812,
+        207.9617156982422,
+        152.68389892578125,
+        224.12449645996094
+      ],
+      "class_id": 42,
+      "class_name": "fork",
+      "yolo_conf": 0.7734741568565369,
+      "minilm_score": 0.9654480218887329,
+      "product_score": 0.746749094719199,
+      "rank_score": 0.9654480218887329
+    },
+    {
+      "detection_id": 3,
+      "bbox_xyxy": [
+        0.6611785888671875,
+        452.6097717285156,
+        124.328125,
+        639.3651123046875
+      ],
+      "class_id": 13,
+      "class_name": "bench",
+      "yolo_conf": 0.11876653879880905,
+      "minilm_score": 0.0026551936753094196,
+      "product_score": 0.0003153481626569886,
+      "rank_score": 0.0026551936753094196
+    }
+  ],
+  "status": "selected",
+  "output_image": "D:\\task-aware-object-detection-pipeline\\results\\result.jpg"
+}

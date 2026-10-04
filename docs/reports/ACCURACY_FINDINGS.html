@@ -1,0 +1,668 @@
+<title>Where the Accuracy Went</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+
+<style>
+:root{
+  --ground:#F5F7F5;
+  --panel:#FFFFFF;
+  --band:#ECEFEC;
+  --ink:#191D1B;
+  --ink-2:#4A534E;
+  --ink-3:#77817B;
+  --rule:#D6DCD7;
+  --rule-2:#E6EAE6;
+  --accent:#0F6E63;
+  --accent-soft:#D7E8E4;
+  --warm:#A66A22;
+  --warm-soft:#F0E3D2;
+  --loss:#9E3B34;
+  --loss-soft:#F1DEDC;
+  --shadow:0 1px 2px rgba(25,29,27,.05),0 8px 24px -16px rgba(25,29,27,.18);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1312;
+    --panel:#161B19;
+    --band:#1C2321;
+    --ink:#E7ECE8;
+    --ink-2:#A9B4AE;
+    --ink-3:#7C8781;
+    --rule:#2B3532;
+    --rule-2:#222A28;
+    --accent:#48B7A7;
+    --accent-soft:#17322E;
+    --warm:#D6A059;
+    --warm-soft:#33281A;
+    --loss:#D9776C;
+    --loss-soft:#33201E;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -16px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1312;
+  --panel:#161B19;
+  --band:#1C2321;
+  --ink:#E7ECE8;
+  --ink-2:#A9B4AE;
+  --ink-3:#7C8781;
+  --rule:#2B3532;
+  --rule-2:#222A28;
+  --accent:#48B7A7;
+  --accent-soft:#17322E;
+  --warm:#D6A059;
+  --warm-soft:#33281A;
+  --loss:#D9776C;
+  --loss-soft:#33201E;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -16px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"IBM Plex Serif",Georgia,serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px 96px}
+
+/* ---------- masthead ---------- */
+header.mast{
+  border-bottom:2px solid var(--ink);
+  padding:56px 0 20px;
+  margin-bottom:44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);font-weight:600;margin:0 0 18px;
+  display:flex;flex-wrap:wrap;gap:10px 18px;align-items:baseline;
+}
+.eyebrow span:not(:first-child){color:var(--ink-3)}
+h1{
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-weight:700;font-size:clamp(34px,5.6vw,54px);line-height:1.04;
+  letter-spacing:-.022em;margin:0 0 16px;text-wrap:balance;max-width:16ch;
+}
+.standfirst{
+  font-size:19px;line-height:1.55;color:var(--ink-2);max-width:64ch;margin:0 0 24px;
+}
+.standfirst strong{color:var(--ink);font-weight:600}
+.mast-meta{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);
+  display:flex;flex-wrap:wrap;gap:6px 22px;
+}
+
+/* ---------- the four numbers ---------- */
+.keyrow{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:1px;background:var(--rule);border:1px solid var(--rule);
+  margin:0 0 52px;
+}
+.key{background:var(--panel);padding:20px 20px 18px}
+.key .n{
+  font-family:"IBM Plex Mono",monospace;font-size:31px;font-weight:600;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1;
+  display:block;margin-bottom:6px;
+}
+.key .l{
+  font-family:"IBM Plex Sans",sans-serif;font-size:12.5px;line-height:1.45;
+  color:var(--ink-2);
+}
+.key.good .n{color:var(--accent)}
+.key.bad  .n{color:var(--loss)}
+.key.ref  .n{color:var(--warm)}
+
+/* ---------- sections ---------- */
+section{margin:0 0 60px;scroll-margin-top:24px}
+h2{
+  font-family:"IBM Plex Sans",sans-serif;font-weight:600;
+  font-size:25px;letter-spacing:-.015em;line-height:1.2;
+  margin:0 0 6px;text-wrap:balance;
+  display:flex;gap:14px;align-items:baseline;
+}
+h2 .num{
+  font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
+  color:var(--accent);letter-spacing:.06em;flex:none;
+  padding-top:2px;
+}
+.dek{color:var(--ink-3);font-size:15px;margin:0 0 22px 40px;max-width:62ch;font-style:italic}
+h3{
+  font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:15px;
+  letter-spacing:.01em;margin:32px 0 10px;color:var(--ink);
+}
+p{margin:0 0 16px;max-width:68ch}
+.body{margin-left:40px}
+@media(max-width:640px){.dek,.body{margin-left:0}}
+strong{font-weight:600}
+em.q{font-style:italic;color:var(--ink-2)}
+code{
+  font-family:"IBM Plex Mono",monospace;font-size:.87em;
+  background:var(--band);padding:1px 5px;border-radius:2px;
+  border:1px solid var(--rule-2);
+}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;margin:22px 0 8px;border:1px solid var(--rule);background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px}
+caption{
+  caption-side:top;text-align:left;padding:13px 16px 11px;
+  font-family:"IBM Plex Sans",sans-serif;font-size:12.5px;font-weight:600;
+  color:var(--ink);border-bottom:1px solid var(--rule);background:var(--band);
+}
+th,td{padding:8px 14px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal;min-width:190px}
+thead th{
+  font-family:"IBM Plex Sans",sans-serif;font-size:11px;font-weight:600;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);
+  border-bottom:1px solid var(--rule);padding-top:11px;padding-bottom:9px;
+}
+tbody tr+tr td{border-top:1px solid var(--rule-2)}
+tbody tr:hover td{background:var(--band)}
+tr.hi td{background:var(--accent-soft);font-weight:600}
+tr.hi:hover td{background:var(--accent-soft)}
+tr.rule-top td{border-top:1.5px solid var(--rule)}
+td.acc{color:var(--accent);font-weight:600}
+td.warm{color:var(--warm);font-weight:600}
+td.dim{color:var(--ink-3)}
+tfoot td{
+  border-top:1.5px solid var(--ink);font-weight:600;
+  background:var(--band);
+}
+.note{
+  font-family:"IBM Plex Sans",sans-serif;font-size:12.5px;color:var(--ink-3);
+  margin:10px 0 0;max-width:70ch;line-height:1.5;
+}
+
+/* ---------- attribution bars ---------- */
+.attr{display:flex;flex-direction:column;gap:16px;margin:24px 0 6px}
+.attr-row{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center}
+@media(max-width:640px){.attr-row{grid-template-columns:1fr;gap:5px}}
+.attr-lab{
+  font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-2);
+  text-align:right;line-height:1.3;
+}
+@media(max-width:640px){.attr-lab{text-align:left}}
+.attr-lab b{display:block;color:var(--ink);font-weight:600}
+.bar{display:flex;height:30px;border:1px solid var(--rule);background:var(--panel);overflow:hidden}
+.seg{
+  display:flex;align-items:center;justify-content:center;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+  color:#fff;overflow:hidden;white-space:nowrap;
+}
+.seg.hit{background:var(--accent)}
+.seg.rank{background:var(--warm)}
+.seg.det{background:var(--loss)}
+.legend{
+  display:flex;flex-wrap:wrap;gap:8px 22px;margin:16px 0 0;
+  font-family:"IBM Plex Sans",sans-serif;font-size:12.5px;color:var(--ink-2);
+}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.sw-hit{background:var(--accent)} .sw-rank{background:var(--warm)} .sw-det{background:var(--loss)}
+
+/* ---------- callout ---------- */
+.callout{
+  border-left:3px solid var(--accent);background:var(--panel);
+  padding:18px 22px;margin:24px 0;box-shadow:var(--shadow);
+}
+.callout.warn{border-left-color:var(--warm)}
+.callout p:last-child{margin-bottom:0}
+.callout .tag{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);font-weight:600;
+  display:block;margin-bottom:7px;
+}
+.callout.warn .tag{color:var(--warm)}
+
+/* ---------- change list ---------- */
+.changes{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.changes li{background:var(--panel);padding:16px 20px}
+.changes .h{
+  font-family:"IBM Plex Mono",monospace;font-size:13.5px;font-weight:600;
+  color:var(--accent);margin-bottom:5px;
+}
+.changes .d{font-size:14.5px;color:var(--ink-2);line-height:1.5}
+.changes .d b{color:var(--ink);font-weight:600}
+
+pre{
+  font-family:"IBM Plex Mono",monospace;font-size:12.5px;line-height:1.65;
+  background:var(--panel);border:1px solid var(--rule);
+  padding:16px 18px;overflow-x:auto;margin:16px 0;
+}
+pre .c{color:var(--ink-3)}
+
+footer{
+  border-top:1px solid var(--rule);margin-top:24px;padding-top:20px;
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3);
+  display:flex;flex-wrap:wrap;gap:6px 24px;
+}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <p class="eyebrow">
+    <span>Team 43 · Silicon Syndicate</span>
+    <span>DVCon India 2026</span>
+    <span>23 August 2026</span>
+  </p>
+  <h1>Where the Accuracy Went</h1>
+  <p class="standfirst">
+    We had one accuracy number — mAP 0.0975 — and no idea which half of the pipeline was losing it.
+    Two new measurements settle it. The MiniLM ranker running INT8 on the FPGA is
+    <strong>better than the reference paper's</strong>. The detector at 128&nbsp;px is losing
+    <strong>72 of every 80 points</strong> we give away.
+  </p>
+  <p class="mast-meta">
+    <span>717 COCO-Tasks test images</span>
+    <span>14 tasks</span>
+    <span>INT8 models exactly as deployed</span>
+    <span>host evaluation, no board time consumed</span>
+  </p>
+</header>
+
+<div class="keyrow">
+  <div class="key good">
+    <span class="n">94.7%</span>
+    <span class="l">Ranker picks the correct object when given clean boxes</span>
+  </div>
+  <div class="key bad">
+    <span class="n">19.8%</span>
+    <span class="l">End-to-end, at the 128&nbsp;px canvas we deploy today</span>
+  </div>
+  <div class="key good">
+    <span class="n">53.2%</span>
+    <span class="l">Same models, same code, at a 320&nbsp;px canvas</span>
+  </div>
+  <div class="key ref">
+    <span class="n">0.362</span>
+    <span class="l">Our INT8 ranker on the paper's own detections — the paper reports 0.326</span>
+  </div>
+</div>
+
+<section>
+  <h2><span class="num">§1</span>The question we could not answer</h2>
+  <p class="dek">A single averaged number cannot tell you which component to fix.</p>
+  <div class="body">
+    <p>
+      Until today the pipeline had exactly one accuracy figure: mAP@0.5 = 0.0975, against the
+      reference paper's 0.326. That gap could have come from anywhere — the INT8 quantisation, the
+      MiniLM ranking, the YOLOv8n detector, the 128&nbsp;px input canvas — and the number gives no
+      way to tell. Worse, it measures something the demo does not do. mAP scores an entire ranked
+      list of candidates. The demo draws <em class="q">one box</em>.
+    </p>
+    <p>
+      So we added the metric that matches the product, and a ceiling measurement that splits the
+      blame.
+    </p>
+
+    <h3>Top-1 selection accuracy</h3>
+    <p>
+      Over every test image that actually contains a preferred object, take the single
+      highest-ranked box — the green one the board draws — and ask whether it lands on a preferred
+      object at IoU&nbsp;≥&nbsp;0.5. Two variants, because they diagnose different faults:
+      <strong>box correct</strong> means the right thing is circled; <strong>class correct</strong>
+      means the marked object is of a preferred kind even if a different instance was boxed.
+    </p>
+
+    <h3>The oracle ceiling</h3>
+    <p>
+      For the same images, ask whether a preferred object appeared <em class="q">anywhere</em> on the
+      candidate list. That is the best score any ranker could possibly achieve given those boxes.
+      The gap from the oracle down to top-1 belongs to the ranker; the gap from 100% down to the
+      oracle belongs to the detector. There is nowhere else for the loss to hide.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§2</span>The ranker is not the problem</h2>
+  <p class="dek">Hand it clean boxes and it is right 19 times in 20.</p>
+  <div class="body">
+    <p>
+      Run the deployed INT8 MiniLM against ground-truth COCO boxes — removing the detector from the
+      question entirely — and it selects the correct object <strong>94.7%</strong> of the time,
+      98.3% by class, for mAP@0.5 = 0.756. The reference paper's best ground-truth-box result is
+      0.742.
+    </p>
+    <p>
+      A stronger test: take the paper's own Faster-RCNN detections, feed them through our INT8
+      ranker unchanged, and score it the way the paper does.
+    </p>
+
+    <div class="tw">
+      <table>
+        <caption>Same ranker, three different box sources — 717 images, 14 tasks</caption>
+        <thead>
+          <tr>
+            <th>Box source</th><th>mAP@0.5</th><th>Top-1 box</th><th>Top-1 class</th><th>Oracle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ground-truth COCO boxes</td>
+            <td class="acc">0.756</td><td class="acc">0.925</td><td>0.983</td><td class="dim">1.000</td>
+          </tr>
+          <tr>
+            <td>Paper's Faster-RCNN detections</td>
+            <td class="acc">0.394</td><td>0.614</td><td>0.686</td><td class="dim">0.807</td>
+          </tr>
+          <tr>
+            <td>Our YOLOv8n INT8 @ 128&nbsp;px <em>(deployed)</em></td>
+            <td class="warm">0.076</td><td class="warm">0.186</td><td>0.250</td><td class="dim">0.268</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">
+      Ground-truth boxes carry no detection score, so they are ranked on the MiniLM probability
+      alone; the other two rows use the paper's rule, MiniLM&nbsp;×&nbsp;detection score.
+    </p>
+
+    <div class="callout">
+      <span class="tag">Result worth presenting</span>
+      <p>
+        On the reference paper's own detections, our INT8 MiniLM ranker — 22&nbsp;MB of quantised
+        weights, executed on a 50&nbsp;MHz RISC-V core with an 8×8 INT8 systolic array — scores
+        <strong>mAP 0.394 against the paper's published 0.326</strong>. Nothing about the language
+        side of this pipeline needs further work.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§3</span>The detector is the entire gap</h2>
+  <p class="dek">Of the 80 points we lose end-to-end, 72 are boxes that were never proposed.</p>
+  <div class="body">
+    <p>
+      Splitting each configuration's top-1 miss into the two causes gives a picture that needs no
+      interpretation. Green is the box the demo marks being correct. Ochre is the ranker choosing
+      wrongly from a list that <em class="q">did</em> contain the right answer. Red is the detector
+      never producing a box on a preferred object at all.
+    </p>
+
+    <div class="attr">
+      <div class="attr-row">
+        <div class="attr-lab"><b>128 px</b>deployed today</div>
+        <div class="bar">
+          <div class="seg hit" style="width:18.6%">18.6</div>
+          <div class="seg rank" style="width:8.2%"></div>
+          <div class="seg det" style="width:73.2%">detector loses 73.2</div>
+        </div>
+      </div>
+      <div class="attr-row">
+        <div class="attr-lab"><b>192 px</b>host measured</div>
+        <div class="bar">
+          <div class="seg hit" style="width:28.6%">28.6</div>
+          <div class="seg rank" style="width:16.4%">16.4</div>
+          <div class="seg det" style="width:55.0%">detector loses 55.0</div>
+        </div>
+      </div>
+      <div class="attr-row">
+        <div class="attr-lab"><b>320 px</b>host measured</div>
+        <div class="bar">
+          <div class="seg hit" style="width:53.2%">53.2</div>
+          <div class="seg rank" style="width:16.8%">16.8</div>
+          <div class="seg det" style="width:30.0%">detector 30.0</div>
+        </div>
+      </div>
+      <div class="attr-row">
+        <div class="attr-lab"><b>Faster-RCNN</b>paper's boxes</div>
+        <div class="bar">
+          <div class="seg hit" style="width:61.4%">61.4</div>
+          <div class="seg rank" style="width:19.3%">19.3</div>
+          <div class="seg det" style="width:19.3%">19.3</div>
+        </div>
+      </div>
+      <div class="attr-row">
+        <div class="attr-lab"><b>Ground truth</b>ceiling</div>
+        <div class="bar">
+          <div class="seg hit" style="width:92.5%">92.5</div>
+          <div class="seg rank" style="width:7.5%"></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="legend">
+      <span><i class="sw-hit"></i>marked box is correct</span>
+      <span><i class="sw-rank"></i>ranker missed an available answer</span>
+      <span><i class="sw-det"></i>detector never proposed the answer</span>
+    </p>
+
+    <p class="note">
+      Percentages of the images that contain a preferred object. The ranker's absolute share grows
+      with resolution simply because there is more for it to get wrong — its <em>hit rate on
+      available answers</em> stays between 0.63 and 0.76 throughout.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§4</span>Resolution, across all fourteen tasks</h2>
+  <p class="dek">Not one task fails to improve. Most improve severalfold.</p>
+  <div class="body">
+    <p>
+      Identical weights, identical code, identical 717 images — only the detector canvas changes.
+      This is the same INT8 model file that is on the board right now.
+    </p>
+
+    <div class="tw">
+      <table>
+        <caption>AP@0.5 and top-1 selection accuracy per task, by detector canvas</caption>
+        <thead>
+          <tr>
+            <th rowspan="2">Task prompt</th>
+            <th colspan="2">128 px</th><th colspan="2">192 px</th><th colspan="2">320 px</th>
+            <th>GT boxes</th>
+          </tr>
+          <tr>
+            <th>AP</th><th>top-1</th><th>AP</th><th>top-1</th><th>AP</th><th>top-1</th><th>top-1</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>step on something to reach a shelf</td><td>0.034</td><td>0.190</td><td>0.106</td><td>0.238</td><td class="acc">0.378</td><td class="acc">0.667</td><td class="dim">0.810</td></tr>
+          <tr><td>sit comfortably</td><td>0.057</td><td>0.226</td><td>0.149</td><td>0.290</td><td class="acc">0.323</td><td class="acc">0.581</td><td class="dim">0.935</td></tr>
+          <tr><td>place flowers</td><td>0.040</td><td>0.167</td><td>0.133</td><td>0.167</td><td class="acc">0.331</td><td class="acc">0.333</td><td class="dim">0.833</td></tr>
+          <tr><td>get potatoes out of fire</td><td>0.100</td><td>0.156</td><td>0.243</td><td>0.250</td><td class="acc">0.492</td><td class="acc">0.500</td><td class="dim">0.969</td></tr>
+          <tr><td>water plant</td><td>0.187</td><td>0.190</td><td>0.188</td><td>0.286</td><td class="acc">0.325</td><td class="acc">0.429</td><td class="dim">0.810</td></tr>
+          <tr><td>get lemon out of tea</td><td>0.002</td><td>0.042</td><td>0.120</td><td>0.292</td><td class="acc">0.263</td><td class="acc">0.417</td><td class="dim">0.875</td></tr>
+          <tr><td>dig hole</td><td>0.137</td><td>0.226</td><td>0.184</td><td>0.290</td><td class="acc">0.448</td><td class="acc">0.548</td><td class="dim">1.000</td></tr>
+          <tr><td>open bottle of beer</td><td>0.022</td><td>0.286</td><td>0.216</td><td>0.714</td><td class="acc">0.413</td><td class="acc">0.714</td><td class="dim">1.000</td></tr>
+          <tr><td>open parcel</td><td>0.000</td><td>0.000</td><td>0.000</td><td>0.000</td><td class="acc">0.188</td><td class="acc">0.286</td><td class="dim">0.857</td></tr>
+          <tr><td>serve wine</td><td>0.132</td><td>0.238</td><td>0.222</td><td>0.381</td><td class="acc">0.418</td><td class="acc">0.762</td><td class="dim">1.000</td></tr>
+          <tr><td>pour sugar</td><td>0.011</td><td>0.100</td><td>0.091</td><td>0.067</td><td class="acc">0.178</td><td class="acc">0.233</td><td class="dim">0.867</td></tr>
+          <tr><td>smear butter</td><td>0.000</td><td>0.000</td><td>0.505</td><td>0.500</td><td class="acc">0.505</td><td class="acc">0.500</td><td class="dim">0.750</td></tr>
+          <tr><td>extinguish fire</td><td>0.144</td><td>0.200</td><td>0.206</td><td>0.300</td><td class="acc">0.671</td><td class="acc">0.700</td><td class="dim">1.000</td></tr>
+          <tr><td>pound carpet</td><td>0.203</td><td>0.314</td><td>0.316</td><td>0.429</td><td class="acc">0.518</td><td class="acc">0.686</td><td class="dim">1.000</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>mean over 14 tasks</td><td>0.076</td><td>0.186</td><td>0.191</td><td>0.286</td><td>0.389</td><td>0.532</td><td>0.925</td></tr>
+        </tfoot>
+      </table>
+    </div>
+    <p class="note">
+      <code>open parcel</code> scoring 0.000 at both 128 and 192&nbsp;px is the clearest single case:
+      the preferred objects are scissors and knives, small and thin, and the detector simply does not
+      see them until the canvas is large enough.
+    </p>
+
+    <h3>Confidence floor</h3>
+    <p>
+      A second free lever, and one we had set wrong. Task-driven selection is not object detection: a
+      box only has to be good enough for the ranker to <em class="q">consider</em>, and every box
+      withheld by the threshold is a candidate the ranker never sees. The old default was 0.25.
+    </p>
+
+    <div class="tw">
+      <table>
+        <caption>Detection threshold at 192&nbsp;px, product ranking</caption>
+        <thead><tr><th>Confidence floor</th><th>mAP@0.5</th><th>Top-1</th><th>Oracle</th><th>Images with no candidate</th></tr></thead>
+        <tbody>
+          <tr><td>0.010</td><td class="acc">0.205</td><td>0.304</td><td class="dim">0.571</td><td>0.0%</td></tr>
+          <tr class="hi"><td>0.020 &nbsp;— new default</td><td>0.201</td><td>0.311</td><td class="dim">0.521</td><td>0.4%</td></tr>
+          <tr><td>0.050 &nbsp;— old evaluation setting</td><td>0.191</td><td>0.286</td><td class="dim">0.450</td><td>0.7%</td></tr>
+          <tr><td>0.100</td><td>0.179</td><td>0.264</td><td class="dim">0.386</td><td>1.4%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§5</span>Three changes that cost nothing</h2>
+  <p class="dek">Shipped in the pipeline source; no hardware, no retraining, no extra runtime.</p>
+  <div class="body">
+    <ul class="changes">
+      <li>
+        <div class="h">--rank-by product is now the default</div>
+        <div class="d">
+          We were shipping <b>MiniLM alone</b> while evaluating <b>MiniLM × detection score</b> —
+          measuring one system and demonstrating another. Product scores mAP 0.098 against 0.071 for
+          MiniLM alone, with statistically indistinguishable top-1. It also fixes a visible demo
+          problem: under MiniLM-alone ranking, <b>54% of marked boxes had detector confidence below
+          0.10</b> and the median was 0.079. Under product ranking the median is 0.230.
+        </div>
+      </li>
+      <li>
+        <div class="h">--conf default 0.25 → 0.02</div>
+        <div class="d">
+          Measured, not guessed — see the sweep above. Ranking cost is a table lookup per box, so a
+          lower floor is essentially free at runtime. Product ranking is what makes it safe: a weak
+          box is discounted by its own confidence rather than competing on language score alone.
+        </div>
+      </li>
+      <li>
+        <div class="h">--draw-top N, default 8</div>
+        <div class="d">
+          A low confidence floor helps the ranker and ruins the picture — a marked image carrying
+          46 boxes tells a viewer nothing. The shortlist is now sorted by rank, the top 8 are drawn
+          and printed, and the remainder are summarised in one line.
+        </div>
+      </li>
+    </ul>
+
+    <div class="callout warn">
+      <span class="tag">Still to verify on hardware</span>
+      <p>
+        All three changes are host-verified only. None has yet run on the Genesys 2 board. The
+        accuracy figures throughout this document are host evaluations of the deployed INT8 model
+        files; the board's own arithmetic has been shown to agree exactly with the host to six
+        decimal places, but that agreement has not been re-checked since these changes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§6</span>What this means for the hardware</h2>
+  <p class="dek">The accuracy is sitting in resolution, and resolution is exactly what an 8×8 array cannot afford.</p>
+  <div class="body">
+    <p>
+      Every accuracy result above points the same way: enlarge the detector canvas. The cost is
+      accelerator invocations, and at 8×8 the invocation is the unit of expense — roughly
+      485&nbsp;µs of it, almost all memory-wall, against about 0.16&nbsp;µs of arithmetic.
+    </p>
+
+    <div class="tw">
+      <table>
+        <caption>Invocation count and projected query time on the present 8×8 array</caption>
+        <thead><tr><th>Canvas</th><th>Detector inv.</th><th>Total inv.</th><th>Query time</th><th>Top-1</th></tr></thead>
+        <tbody>
+          <tr><td>128 px</td><td>342,160</td><td>517,888</td><td class="acc">528 s &nbsp;<span class="dim">measured</span></td><td>0.186</td></tr>
+          <tr><td>192 px</td><td>785,432</td><td>970,424</td><td class="warm">~747 s <span class="dim">projected</span></td><td>0.286</td></tr>
+          <tr><td>256 px</td><td>1,368,640</td><td>1,553,632</td><td class="warm">~1,030 s <span class="dim">projected</span></td><td class="dim">—</td></tr>
+          <tr><td>320 px</td><td>2,154,072</td><td>2,339,064</td><td class="warm">~1,411 s <span class="dim">projected</span></td><td>0.532</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">
+      Projections extrapolate the measured 485&nbsp;µs per invocation and are marked as projections
+      throughout — only the 528&nbsp;s figure has been observed on the board. 320&nbsp;px on the
+      present array would be roughly 23 minutes per query, which is not demonstrable.
+    </p>
+
+    <h3>Widening the array</h3>
+    <p>
+      For a square array of side <em>R</em> with matching accumulation depth, invocation count falls
+      as <em>1/R³</em>. The measured fabric cost is 6,913 LUTs for 64 PEs, or about
+      <strong>108 LUT per PE</strong>, against roughly <strong>95,900 LUTs free</strong> on the
+      XC7K325T after the present SoC — plus 790 unused DSP48E1 slices and 353 unused block RAMs.
+    </p>
+
+    <div class="tw">
+      <table>
+        <caption>Array sizing against the measured fabric budget</caption>
+        <thead><tr><th>Array</th><th>PEs</th><th>Inv. reduction</th><th>320 px inv.</th><th>LUT estimate</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr><td>8 × 8 <em>(present)</em></td><td>64</td><td>1×</td><td>2,339,064</td><td>6,913 <span class="dim">measured</span></td><td class="dim">too slow for 320 px</td></tr>
+          <tr class="hi"><td>16 × 16</td><td>256</td><td>8×</td><td>292,383</td><td>~27,600</td><td>fits with room — the safe target</td></tr>
+          <tr><td>24 × 24</td><td>576</td><td>27×</td><td>86,632</td><td>~62,200</td><td class="warm">plausible, tight</td></tr>
+          <tr><td>32 × 32</td><td>1,024</td><td>64×</td><td>36,548</td><td>~110,600</td><td class="dim">exceeds free LUTs</td></tr>
+          <tr><td>64 × 64</td><td>4,096</td><td>512×</td><td>4,568</td><td>~442,000</td><td class="dim">4× the whole device</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="tag">Recommendation</span>
+      <p>
+        <strong>16 × 16 is the target, not 64 × 64.</strong> At 108&nbsp;LUT/PE a 64×64 array needs
+        roughly four times the entire XC7K325T; even 32×32 overruns the free LUTs, and moving the
+        multipliers into DSP48E1 slices does not rescue it because 1,024&nbsp;PEs exceed the 790
+        available. A 16×16 array uses under a third of the free fabric and cuts 320&nbsp;px to
+        292,000 invocations — <em class="q">fewer than the 128&nbsp;px pipeline runs today</em>.
+        That is the whole argument: a modest widening buys a 2.9× improvement in what the audience
+        actually sees, at a query time no worse than the one already demonstrated.
+      </p>
+    </div>
+
+    <p class="note">
+      Caveats, stated plainly. The LUT estimates assume per-PE cost stays at the measured
+      108&nbsp;LUT and exclude the wider operand buffering and DMA a larger tile needs. Per-invocation
+      cost is assumed flat, which is optimistic in one direction (a 16×16 tile moves 16× the bytes)
+      and pessimistic in the other (the memory wall is per-access, and larger bursts amortise it).
+      Nothing here has been synthesised. These are the numbers that justify attempting it, not
+      results.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§7</span>Reproducing this</h2>
+  <div class="body">
+    <p>
+      Every figure above comes from <code>eval_coco_tasks.py</code>, extended with
+      <code>--rank</code>, <code>--images</code> and the top-1 and oracle metrics. The
+      pre-existing mAP path is unchanged and still reproduces the previously recorded
+      0.0975 exactly, which is how the harness was validated before any new number was trusted.
+    </p>
+<pre><span class="c"># the headline attribution, on the deployed INT8 detections</span>
+python eval_coco_tasks.py --boxes detfile --detfile det_int8_128.json \
+       --conf 0.05 --limit 200 --rank product
+
+<span class="c"># the ranker with the detector removed from the question</span>
+python eval_coco_tasks.py --boxes gt --limit 200 --rank product
+
+<span class="c"># our ranker on the paper's own Faster-RCNN boxes</span>
+python eval_coco_tasks.py --boxes detfile --detfile det_faster_s05.json \
+       --conf 0.05 --limit 200 --rank product
+
+<span class="c"># regenerate detections at another canvas (INT8, software-emulated accelerator)</span>
+./pipeline_x86 --sim --imgsz 320 --conf 0.05 \
+       --detect-list images_700.txt --detect-json det7_320c05.json --resume
+</pre>
+  </div>
+</section>
+
+<footer>
+  <span>Team 43 — Silicon Syndicate</span>
+  <span>University of Moratuwa, Sri Lanka</span>
+  <span>Team 43 — Silicon Syndicate · University of Moratuwa</span>
+</footer>
+
+</div>

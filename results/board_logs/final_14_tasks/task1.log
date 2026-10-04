@@ -1,0 +1,126 @@
+=== TEAM43 -- task-aware object selection, standalone on the board ===
+image : COCO_val2014_000000262353.jpg
+task  : "step on something to reach top of a shelf"
+imgsz : 256x256    rank-by: product    mode: accelerator
+build : Aug 26 2026 09:38:04   jpeg: integer islow IDCT + table colour
+kdepth : whole K per invocation
+silu   : expf
+fpcheck: 34800000 3efe65ea be54d74a   (host and board must match)
+regs   : 5 syscalls/tile (correct)
+weights: pre-packed cache
+ddr    : K/X windows 2 MB each, largest weight block 1179648 bytes
+format: JPEG, decoded on the board
+source: 640 x 513
+
+  yolo op 20/103
+  yolo op 40/103
+  yolo op 60/103
+  yolo op 80/103
+  yolo op 100/103
+[warn] prompt truncated to 6 tokens
+
+--- DETECTED (46) ---
+  person           0.862
+  person           0.812
+  person           0.805
+  person           0.796
+  person           0.725
+  person           0.610
+  bottle           0.557
+  chair            0.488
+  dining table     0.460
+  wine glass       0.314
+  person           0.239
+  cup              0.185
+  bottle           0.185
+  cup              0.168
+  wine glass       0.134
+  cup              0.114
+  wine glass       0.102
+  person           0.097
+  cup              0.094
+  couch            0.089
+  couch            0.073
+  couch            0.068
+  bottle           0.062
+  dining table     0.057
+  chair            0.057
+  wine glass       0.056
+  dining table     0.051
+  person           0.050
+  cup              0.044
+  chair            0.044
+  chair            0.043
+  wine glass       0.042
+  chair            0.039
+  chair            0.038
+  couch            0.034
+  cup              0.034
+  bench            0.031
+  wine glass       0.031
+  cup              0.029
+  cup              0.029
+  person           0.027
+  chair            0.026
+  chair            0.024
+  chair            0.022
+  couch            0.022
+  chair            0.020
+
+tokens: [CLS] task : step on something to [SEP]
+  minilm layer 1/6
+  minilm layer 2/6
+  minilm layer 3/6
+  minilm layer 4/6
+  minilm layer 5/6
+  minilm layer 6/6
+
+--- TASK-AWARE RANKING (minilm x yolo) ---
+  chair            yolo 0.488  minilm 0.95224  rank 0.46514   <== SELECTED
+  dining table     yolo 0.460  minilm 0.42620  rank 0.19615
+  couch            yolo 0.089  minilm 0.67088  rank 0.05944
+  chair            yolo 0.057  minilm 0.95224  rank 0.05442
+  couch            yolo 0.073  minilm 0.67088  rank 0.04918
+  couch            yolo 0.068  minilm 0.67088  rank 0.04535
+  chair            yolo 0.044  minilm 0.95224  rank 0.04157
+  chair            yolo 0.043  minilm 0.95224  rank 0.04118
+  ... 38 further candidates below rank 0.04118 not shown or drawn
+
+--- RESULT ---
+  SELECTED : chair   (rank 0.46514)
+  marked image written to ./ev_s256/task1.ppm
+
+--- WORK ---
+  detection   : 68432 invocations, 250.4 s
+  minilm      : 3001 invocations, 16.6 s  (head over 8 detected classes,
+                                          not all 80)
+  total       : 71433 invocations, 276.1 s
+  output tiles: 71433   (mean K-tiles per output tile 65.1)
+  if the k0 loop were streamed as one accumulation:
+     invocations 71433 -> 71433   (1.0x fewer)
+     syscalls    500031 -> 500031   (1.0x fewer)
+  GEMM loop 122.8 s | packing 43.6 s | upload 26.8 s | VEGA float 98.1 s
+  --- float breakdown (all of it inside VEGA float) ---
+    amax scan       :    5.91 s  over   5939200 elements  (1.00 us/elem)
+    quantise convert:   20.04 s  over   5939200 elements  (3.37 us/elem)
+    dequant + silu  :   64.16 s  over   4379648 elements  (14.65 us/elem, 4186112 through silu)
+    accounted       :   90.11 s of 98.11 s
+
+--- PACKING BREAKDOWN ---
+  detection  im2col      :    42.11 s  over      66 calls
+  detection  W tile copy :     1.35 s  over      63 calls, 10.6 MB  (7.9 MB/s)
+  minilm     activations :     0.11 s  over     182 calls
+  minilm     weights     :     1.31 s  over      38 calls, 10.7 MB  (8.15 MB/s)  [from cache]
+  cache hits             : 38 blocks, 10.7 MB copied
+  minilm     act-as-wgt  :     0.03 s  over     144 calls
+  ------------------------------------------------------------
+  detection subtotal     :    43.46 s
+  minilm    subtotal     :     1.45 s
+  sum vs g_pack_us       :    44.91 s vs 43.56 s   (W tile copy is extra, it was never counted before)
+
+--- JPEG DECODE ---
+  total                  :     5.66 s
+  huffman + dequant      :     2.95 s   (scan 4.81 s minus IDCT)
+  IDCT                   :     1.86 s   over 15600 blocks  (119 us/block)
+  YCbCr -> RGB           :     0.84 s   over 328320 pixels  (2.6 us/pixel)
+  unaccounted            :     0.01 s   (headers, allocation)
